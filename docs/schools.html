@@ -18,7 +18,8 @@
       <div class="nav__bar">
         <div class="nav__header">
           <div class="logo nav__logo">
-            <div>SN</div>
+            <div> <img src="assets/NEST GREY LOGO.png" alt="logo" style="width: 40px; height: 40px;"> 
+            </div>
             <span>SCHOLAR'S <br /> NEST</span>
           </div>
           <div class="nav__menu__btn" id="menu-btn">
@@ -81,7 +82,7 @@
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1300px;
   margin: auto;
   padding: 2rem 1rem;
 }
@@ -100,9 +101,10 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-size: clamp(1.2rem, 3vw, 6.8rem);
   border-bottom: 3px solid var(--accent);
-  padding-bottom: 0.4rem;
+  line-height: normal;
+  padding-bottom: 0.2rem;
 }
 
 h3 {
@@ -149,13 +151,14 @@ p, strong {
 
     .highlight-box {
       background: #ffffff;
-      border-left: 6px solid var(--accent);
+      border-left: 2px solid var(--accent);
+      border-top: 2px solid var(--accent);
       padding: 1rem 1.5rem;
       margin: 1rem 0 1.5rem 0;
       font-style: italic;
       color: #76797d;
       font-weight: 500;
-      border-radius: 3px;
+      border-radius: 2px;
     }
 
     ul {
@@ -187,18 +190,19 @@ p, strong {
     }
 
     blockquote {
-      border-left: 4px solid var(--accent);
+      border-left: 2px solid var(--accent);
       margin: 1rem 0;
+      font-size: 1rem;
       padding-left: 1rem;
       font-style: italic;
       color: var(--quote);
       font-weight: 500;
       background: rgba(7,148,242,0.03);
-      border-radius: 4px;
+      border-radius: 2px;
     }
     .partner-endorsement {
       font-weight: 400;
-      font-size: 1rem;
+      font-size: 0.8rem;
       color: #333;
       margin-top: 0.4rem;
       font-style: normal;
@@ -215,7 +219,8 @@ p, strong {
     }
     .badge {
       display: inline-block;
-      border-radius: 15px;
+      border-radius: 1px;
+      border-bottom: 3px solid var(--accent);
       background: var(--badge-bg);
       color: #fff;
       padding: 0.3rem 1rem;
@@ -390,16 +395,27 @@ p, strong {
           <div class="stat">20+</div>
           <div class="stat-label">Community events</div>
         </div>
+        <div>
+          <div class="stat">15</div>
+          <div class="stat-label">Nationalities Represented</div>
+        </div>
+        <div>
+        <div class="stat">25+</div>
+          <div class="stat-label">Students Committed to International Universities</div>
+        </div>
+
       </div>
     </section>
 
     <!-- SCHOOLS & EDUCATORS -->
     <section class="section block-education reveal" aria-labelledby="schools-heading">
-      <h2 id="schools-heading">For Schools and Educators</h2>
-      <h3>Inspiring student growth through safe, immersive experiences</h3>
-      <p>Scholar’s Nest offers structured residential programs that extend learning beyond the classroom. Each program includes clear safety protocols, supervised activities, and tailored learning modules that support curriculum goals.</p>
-      <p>We work with teachers to design trips that focus on cultural exchange, leadership, and practical skills. These trips include local museum visits, community service projects, and experiential workshops led by local experts.</p>
-
+      <h2 id="schools-heading"> Schools <br /> & Educators</h2>
+      <h3>Empowering schools with premium, development-focused student experiences</h3> 
+      <p>Scholar’s Nest serves as a dedicated experience agency for schools, providing professionally coordinated, curriculum-aligned trips that enrich student growth beyond the classroom. 
+        We work with a vetted network of child-development partners to deliver high-quality excursions including nature hikes, creative arts sessions, tech innovation camps, and structured team-building activities.</p> 
+        <p>Each program is designed in collaboration with school leadership to reinforce key competencies such as leadership, creativity, problem-solving, and collaboration. All activities are fully supervised, 
+           supported by strict safety standards, and led by qualified facilitators to ensure a secure and purposeful learning environment.</p> <p>By partnering with Scholar’s Nest, schools gain a reliable, 
+           end-to-end solution for planning, organizing, and delivering meaningful student experiences. Our goal is to help institutions offer trips that are impactful, well managed, and aligned with their educational mission.</p>
       <div class="content-columns reveal-stagger" style="margin-top:1rem;">
         <div class="content-column">
           <ul>
@@ -414,6 +430,8 @@ p, strong {
           </div>
         </div>
 
+   
+        
         <div class="content-column">
           <h3>Educator Endorsements</h3>
           <div class="testimonials">
@@ -430,13 +448,17 @@ p, strong {
       </div>
 
       <div style="margin-top:1rem;">
-        <button class="btn" onclick="window.location.href='contact?type=school'">Organize a School Trip</button>
+      <button class="btn" onclick="window.location.href='contact-us.html#bg-photo-section'">
+  Organize a School Trip
+</button>
+
+
       </div>
     </section>
 
     <!-- UNIVERSITY PATHWAYS (inserted before community as requested) -->
     <section class="section block-university reveal" aria-labelledby="university-heading">
-      <h2 id="university-heading">University Pathways and Global Opportunities</h2>
+      <h2 id="university-heading">University Pathways <br /> & Global Opportunities</h2>
       <h3>Beyond graduation, towards the world</h3>
       <p>For senior residents, the Global Pathways Program offers targeted support for admissions to universities in the United States, Canada, Japan, Europe and beyond.</p>
       <ul>
@@ -484,7 +506,7 @@ p, strong {
 
     <!-- PARTNERS (commercial partners) -->
     <section class="section block-partners reveal" aria-labelledby="partners-heading">
-      <h2 id="partners-heading">For Commercial Partners</h2>
+      <h2 id="partners-heading">Commercial <br />Partners</h2>
       <h3>Collaborate and grow with Scholar’s Nest</h3>
       <p>We partner with tour operators, travel agents and local businesses who prioritise ethical practices and community benefit. Partners access a stable stream of young travellers, educators and visiting families.</p>
       <div class="benefit-grid reveal-stagger" style="margin-top:1rem;">
@@ -509,7 +531,8 @@ p, strong {
       <h3 style="margin-top:1rem;">Partner endorsements</h3>
       <div class="testimonials reveal-stagger">
         <div class="testimonial">
-          “Hosting Scholar’s Nest residents at our amusement park and cinema in Mombasa has been a pleasure — they arrive curious, respectful and eager to engage. Our joint events create fun, safe outings that benefit both the community and local businesses.”<br><br>
+          “Hosting Scholar’s Nest residents at our amusement park and cinema in Mombasa has been a pleasure — they arrive curious, respectful and eager to engage. 
+          Our joint events create fun, safe outings that benefit both the community and local businesses.”<br><br>
           <strong>— Aisha Hassan, Guest Relations Manager, Wild Waters Amusement Park & Cineplex</strong>
         </div>
 
@@ -525,7 +548,7 @@ p, strong {
           nutritious and sustainably made. Feedback has been overwhelmingly positive, and both Scholar’s Nest and Nutriee Fish have seen significant benefits: 
           residents enjoy healthier options while Nutriee Fish expanded its local reach and impact.”
           <br><br>
-          <strong>— Karen Mwangi, COO, Nutriee Fish</strong>
+          <strong>— Karen Mwangi, COO, <span style="color: var(--secondary-color)">Nutriee Fish </span></strong>
         </div>
 
         <!-- Photo grid: snapshots for the Nutriee Fish endorsement -->
@@ -542,18 +565,19 @@ p, strong {
            visitors come to pick mushrooms and seasonal fruit, learn about organic farming and halal practices, and leave inspired. 
            I’m passionate about this work and grateful for a partner that shares our values — I can’t wait for more shared events and visits.” 
           <br><br>
-          <strong>— Mr. Musa Otieno, Founder, GreenHarvest Farms</strong>
+          <strong>— Mr. Musa Otieno, Founder, <span style="color: var(--secondary-color)">GreenHarvest Farms </span></strong>
         </div>
       </div>
 
       <div style="margin-top:1rem;">
-        <button class="btn" onclick="window.location.href='contact-us.html'">Become a Commercial Partner</button>
-      </div>
+         <button class="btn" onclick="window.location.href='contact-us.html#bg-photo-section'">
+         Be Our Commercial Partner
+         </button>
     </section>
 
     <!-- COMMUNITY & SUSTAINABILITY -->
     <section class="section block-community reveal" aria-labelledby="community-heading">
-      <h2 id="community-heading">Community and NPOs</h2>
+      <h2 id="community-heading">Community <br />& NPOs</h2>
       <h3>Making local impact through shared action</h3>
       <p>Scholar’s Nest invites community organisations and sustainability groups to design and lead projects with residents. Our role is to provide venue, visibility and logistical support so projects can scale and sustain.</p>
       <div class="highlight-box">

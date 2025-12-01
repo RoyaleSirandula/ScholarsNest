@@ -1,97 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Animated Intro</title>
+
 <style>
-  .animated-section {
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background: #245401;
+        font-family: "Raleway", sans-serif;
+        color: #2b6502;
+        transition: background 1s, color 1s;
+    }
+
+  .word {
+    font-size: clamp(6rem, 20vw, 20rem);  /* Responsive scaling */
+    font-weight: 800;
+    padding: 0;
+    margin: 0;                           /* Removes extra vertical spacing */
+    line-height: 0.7;                      /* Tightens the vertical gap */
+    display: inline-block;               /* Makes stacking tighter */
     position: relative;
-    height: 50vh;
-    background: url('https://i.pinimg.com/1200x/0a/81/3f/0a813f5ad42db5822f78c01f98bf2493.jpg') center center/cover no-repeat;
-    overflow: hidden;
-    cursor: default;
-  }
+    white-space: nowrap;
+    text-align: left;
+    transition: opacity 1s;
+}
 
-  .animated-section::before {
-    content: "";
+
+
+    /* COMMENT: To bring words closer to center, reduce this number (closer to 0 = closer to center) */
+    .meet-offset {
+        --meet-offset: 0.01; /* 2% of animation duration. Previously 0.05. Change here. */
+    }
+
+    #final-display {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 100%);
+        opacity: 0;
+        transition: opacity 2s, transform 2.5s ease-out; /* smooth easing */
+    }
+
+    /* Elastic slide-left effect (spring style) */
+    #final-display.elastic-left {
+        transform: translate(calc(-50% - var(--logo-shift)), -50%) scale(1);
+        transition: transform 2.5s cubic-bezier(.34,1.56,.64,1); /* elastic */
+    }
+
+    #text {
+        margin-left: 20px !important; /* space from grey line */
+    }
+
+    #logo {
+        width: clamp(120px, 20vw, 200px); /* responsive */
+        height: auto;
+        transition: transform 1s ease-out;
+    }
+    /* Initial centered state: logo only */
+#final-display {
+    display: none;
     position: absolute;
-    inset: 0; /* cover entire section */
-    background-color: rgba(0, 0, 0, 0.5); /* dark tint */
-    z-index: 1;
-  }
-
-  .animated-section > * {
-    position: relative; /* stack above overlay */
-    z-index: 2;
-  }
-
-  .text1, .see-store-button {
-    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 100%);
     opacity: 0;
-    transition: transform 1s ease, opacity 1s ease;
-  }
+    justify-content: center;  /* IMPORTANT */
+    transition: opacity 1s, transform 1.5s ease-out;
+}
 
-  .text1 {
-    top: 10%;
-    right: 10%;
-    transform: translateY(-100%);
-    font-size: 6rem;
-    color: var(--secondary-color);
-    font-weight: bold;
-  }
+/* After fade-in -> slide left (elastic) */
+#final-display.slide-left {
+    transform: translate(calc(-50% - var(--shift-left)), -50%);
+    transition: transform 1.2s cubic-bezier(.34,1.56,.64,1);
+}
 
-  .see-store-button {
-    bottom: 10%;
-    left: 10%;
-    transform: translateY(100%);
-    font-size: 1.4rem;
-    color: white;
-    font-weight: bold;
-    background: var(--secondary-color);
-    padding: 0.6em 1.2em;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
-    opacity: 0;
-  }
 
-  .text1.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .see-store-button.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
 </style>
+</head>
+<body>
 
-<section class="animated-section" id="animatedSection">
-  <div class="text1" id="text1">What are you <br /> waiting for?</div>
-  <button class="see-store-button" id="seeStoreButton">See what's in store</button>
-</section>
+<div id="scholars" class="word meet-offset">Scholar’s</div>
+<div id="nest" class="word meet-offset">
+    <span style="color: inherit; -webkit-text-fill-color: transparent; -webkit-text-stroke: 4px currentColor;">
+        Nest™
+    </span>
+</div>
+
+<div id="final-display" style="display:flex; align-items:center; justify-content:center; gap:0;">
+    <img id="logo" src="docs/assets/NEST LOGO 1.png" alt="Logo">
+    <div id="line" style="width:2px; height:200px; background:grey; opacity:0; transition:opacity 0.5s;"></div>
+    <div id="text" style="opacity:0; font-size:3rem; font-weight:bold; transition:opacity 1s;">
+        Scholar's <br> Nest™
+    </div>
+</div>
+
 
 <script>
-  const section = document.getElementById('animatedSection');
-  const text1 = document.getElementById('text1');
-  const button = document.getElementById('seeStoreButton');
+// ---------------------------------------------
+// INITIAL SETUP
+// ---------------------------------------------
+const scholars = document.getElementById("scholars");
+const nest = document.getElementById("nest");
+const meetingOffset = parseFloat(getComputedStyle(scholars).getPropertyValue("--meet-offset"));
+const totalDistance = window.innerWidth + 100;
 
-  // Ensure button hidden initially and positioned
-  button.style.opacity = '0';
+const duration = 20000;
 
-  // Intersection observer to detect when section is at least 50% visible
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting) {
-        // Trigger text1 animation sliding down
-        text1.classList.add('visible');
+// ---------------------------------------------
+// ANIMATIONS (start far → meet center → move out)
+// ---------------------------------------------
+const kf_scholars = [
+    { transform: `translateX(${-totalDistance}px)` },
+    { transform: `translateX(0px)` , offset: meetingOffset }, /* They meet here */
+    { transform: `translateX(${totalDistance}px)` }
+];
 
-        // After text1 finishes sliding down, trigger button
-        text1.addEventListener('transitionend', () => {
-          button.classList.add('visible');
-        }, {once: true});
+const kf_nest = [
+    { transform: `translateX(${totalDistance}px)` },
+    { transform: `translateX(0px)` , offset: meetingOffset }, /* They meet here */
+    { transform: `translateX(${-totalDistance}px)` }
+];
 
-        // Stop observing after first trigger
-        observer.unobserve(section);
-      }
-    });
-  }, {threshold: 0.5});
+const animA = scholars.animate(kf_scholars, {
+    duration,
+    easing: "ease-out",
+    fill: "forwards"
+});
 
-  observer.observe(section);
+const animB = nest.animate(kf_nest, {
+    duration,
+    easing: "ease-out",
+    fill: "forwards"
+});
+
+// ---------------------------------------------
+// SPEED RAMP
+// ---------------------------------------------
+setTimeout(() => {
+    animA.playbackRate = 0.1;
+    animB.playbackRate = 0.1;
+}, duration * meetingOffset);
+
+setTimeout(() => {
+    document.body.style.background = '#ffffff';
+    document.body.style.color = '#a1a1a1';
+}, duration * meetingOffset + 2500);
+
+setTimeout(() => {
+    animA.playbackRate = 1;
+    animB.playbackRate = 1;
+}, duration * meetingOffset + 5000);
+
+// FADE WORDS OUT → FADE LOGO IN CENTER → THEN SLIDE LEFT
+setTimeout(() => {
+
+    scholars.style.opacity = "0";
+    nest.style.opacity = "0";
+
+    const display = document.getElementById("final-display");
+    display.style.display = "flex";
+
+    // --- PHASE 1: fade in logo at *true screen center* ---
+    display.style.justifyContent = "center";     // KEEP LOGO IN CENTER
+    display.style.transform = "translate(-50%, -50%)";
+    display.style.opacity = "1";
+
+    // Run only AFTER fade-in completes (delay = 1s)
+    setTimeout(() => {
+
+        // Calculate dynamic shift so the grey line ends up at the screen center
+        const logo = document.getElementById("logo");
+        const shift = logo.getBoundingClientRect().width * 0.8;  // tweak factor if needed
+        document.documentElement.style.setProperty("--shift-left", shift + "px");
+
+        // --- PHASE 2: slide the whole block left (elastic) ---
+        display.classList.add("slide-left");
+
+        // After slide begins → switch layout alignment
+        setTimeout(() => {
+            display.style.justifyContent = "flex-start";
+
+            // Show line
+            setTimeout(() => {
+                document.getElementById("line").style.opacity = "1";
+
+                // Show text
+                setTimeout(() => {
+                    document.getElementById("text").style.opacity = "1";
+                }, 400);
+
+            }, 300);
+
+        }, 200);
+
+    }, 1000); // Wait for fade-in to complete
+
+}, duration * meetingOffset + 5000);
+
 </script>
+
+</body>
+</html>

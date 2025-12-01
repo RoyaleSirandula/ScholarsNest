@@ -1,24 +1,125 @@
-<section class="photo-section-2">
-  <div class="photo-header-2">
-    <div class="header-text-2">
-      <div class="caption-2">1</div>
-      <h2 class="title-2">Absolute Safety, Always.</h2>
-      <div class="subtitle">All Day, Everyday.</div>
-    </div>
-    <div class="description-2">
-       <p>
-        We do not “attempt” safety — <span style="color: var(--secondary-color)">we guarantee it </span> through accredited 24/7 security teams, 
-        certified lifeguards, biometric access control, professionally monitored CCTV, and rapid-response services. 
-        We are located within secure, gated communities with controlled entry points and regular patrols.
-        Every entry, corridor and common area is engineered for peace of mind so your child’s day — and night — is protected.
-      </p>
-    </div>
-  </div>
-    <section class="carousel-section" style="background:var(--white); padding:2rem; display:flex; justify-content:center; font-family:Arial,sans-serif;">
-  <div class="carousel-container" style="max-width:90%; width:100%;">
-    <img id="mainImage" class="main-image" src="" alt="Main Image" 
-      style="width:100%; height:500px; object-fit:cover; border-radius:1px; box-shadow:0 4px 12px rgba(0,0,0,0.1); margin-bottom:0.5rem;">
-    <div id="thumbnails" class="thumbnails" style="display:flex; gap:2px; overflow-x:auto; padding-bottom:0.5rem;"></div>
-    <div id="counter" class="counter" style="text-align:center; font-size:0.9rem; color:#fff; margin-top:0.5rem;"></div>
-  </div>
-</section>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+<title>Smooth Logo Slide with Center Line</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: #ffffff;
+    font-family: "Raleway", sans-serif;
+}
+
+/* Container */
+#final-display {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    gap: 0;
+
+    /* Smooth transitions */
+    transition:
+        opacity 1.8s ease-in-out,       /* fade-in starts slow, ends smooth */
+        left 2.5s ease-in-out;  /* smooth slide left */
+}
+
+/* Logo */
+#logo {
+    width: 200px;
+    height: auto;
+    transition: transform 1.4s ease-in-out;
+}
+
+/* Vertical line */
+#line {
+    width: 2px;
+    background: grey;
+    opacity: 0;
+    transition:
+        height 1.6s ease,
+        opacity 1.6s ease-in-out;      /* fade in smooth */
+}
+
+/* Text */
+#text {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #245401;
+    opacity: 0;
+    margin-left: 20px;
+    transition: opacity 1.8s ease-in-out;  /* fade in smooth with ease-in-out */
+}
+</style>
+</head>
+<body>
+
+<div id="final-display">
+    <img id="logo" src="docs/assets/NEST LOGO 1.png" alt="Logo">
+</div>
+
+<script>
+window.onload = () => {
+    const finalDisplay = document.getElementById("final-display");
+    const logo = document.getElementById("logo");
+
+    // PHASE 1: Fade in logo centered
+    setTimeout(() => {
+        finalDisplay.style.opacity = "1";  // ease-in-out applies here
+    }, 100);
+
+    // PHASE 2: After 2s, slide container left & reveal line + text
+    setTimeout(() => {
+
+        // Create line + text
+        const line = document.createElement("div");
+        line.id = "line";
+
+        const text = document.createElement("div");
+        text.id = "text";
+        text.innerHTML = "Scholar's <br> Nest™";
+
+        finalDisplay.appendChild(line);
+        finalDisplay.appendChild(text);
+
+        // Match line height to logo
+        const logoHeight = logo.getBoundingClientRect().height;
+        line.style.height = logoHeight + "px";
+
+        // Expand spacing smoothly
+        finalDisplay.style.gap = "10px";
+
+        // Calculate exact shift in px so the line is at screen center
+        const amount = logo.getBoundingClientRect().width + 20 + (line.getBoundingClientRect().width / 1);
+        finalDisplay.style.left = `calc(50% - ${amount}px)`;
+
+        // Optional subtle elastic bump on logo (after half slide)
+        setTimeout(() => {
+            logo.style.transform = "scale(1.01)";
+        }, 1200);
+        setTimeout(() => {
+            logo.style.transform = "scale(1)";
+        }, 1800);
+
+        // Fade in line and text simultaneously
+        setTimeout(() => {
+            line.style.opacity = "1";
+            text.style.opacity = "1";
+        }, 400);
+
+    }, 2000);
+};
+</script>
+
+</body>
+</html>

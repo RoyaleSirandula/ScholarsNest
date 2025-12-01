@@ -9,6 +9,7 @@
   --secondary-color: #f6ac0f;
   --text-dark: #357d01;
   --text-light: #76797d;
+  --text-lighter:#adb0b4;
   --extra-light: #f8fafc;
   --white: #ffffff;
   --max-width: 1200px;
@@ -1244,7 +1245,7 @@ nav {
       flex-direction: column;
       margin-bottom: 0.7rem;
       font-family: var(--header-font);
-      color: var(--text-light);
+      color: var(--text-lighter);
       font-size: 0.9rem;
       font-weight: 500;
       line-height: 1.1;
@@ -1279,7 +1280,11 @@ nav {
   17. FOOTER SECTION
   ========================= */
 .footer {
-  background-color: var(--primary-color);
+ background: linear-gradient(to bottom,
+    var(--primary-color) 0%,
+    var(--primary-color) 80%, /* keep white until 80% of the screen */
+    rgb(0, 0, 0) 100%
+);
 }
 
 .footer__container {
@@ -1339,7 +1344,7 @@ nav {
 }
 
 .footer__links a {
-  color: var(--text-light);
+  color: var(--text-lighter);
   transition: 0.3s;
 }
 
@@ -1365,7 +1370,7 @@ nav {
 }
 
 .footer__links p {
-  color: var(--text-light);
+  color: var(--text-lighter);
 }
 
 .footer__bar {
