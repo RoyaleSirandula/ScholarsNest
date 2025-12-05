@@ -1,137 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
-      rel="stylesheet"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css" />
-    <title>Schools & Community - Nest</title>
-  </head>
 
-  <body>
-    <nav>
-      <div class="nav__bar">
-        <div class="nav__header">
-          <div class="logo nav__logo">
-            <div> <img src="assets/NEST GREY LOGO.png" alt="logo" style="width: 40px; height: 40px;"> 
-            </div>
-            <span>SCHOLAR'S <br /> NEST</span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <title>Schools & Community - Nest</title>
+</head>
+
+<body>
+  <nav>
+    <div class="nav__bar">
+      <div class="nav__header">
+        <div class="logo nav__logo">
+          <div> <img src="assets/NEST GREY LOGO.png" alt="logo" style="width: 40px; height: 40px;">
           </div>
-          <div class="nav__menu__btn" id="menu-btn">
-            <i class="ri-menu-line"></i>
-          </div>
+          <span>SCHOLAR'S <br /> NEST</span>
         </div>
-        <ul class="nav__links" id="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about-us.html">About Us</a></li>
-          <li><a href="parents.html">Guardians & Residents</a></li>
-          <li><a href="schools.html" class="active" aria-current="page">Schools & Partners</a></li>
-          <li><a href="room-details.html">Rooms & Spaces</a></li>
-          <li><a href="contact-us.html">Contact Us</a></li>
-        </ul>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
       </div>
-    </nav>
-<header class="header-schools" id="home">
-  <div class="section__container-lead header__container">
-    <p class="section__subheader">We want you to be involved...</p>
-    <h1 id="highlightText">
-      schools, partners <br />
-      <span style="color: inherit; -webkit-text-fill-color: transparent; -webkit-text-stroke: 2px currentColor; text-stroke: 2px currentColor;">&amp;</span>
-      community
-    </h1>
-    <button class="btn" onclick="document.getElementById('section block-hero reveal').scrollIntoView({behavior: 'smooth'});">Get Started</button>
-</header>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="parents.html">Guardians & Residents</a></li>
+        <li><a href="schools.html" class="active" aria-current="page">Schools & Partners</a></li>
+        <li><a href="room-details.html">Rooms & Spaces</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+  <header class="header-schools" id="home">
+    <div class="section__container-lead header__container">
+      <p class="section__subheader">We want you to be involved...</p>
+      <h1 id="highlightText">
+        schools, partners <br />
+        <span
+          style="color: inherit; -webkit-text-fill-color: transparent; -webkit-text-stroke: 2px currentColor;">&amp;</span>
+        community
+      </h1>
+      <button class="btn"
+        onclick="document.getElementById('section block-hero reveal').scrollIntoView({behavior: 'smooth'});">Get
+        Started</button>
+  </header>
 
-<style>
+  <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;500&display=swap');
 
-    :root{
-      --accent:  #f6ac0f;         /* primary accent */
+    :root {
+      --accent: #f6ac0f;
+      /* primary accent */
       --text: #357d01;
       --text-light: #76797d;
-      --muted:  #4c4e4f;
+      --muted: #4c4e4f;
       --bg: #ffffff;
-      --blue-block: #ffffff;    /* section background for education */
-      --green-block: #ffffff;   /* section background for sustainability */
-      --sand-block: #ffffff;    /* community / warm block */
+      --blue-block: #ffffff;
+      /* section background for education */
+      --green-block: #ffffff;
+      /* section background for sustainability */
+      --sand-block: #ffffff;
+      /* community / warm block */
       --card-bg: #ffffff;
       --quote: #76797d;
       --badge-bg: #245401;
-      --shadow: rgba(10, 10, 10, 0.08);
-    }
-
-    body {
-      margin: 0;
-      background: var(--bg);
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
     }
 
     /* Apply site typography to the main content only so nav and the hero header
        can be styled from styles.css (they are outside <main class="container">) */
     main {
-  font-family: 'Raleway', sans-serif;
-  color: var(--text);
-  line-height: 1.6;
-  font-size: 1.2rem;
-}
+      font-family: 'Raleway', sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      font-size: 1.2rem;
+    }
 
-.container {
-  max-width: 1300px;
-  margin: auto;
-  padding: 2rem 1rem;
-}
+    .container {
+      max-width: 1300px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
 
-/* Headings */
-h1, h2, h3 {
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--text);
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
+    /* Headings */
+    h1,
+    h2,
+    h3 {
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
 
-h1 {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-}
+    h1 {
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+    }
 
-h2 {
-  font-size: clamp(1.2rem, 3vw, 6.8rem);
-  border-bottom: 3px solid var(--accent);
-  line-height: normal;
-  padding-bottom: 0.2rem;
-}
+    h2 {
+      font-size: clamp(1.2rem, 3vw, 6.8rem);
+      border-bottom: 3px solid var(--accent);
+      line-height: normal;
+      padding-bottom: 0.2rem;
+    }
 
-h3 {
-  font-size: clamp(1rem, 2.5vw, 1.3rem);
-  color: var(--accent);
-}
+    h3 {
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      color: var(--accent);
+    }
 
-/* Paragraphs */
-p, strong {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  font-size: clamp(0.8rem, 2vw, 0.95rem);
-  color: var(--muted);
-  margin: 0;
-}
+    /* Paragraphs */
+    p,
+    strong {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: clamp(0.8rem, 2vw, 0.95rem);
+      color: var(--muted);
+      margin: 0;
+    }
 
-/* Mobile adjustments */
-@media (max-width: 600px) {
-  h1 { font-size: 1.2rem; }
-  h2 { font-size: 1rem; }
-  h3 { font-size: 0.9rem; }
-  p, strong { font-size: 0.8rem; }
-  body { line-height: 1.7; }
-}
+    /* Mobile adjustments */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.2rem;
+      }
 
-    
-    strong { font-weight: 500; }
+      h2 {
+        font-size: 1rem;
+      }
+
+      h3 {
+        font-size: 0.9rem;
+      }
+
+      p,
+      strong {
+        font-size: 0.8rem;
+      }
+
+      body {
+        line-height: 1.7;
+      }
+    }
+
+
+    strong {
+      font-weight: 500;
+    }
 
     .section {
       margin-bottom: 2.5rem;
@@ -142,12 +160,33 @@ p, strong {
     }
 
     /* Colour blocking for different areas */
-    .block-hero { background: linear-gradient(180deg, rgba(7,148,242,0.06), rgba(255,255,255,0)); box-shadow:none; padding-top:1.5rem; padding-bottom:1.5rem; }
-    .block-education { background: var(--blue-block); }
-    .block-partners { background: var(--sand-block); }
-    .block-university { background: #ffffff; } /* slightly lighter blue */
-    .block-community { background: var(--green-block); }
-    .block-involvement { background: #ffffff; }
+    .block-hero {
+      background: linear-gradient(180deg, rgba(7, 148, 242, 0.06), rgba(255, 255, 255, 0));
+      box-shadow: none;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+
+    .block-education {
+      background: var(--blue-block);
+    }
+
+    .block-partners {
+      background: var(--sand-block);
+    }
+
+    .block-university {
+      background: #ffffff;
+    }
+
+    /* slightly lighter blue */
+    .block-community {
+      background: var(--green-block);
+    }
+
+    .block-involvement {
+      background: #ffffff;
+    }
 
     .highlight-box {
       background: #ffffff;
@@ -166,16 +205,17 @@ p, strong {
       margin-left: 1rem;
       color: #444;
       font-size: 1rem;
-      
+
     }
 
     .stats-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
       gap: 1.5rem;
       text-align: center;
       margin: 1.5rem 0;
     }
+
     .stat {
       font-weight: 700;
       font-size: 2rem;
@@ -183,6 +223,7 @@ p, strong {
       margin-bottom: 0.3rem;
       font-family: 'Montserrat', sans-serif;
     }
+
     .stat-label {
       font-weight: 300;
       font-size: 1rem;
@@ -197,9 +238,10 @@ p, strong {
       font-style: italic;
       color: var(--quote);
       font-weight: 500;
-      background: rgba(7,148,242,0.03);
+      background: rgba(7, 148, 242, 0.03);
       border-radius: 2px;
     }
+
     .partner-endorsement {
       font-weight: 400;
       font-size: 0.8rem;
@@ -213,10 +255,12 @@ p, strong {
       gap: 2rem;
       flex-wrap: wrap;
     }
+
     .content-column {
       flex: 1 1 320px;
       min-width: 280px;
     }
+
     .badge {
       display: inline-block;
       border-radius: 1px;
@@ -236,6 +280,7 @@ p, strong {
       font-size: 1rem;
       margin: 1rem 0 0 0;
     }
+
     .engagement-list li {
       position: relative;
       padding-left: 1.6rem;
@@ -243,6 +288,7 @@ p, strong {
       font-weight: 300;
       color: #444;
     }
+
     .engagement-list li::before {
       content: '✔';
       position: absolute;
@@ -261,6 +307,7 @@ p, strong {
       gap: 0.25rem;
       margin-top: 1rem;
     }
+
     .image-grid img {
       width: 100%;
       height: 500px;
@@ -268,23 +315,25 @@ p, strong {
       border-radius: 2px;
       background: #eee;
       display: block;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
     }
+
     /* testimonial image grids */
-     .image-grid2 {
+    .image-grid2 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 0.25rem;
       margin-top: 1rem;
     }
-     .image-grid2 img {
+
+    .image-grid2 img {
       width: 100%;
       height: 300px;
       object-fit: cover;
       border-radius: 2px;
       background: #eee;
       display: block;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
     }
 
     /* small cards for partner benefits */
@@ -294,14 +343,25 @@ p, strong {
       gap: 0.5rem;
       margin-top: 1rem;
     }
+
     .benefit {
       background: var(--card-bg);
       padding: 1rem;
       border-radius: 8px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.04);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.04);
     }
-    .benefit h4 { margin: 0 0 0.5rem 0; font-size: 1rem; color: var(--accent); }
-    .benefit p { margin: 0; font-size: 0.95rem; color: #444; }
+
+    .benefit h4 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1rem;
+      color: var(--accent);
+    }
+
+    .benefit p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #444;
+    }
 
     /* testimonial cluster */
     .testimonials {
@@ -310,15 +370,20 @@ p, strong {
       gap: 1rem;
       margin-top: 1rem;
     }
+
     .testimonial {
       background: var(--card-bg);
       padding: 1rem;
       border-radius: 8px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.04);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.04);
       font-style: italic;
       color: #186908;
     }
-    .testimonial strong { font-style: normal; color: #0c6707; }
+
+    .testimonial strong {
+      font-style: normal;
+      color: #0c6707;
+    }
 
     /* CTA */
     .cta {
@@ -326,8 +391,9 @@ p, strong {
       padding: 1.5rem;
       margin-top: 1rem;
       border-radius: 8px;
-      background: linear-gradient(90deg, rgba(7,148,242,0.08), rgba(34,193,195,0.02));
+      background: linear-gradient(90deg, rgba(7, 148, 242, 0.08), rgba(34, 193, 195, 0.02));
     }
+
     .cta .btn {
       background: var(--accent);
       color: #fff;
@@ -338,12 +404,21 @@ p, strong {
       font-weight: 600;
       box-shadow: 0 8px 18px rgba(162, 162, 162, 0.12);
     }
-    .cta .btn:hover { opacity: 0.95; transform: translateY(-1px); }
+
+    .cta .btn:hover {
+      opacity: 0.95;
+      transform: translateY(-1px);
+    }
 
     /* small responsiveness */
     @media (max-width: 768px) {
-      .content-columns { flex-direction: column; }
-      .section { padding: 1rem; }
+      .content-columns {
+        flex-direction: column;
+      }
+
+      .section {
+        padding: 1rem;
+      }
     }
 
     /* Animations: fade-up on scroll */
@@ -353,401 +428,531 @@ p, strong {
       transition: opacity 600ms ease, transform 600ms ease;
       will-change: transform, opacity;
     }
+
     .reveal.in-view {
       opacity: 1;
       transform: translateY(0);
     }
+
     /* stagger children */
-    .reveal-stagger > * {
+    .reveal-stagger>* {
       opacity: 0;
       transform: translateY(12px);
     }
-    .reveal-stagger.in-view > * {
+
+    .reveal-stagger.in-view>* {
       opacity: 1;
       transform: translateY(0);
       transition: opacity 500ms ease, transform 500ms ease;
     }
-    .reveal-stagger.in-view > *:nth-child(1) { transition-delay: 0.05s; }
-    .reveal-stagger.in-view > *:nth-child(2) { transition-delay: 0.10s; }
-    .reveal-stagger.in-view > *:nth-child(3) { transition-delay: 0.15s; }
-    .reveal-stagger.in-view > *:nth-child(4) { transition-delay: 0.20s; }
 
+    .reveal-stagger.in-view>*:nth-child(1) {
+      transition-delay: 0.05s;
+    }
+
+    .reveal-stagger.in-view>*:nth-child(2) {
+      transition-delay: 0.10s;
+    }
+
+    .reveal-stagger.in-view>*:nth-child(3) {
+      transition-delay: 0.15s;
+    }
+
+    .reveal-stagger.in-view>*:nth-child(4) {
+      transition-delay: 0.20s;
+    }
+
+    .reveal-stagger.in-view>*:nth-child(5) {
+      transition-delay: 0.25s;
+    }
+
+    /* New Gallery Strip Styles */
+    .block-gallery {
+      padding: 0;
+      margin-bottom: 0.5rem;
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .gallery-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.2rem;
+      height: 440px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 2px;
+      height: 100%;
+      cursor: pointer;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease, filter 0.4s ease;
+      filter: grayscale(20%);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+      filter: grayscale(0%);
+    }
+
+    @media (max-width: 768px) {
+      .gallery-strip {
+        grid-template-columns: repeat(2, 1fr);
+        height: auto;
+      }
+
+      .gallery-item {
+        height: 180px;
+      }
+    }
   </style>
-</head>
-<body>
-  <main class="container">
+  </head>
 
-    <!-- HERO -->
-    <section id="section block-hero reveal" class="section block-hero reveal" aria-label="hero">
-      <h1>Partner with Scholar’s Nest™</h1>
-      <p>Scholar’s Nest™ connects schools, partners, and community groups in a shared effort to grow confident learners and stronger neighbourhoods.</p>
-      <p>Join our network to support student journeys, expand your reach, and build meaningful sustainability projects with residents and local partners.</p>
-      <div class="stats-grid reveal-stagger" style="margin-top:1rem;">
-        <div>
-          <div class="stat">100+</div>
-          <div class="stat-label">Residents per year</div>
-        </div>
-        <div>
-          <div class="stat">10+</div>
-          <div class="stat-label">Partner schools & Institutions</div>
-        </div>
-        <div>
-          <div class="stat">20+</div>
-          <div class="stat-label">Community events</div>
-        </div>
-        <div>
-          <div class="stat">15</div>
-          <div class="stat-label">Nationalities Represented</div>
-        </div>
-        <div>
-        <div class="stat">25+</div>
-          <div class="stat-label">Students Committed to International Universities</div>
-        </div>
+  <body>
+    <main class="container">
 
-      </div>
-    </section>
+      <!-- HERO -->
+      <section id="section block-hero reveal" class="section block-hero reveal" aria-label="hero">
+        <h1>Partner with Scholar’s Nest™</h1>
+        <p>Scholar’s Nest™ connects schools, partners, and community groups in a shared effort to grow confident
+          learners and stronger neighbourhoods.</p>
+        <p>Join our network to support student journeys, expand your reach, and build meaningful sustainability projects
+          with residents and local partners.</p>
+        <div class="stats-grid reveal-stagger" style="margin-top:1rem;">
+          <div>
+            <div class="stat">100+</div>
+            <div class="stat-label">Residents per year</div>
+          </div>
+          <div>
+            <div class="stat">10+</div>
+            <div class="stat-label">Partner schools & Institutions</div>
+          </div>
+          <div>
+            <div class="stat">20+</div>
+            <div class="stat-label">Community events</div>
+          </div>
+          <div>
+            <div class="stat">15</div>
+            <div class="stat-label">Nationalities Represented</div>
+          </div>
+          <div>
+            <div class="stat">25+</div>
+            <div class="stat-label">Students Committed to International Universities</div>
+          </div>
 
-    <!-- SCHOOLS & EDUCATORS -->
-    <section class="section block-education reveal" aria-labelledby="schools-heading">
-      <h2 id="schools-heading"> Schools <br /> & Educators</h2>
-      <h3>Empowering schools with premium, development-focused student experiences</h3> 
-      <p>Scholar’s Nest serves as a dedicated experience agency for schools, providing professionally coordinated, curriculum-aligned trips that enrich student growth beyond the classroom. 
-        We work with a vetted network of child-development partners to deliver high-quality excursions including nature hikes, creative arts sessions, tech innovation camps, and structured team-building activities.</p> 
-        <p>Each program is designed in collaboration with school leadership to reinforce key competencies such as leadership, creativity, problem-solving, and collaboration. All activities are fully supervised, 
-           supported by strict safety standards, and led by qualified facilitators to ensure a secure and purposeful learning environment.</p> <p>By partnering with Scholar’s Nest, schools gain a reliable, 
-           end-to-end solution for planning, organizing, and delivering meaningful student experiences. Our goal is to help institutions offer trips that are impactful, well managed, and aligned with their educational mission.</p>
-      <div class="content-columns reveal-stagger" style="margin-top:1rem;">
-        <div class="content-column">
-          <ul>
-            <li><strong>Safety First</strong> with 24/7 staff, secure access and private dorm options for school groups.</li>
-            <li><strong>Custom Learning Modules</strong> designed with partner educators to reinforce class topics and learning objectives.</li>
-          </ul>
-          <div class="highlight-box">Teachers can request custom itineraries, risk assessments and pre-visit orientations for students and chaperones.</div>
-          <div class="image-grid" aria-hidden="true">
-            <img src="https://i.pinimg.com/736x/7e/49/e9/7e49e9c54230a9274f0e82d199824afd.jpg" alt="students at a local museum">
-            <img src="https://i.pinimg.com/1200x/35/81/17/3581171d71c9dfd222d5a23dc0dcdbb9.jpg" alt="hands-on workshop with local artisan">
-            <img src="https://i.pinimg.com/1200x/ad/cb/ad/adcbad84ef3d36f9cb331076513b41cc.jpg" alt="outdoor team-building exercise">
+        </div>
+      </section>
+
+      <!-- PICTURE SECTION -->
+      <section class="section block-gallery reveal" aria-label="campus gallery">
+        <div class="gallery-strip">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=800&auto=format&fit=crop"
+              alt="Modern campus facade">
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=800&auto=format&fit=crop"
+              alt="Student study space">
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1592280771190-3e2e4d571952?q=80&w=800&auto=format&fit=crop"
+              alt="Green outdoor area">
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop"
+              alt="Architectural detail">
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=800&auto=format&fit=crop"
+              alt="Modern campus facade">
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=800&auto=format&fit=crop"
+              alt="Student study space">
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1592280771190-3e2e4d571952?q=80&w=800&auto=format&fit=crop"
+              alt="Green outdoor area">
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop"
+              alt="Architectural detail">
           </div>
         </div>
+      </section>
 
-   
-        
-        <div class="content-column">
-          <h3>Educator Endorsements</h3>
-          <div class="testimonials">
-            <div class="testimonial">
-              “Our visit to Scholar’s Nest became part of our core curriculum. Students returned curious, confident and better prepared for leadership roles.”<br><br>
-              <strong>— Dr. Evelyn Reed. Dean of Students, Light Academy.</strong>
-            </div>
-            <div class="testimonial">
-              “Logistics were seamless, and the learning outcomes were tangible. Scholar’s Nest understands how to run safe, meaningful group visits.”<br><br>
-              <strong>— Ms. Amina Okoth. Head of Trips, Braeburn International.</strong>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div style="margin-top:1rem;">
-      <button class="btn" onclick="window.location.href='contact-us.html#bg-photo-section'">
-  Organize a School Trip
-</button>
-
-
-      </div>
-    </section>
-
-    <!-- UNIVERSITY PATHWAYS (inserted before community as requested) -->
-    <section class="section block-university reveal" aria-labelledby="university-heading">
-      <h2 id="university-heading">University Pathways <br /> & Global Opportunities</h2>
-      <h3>Beyond graduation, towards the world</h3>
-      <p>For senior residents, the Global Pathways Program offers targeted support for admissions to universities in the United States, Canada, Japan, Europe and beyond.</p>
-      <ul>
-        <li><strong>In-house Education Consultants</strong> who guide residents through essays, scholarships and selection.</li>
-        <li><strong>Global Alumni Mentorship</strong> pairing aspiring students with former Nest residents studying abroad.</li>
-        <li><strong>Exam Readiness</strong> with SAT, IELTS and other test prep sessions on site.</li>
-        <li><strong>Pathways Fair</strong> a signature annual event with university representatives and scholarship advisors.</li>
-      </ul>
-
-      <div class="content-columns reveal-stagger" style="margin-top:1rem;">
-        <div class="content-column">
-          <h3>What to expect in your application process</h3>
-          <ul>
-            <li>Personal statement coaching and iterative feedback.</li>
-            <li>Portfolio review for arts and design applicants.</li>
-            <li>Mock interviews and scholarship strategy sessions.</li>
-            <li>Visa orientation and pre-departure briefings.</li>
-          </ul>
-          <div class="image-grid" aria-hidden="true">
-            <img src="https://i.pinimg.com/1200x/8c/7d/cb/8c7dcb0baec6e068f49858c03bc2ce8f.jpg" alt="student at a university fair">
-            <img src="https://i.pinimg.com/1200x/15/c3/11/15c311a5f67162361f2effe111e726b5.jpg" alt="one-on-one essay coaching">
-            <img src="https://i.pinimg.com/736x/39/61/cc/3961cc8bb293f19b6b513b33757cc89b.jpg" alt="alumni mentoring session">
-            <img src="https://i.pinimg.com/1200x/ba/a5/9d/baa59dd34de4b9992cd630238118f87d.jpg" alt="mock interview practice">
-          </div>
-        </div>
-
-        <div class="content-column">
-          <h3>Resident Success</h3>
-          <blockquote>“I arrived at my dream university in Canada because Scholar’s Nest gave me direction, resources, and confidence. They did not just house me; they raised my ambition.”</blockquote>
-          <p class="partner-endorsement"><strong>— Faith M., Resident Alumnus</strong></p>
-
-          <div style="margin-top:1rem;" class="benefit-grid">
-            <div class="benefit">
-              <h4>Alumni Network</h4>
-              <p>Connect with past residents excelling in academics and careers globally.</p>
-            </div>
-            <div class="benefit">
-              <h4>On-site Support</h4>
-              <p>Workshops, consultations, and quiet study spaces dedicated to applicants.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PARTNERS (commercial partners) -->
-    <section class="section block-partners reveal" aria-labelledby="partners-heading">
-      <h2 id="partners-heading">Commercial <br />Partners</h2>
-      <h3>Collaborate and grow with Scholar’s Nest</h3>
-      <p>We partner with tour operators, travel agents and local businesses who prioritise ethical practices and community benefit. Partners access a stable stream of young travellers, educators and visiting families.</p>
-      <div class="benefit-grid reveal-stagger" style="margin-top:1rem;">
-        <div class="benefit">
-          <h4>Expanded Market Reach</h4>
-          <p>Feature your services to a highly engaged resident and visitor base.</p>
-        </div>
-        <div class="benefit">
-          <h4>Competitive Commissions</h4>
-          <p>Clear, fair commission structures for bookings and referrals.</p>
-        </div>
-        <div class="benefit">
-          <h4>Dedicated Support</h4>
-          <p>Partner portal, seamless integrations and an assigned account lead.</p>
-        </div>
-        <div class="benefit">
-          <h4>Exclusive Offers</h4>
-          <p>Seasonal deals and partner-only listings to drive bookings.</p>
-        </div>
-      </div>
-
-      <h3 style="margin-top:1rem;">Partner endorsements</h3>
-      <div class="testimonials reveal-stagger">
-        <div class="testimonial">
-          “Hosting Scholar’s Nest residents at our amusement park and cinema in Mombasa has been a pleasure — they arrive curious, respectful and eager to engage. 
-          Our joint events create fun, safe outings that benefit both the community and local businesses.”<br><br>
-          <strong>— Aisha Hassan, Guest Relations Manager, Wild Waters Amusement Park & Cineplex</strong>
-        </div>
-
-        <!-- Photo grid: snapshots for the first endorsement -->
-        <div class="image-grid2" aria-hidden="true" style="margin:0.75rem 0;">
-          <img src="https://i.pinimg.com/1200x/24/34/fa/2434fa084b446601473be7f0567a674a.jpg" alt="Snapshot: SafariLink collaboration event">
-          <img src="https://i.pinimg.com/1200x/39/ae/90/39ae90623a3c5d04a068d32c86491804.jpg" alt="Snapshot: young travellers at Scholar's Nest">
-          <img src="https://picsum.photos/seed/sn3/800/600" alt="Snapshot: sustainable travel workshop">
-        </div>
-
-        <div class="testimonial">
-          “Nutriee Fish's natural fish snacks and spice powder were an instant hit with the residents — delicious, 
-          nutritious and sustainably made. Feedback has been overwhelmingly positive, and both Scholar’s Nest and Nutriee Fish have seen significant benefits: 
-          residents enjoy healthier options while Nutriee Fish expanded its local reach and impact.”
-          <br><br>
-          <strong>— Karen Mwangi, COO, <span style="color: var(--secondary-color)">Nutriee Fish </span></strong>
-        </div>
-
-        <!-- Photo grid: snapshots for the Nutriee Fish endorsement -->
-        <div class="image-grid2" aria-hidden="true" style="margin:0.75rem 0;">
-          <img src="https://i.pinimg.com/1200x/dc/46/4c/dc464c52692dbd2b592b959280ddd5f6.jpg" alt="Snapshot: Nutriee Fish tasting session">
-          <img src="https://i.pinimg.com/1200x/b1/8d/97/b18d97ee5549d84548a0620bda227af4.jpg" alt="Snapshot: residents enjoying healthy snacks">
-          <img src="https://i.pinimg.com/1200x/d2/c5/ff/d2c5ffed4567aa5bba67d87b8549e20a.jpg" alt="Snapshot: Nutriee Fish product display">
-        </div>
-
-        <div class="testimonial">
-          “Partnering with Scholar’s Nest has been a joy. At GreenHarvest Farms we grow organic, halal and non‑GMO produce with care — and seeing our mushrooms, 
-          fruits and other harvests become part of residents' meals fills me with pride. Scholar’s Nest treats food with the same respect we do,
-           and this collaboration has helped us reach neighbours who value healthy, ethical food. Our open-farm days are a community highlight: residents and 
-           visitors come to pick mushrooms and seasonal fruit, learn about organic farming and halal practices, and leave inspired. 
-           I’m passionate about this work and grateful for a partner that shares our values — I can’t wait for more shared events and visits.” 
-          <br><br>
-          <strong>— Mr. Musa Otieno, Founder, <span style="color: var(--secondary-color)">GreenHarvest Farms </span></strong>
-        </div>
-      </div>
-
-      <div style="margin-top:1rem;">
-         <button class="btn" onclick="window.location.href='contact-us.html#bg-photo-section'">
-         Be Our Commercial Partner
-         </button>
-    </section>
-
-    <!-- COMMUNITY & SUSTAINABILITY -->
-    <section class="section block-community reveal" aria-labelledby="community-heading">
-      <h2 id="community-heading">Community <br />& NPOs</h2>
-      <h3>Making local impact through shared action</h3>
-      <p>Scholar’s Nest invites community organisations and sustainability groups to design and lead projects with residents. Our role is to provide venue, visibility and logistical support so projects can scale and sustain.</p>
-      <div class="highlight-box">
-        We welcome groups to lead beach cleanups, guided park hikes, yoga and reflection sessions, and nature trails that combine conservation with wellbeing.
-      </div>
-
-      <div class="content-columns reveal-stagger" style="margin-top:1rem;">
-        <div class="content-column">
-          <h3>Typical activities we host</h3>
-          <ul class="engagement-list">
-            <li>Beach cleanups and coastal restoration projects.</li>
-            <li>Park hikes and guided nature trails with local ecologists.</li>
-            <li>Yoga mornings, mindfulness sessions and reflection circles.</li>
-            <li>Community fairs, craft markets and sustainability workshops.</li>
-          </ul>
-
-          <div class="image-grid" aria-hidden="true" style="margin-top:1rem;">
-            <img src="https://i.pinimg.com/1200x/d9/ca/e0/d9cae0b1ddf2e4ec41febaaaca897db6.jpg" alt="volunteers picking up litter at a beach">
-            <img src="https://i.pinimg.com/1200x/78/53/fd/7853fd56b4458943dff95b180d47e133.jpg" alt="group hike and nature trail">
-            <img src="https://i.pinimg.com/1200x/ed/e3/e3/ede3e3ff8244bef97c6e4030a76394eb.jpg" alt="yoga session on the lawn">
-            <img src="https://i.pinimg.com/1200x/95/40/c3/9540c37f87e018a7916d4d6b11d31b40.jpg" alt="community craft fair">
-          </div>
-        </div>
-
-        <div class="content-column">
-          <h3>Partnership impact</h3>
-          <p>Projects run with us aim to create measurable outcomes, such as reduced single-use waste, increased native tree cover, and greater public awareness of local biodiversity. We publish short reports after major activities so partners and residents can see progress.</p>
-
-          <h3 style="margin-top:1rem;">Community voices</h3>
-          <div class="testimonials">
-            <div class="testimonial">
-              “We hosted a coastal restoration day and the energy was incredible. Guests, residents and locals worked side by side.”<br><br>
-              <strong>— Umi Sora, Green Shores Initiative</strong>
-            </div>
-            <div class="testimonial">
-              “Joining a yoga and beach cleanup changed how I travel. I look forward to more. Bana mshaniconvince”<br><br>
-              <strong>— Ahmed Noor, Resident and Volunteer</strong>
+      <!-- SCHOOLS & EDUCATORS -->
+      <section class="section block-education reveal" aria-labelledby="schools-heading">
+        <h2 id="schools-heading"> Schools <br /> & Educators</h2>
+        <h3>Empowering schools with premium, development-focused student experiences</h3>
+        <p>Scholar’s Nest serves as a dedicated experience agency for schools, providing professionally coordinated,
+          curriculum-aligned trips that enrich student growth beyond the classroom.
+          We work with a vetted network of child-development partners to deliver high-quality excursions including
+          nature hikes, creative arts sessions, tech innovation camps, and structured team-building activities.</p>
+        <p>Each program is designed in collaboration with school leadership to reinforce key competencies such as
+          leadership, creativity, problem-solving, and collaboration. All activities are fully supervised,
+          supported by strict safety standards, and led by qualified facilitators to ensure a secure and purposeful
+          learning environment.</p>
+        <p>By partnering with Scholar’s Nest, schools gain a reliable,
+          end-to-end solution for planning, organizing, and delivering meaningful student experiences. Our goal is to
+          help institutions offer trips that are impactful, well managed, and aligned with their educational mission.
+        </p>
+        <div class="content-columns reveal-stagger" style="margin-top:1rem;">
+          <div class="content-column">
+            <ul>
+              <li><strong>Safety First</strong> with 24/7 staff, secure access and private dorm options for school
+                groups.</li>
+              <li><strong>Custom Learning Modules</strong> designed with partner educators to reinforce class topics and
+                learning objectives.</li>
+            </ul>
+            <div class="highlight-box">Teachers can request custom itineraries, risk assessments and pre-visit
+              orientations for students and chaperones.</div>
+            <div class="image-grid" aria-hidden="true">
+              <img src="https://i.pinimg.com/736x/7e/49/e9/7e49e9c54230a9274f0e82d199824afd.jpg"
+                alt="students at a local museum">
+              <img src="https://i.pinimg.com/1200x/35/81/17/3581171d71c9dfd222d5a23dc0dcdbb9.jpg"
+                alt="hands-on workshop with local artisan">
+              <img src="https://i.pinimg.com/1200x/ad/cb/ad/adcbad84ef3d36f9cb331076513b41cc.jpg"
+                alt="outdoor team-building exercise">
             </div>
           </div>
 
-          <div style="margin-top:1rem;">
-            <button class="btn" onclick="window.location.href='contact?type=community'">Propose a Community Initiative</button>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- WHAT WE'RE LOOKING FOR -->
-    <section class="section block-involvement reveal" aria-labelledby="looking-heading">
-      <h2 id="looking-heading">What we are looking for</h2>
-      <h3>Partners who share values and practical impact</h3>
-      <p>Scholar’s Nest seeks collaborators who care about safe student experiences, ethical commerce and environmental restoration. If your organisation prioritises learning, dignity and measurable outcomes, we want to hear from you.</p>
-      <ul>
-        <li>Schools that prioritise student safety, experiential learning and inclusivity.</li>
-        <li>Commercial partners that practice ethical travel, fair pricing and cultural respect.</li>
-        <li>Community organisations focused on conservation, youth mentorship and local livelihoods.</li>
-      </ul>
 
-      <blockquote>“Every partnership grows into community. We look for organisations that bring skill, patience and a long-term view.”</blockquote>
-      <p class="partner-endorsement"><strong>— Scholar’s Nest Community Board</strong></p>
-    </section>
-
-    <!-- RECOGNITION -->
-    <section class="section reveal" aria-labelledby="recognition-heading">
-      <h2 id="recognition-heading">Recognition and next steps</h2>
-      <p>Scholar’s Nest is recognised for combining hospitality with education and community impact. Our badges reflect trusted partnerships and verified sustainability practices.</p>
-      <div style="margin-top:0.6rem;">
-        <span class="badge">Education-First Partnerships</span>
-        <span class="badge">Sustainability Verified</span>
-        <span class="badge">Community Builder 2025</span>
-      </div>
-
-      <div class="cta reveal" style="margin-top:1rem;">
-        <p style="margin-bottom:0.6rem;">Still have questions, or ready to partner with Scholar’s Nest?</p>
-        <button class="btn" onclick="window.location.href='contact-us.html'">Visit the contact page</button>
-      </div>
-    </section>
-
-  </main>
-
-  <script>
-    // Intersection Observer to reveal elements with .reveal and .reveal-stagger
-    (function(){
-      const observerOptions = { root: null, rootMargin: '0px 0px -80px 0px', threshold: 0.06 };
-      const revealObserver = new IntersectionObserver((entries, obs) => {
-        entries.forEach(entry => {
-          if(entry.isIntersecting) {
-            entry.target.classList.add('in-view');
-            // if we want to keep it once visible, unobserve
-            obs.unobserve(entry.target);
-          }
-        });
-      }, observerOptions);
-
-      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-      document.querySelectorAll('.reveal-stagger').forEach(el => revealObserver.observe(el));
-    })();
-  </script>
-
-<!--footer and shii-->
-<footer class="footer">
-      <div class="section__container footer__container">
-        <div class="footer__col">
-          <div class="logo footer__logo">
-            <div>SN</div>
-            <span>SCHOLAR'S <br />NEST</span>
-          </div>
-            <p class="section__description">
-            Scholar's Nest provides safe, affordable, and comfortable student accommodations.<br />
-             Book your stay with us and join a vibrant community focused on learning, growth, and well-being.
-            </p>
-          <ul class="footer__socials">
-            <li>
-              <a href="#"><i class="ri-youtube-fill"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="ri-instagram-line"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="ri-facebook-fill"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="ri-linkedin-fill"></i></a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h4>Services</h4>
-          <div class="footer__links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about-us.html">About Us</a></li>
-            <li><a href="parents.html">Guardians & Residents</a></li>
-            <li><a href="schools.html">Schools & Partners</a></li>
-            <li><a href="room-details.html">Rooms & Spaces</a></li>
-            <li><a href="contact-us.html">Contact Us</a></li>
-          </div>
-        </div>
-        <div class="footer__col">
-          <h4>Contact Us</h4>
-          <div class="footer__links">
-            <li>
-              <span><i class="ri-phone-fill"></i></span>
-              <div>
-                <h5>Phone Number</h5>
-                <p>+254 719837909</p>
+          <div class="content-column">
+            <h3>Educator Endorsements</h3>
+            <div class="testimonials">
+              <div class="testimonial">
+                “Our visit to Scholar’s Nest became part of our core curriculum. Students returned curious, confident
+                and better prepared for leadership roles.”<br><br>
+                <strong>— Dr. Evelyn Reed. Dean of Students, Light Academy.</strong>
               </div>
-            </li>
-            <li>
-              <span><i class="ri-record-mail-line"></i></span>
-              <div>
-                <h5>Email</h5>
-                <p><a href="mailto:scholarsnestke@gmail.com">scholarsnestke@gmail.com</a></p>
+              <div class="testimonial">
+                “Logistics were seamless, and the learning outcomes were tangible. Scholar’s Nest understands how to run
+                safe, meaningful group visits.”<br><br>
+                <strong>— Ms. Amina Okoth. Head of Trips, Braeburn International.</strong>
               </div>
-            </li>
-            <li>
-              <span><i class="ri-map-pin-2-fill"></i></span>
-              <div>
-                <h5>Location</h5>
-                <p>Delta Towers, 4th Floor, <br /> Suite 3, Westlands Nairobi</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:1rem;">
+          <button class="btn" onclick="window.location.href='contact-us.html#bg-photo-section'">
+            Organize a School Trip
+          </button>
+
+
+        </div>
+      </section>
+
+      <!-- UNIVERSITY PATHWAYS (inserted before community as requested) -->
+      <section class="section block-university reveal" aria-labelledby="university-heading">
+        <h2 id="university-heading">University Pathways <br /> & Global Opportunities</h2>
+        <h3>Beyond graduation, towards the world</h3>
+        <p>For senior residents, the Global Pathways Program offers targeted support for admissions to universities in
+          the United States, Canada, Japan, Europe and beyond.</p>
+        <ul>
+          <li><strong>In-house Education Consultants</strong> who guide residents through essays, scholarships and
+            selection.</li>
+          <li><strong>Global Alumni Mentorship</strong> pairing aspiring students with former Nest residents studying
+            abroad.</li>
+          <li><strong>Exam Readiness</strong> with SAT, IELTS and other test prep sessions on site.</li>
+          <li><strong>Pathways Fair</strong> a signature annual event with university representatives and scholarship
+            advisors.</li>
+        </ul>
+
+        <div class="content-columns reveal-stagger" style="margin-top:1rem;">
+          <div class="content-column">
+            <h3>What to expect in your application process</h3>
+            <ul>
+              <li>Personal statement coaching and iterative feedback.</li>
+              <li>Portfolio review for arts and design applicants.</li>
+              <li>Mock interviews and scholarship strategy sessions.</li>
+              <li>Visa orientation and pre-departure briefings.</li>
+            </ul>
+            <div class="image-grid" aria-hidden="true">
+              <img src="https://i.pinimg.com/1200x/8c/7d/cb/8c7dcb0baec6e068f49858c03bc2ce8f.jpg"
+                alt="student at a university fair">
+              <img src="https://i.pinimg.com/1200x/15/c3/11/15c311a5f67162361f2effe111e726b5.jpg"
+                alt="one-on-one essay coaching">
+              <img src="https://i.pinimg.com/736x/39/61/cc/3961cc8bb293f19b6b513b33757cc89b.jpg"
+                alt="alumni mentoring session">
+              <img src="https://i.pinimg.com/1200x/ba/a5/9d/baa59dd34de4b9992cd630238118f87d.jpg"
+                alt="mock interview practice">
+            </div>
+          </div>
+
+          <div class="content-column">
+            <h3>Resident Success</h3>
+            <blockquote>“I arrived at my dream university in Canada because Scholar’s Nest gave me direction, resources,
+              and confidence. They did not just house me; they raised my ambition.”</blockquote>
+            <p class="partner-endorsement"><strong>— Faith M., Resident Alumnus</strong></p>
+
+            <div style="margin-top:1rem;" class="benefit-grid">
+              <div class="benefit">
+                <h4>Alumni Network</h4>
+                <p>Connect with past residents excelling in academics and careers globally.</p>
               </div>
-            </li>
+              <div class="benefit">
+                <h4>On-site Support</h4>
+                <p>Workshops, consultations, and quiet study spaces dedicated to applicants.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PARTNERS (commercial partners) -->
+      <section class="section block-partners reveal" aria-labelledby="partners-heading">
+        <h2 id="partners-heading">Commercial <br />Partners</h2>
+        <h3>Collaborate and grow with Scholar’s Nest</h3>
+        <p>We partner with tour operators, travel agents and local businesses who prioritise ethical practices and
+          community benefit. Partners access a stable stream of young travellers, educators and visiting families.</p>
+        <div class="benefit-grid reveal-stagger" style="margin-top:1rem;">
+          <div class="benefit">
+            <h4>Expanded Market Reach</h4>
+            <p>Feature your services to a highly engaged resident and visitor base.</p>
+          </div>
+          <div class="benefit">
+            <h4>Competitive Commissions</h4>
+            <p>Clear, fair commission structures for bookings and referrals.</p>
+          </div>
+          <div class="benefit">
+            <h4>Dedicated Support</h4>
+            <p>Partner portal, seamless integrations and an assigned account lead.</p>
+          </div>
+          <div class="benefit">
+            <h4>Exclusive Offers</h4>
+            <p>Seasonal deals and partner-only listings to drive bookings.</p>
+          </div>
+        </div>
+
+        <h3 style="margin-top:1rem;">Partner endorsements</h3>
+        <div class="testimonials reveal-stagger">
+          <div class="testimonial">
+            “Hosting Scholar’s Nest residents at our amusement park and cinema in Mombasa has been a pleasure — they
+            arrive curious, respectful and eager to engage.
+            Our joint events create fun, safe outings that benefit both the community and local businesses.”<br><br>
+            <strong>— Aisha Hassan, Guest Relations Manager, Wild Waters Amusement Park & Cineplex</strong>
+          </div>
+
+          <!-- Photo grid: snapshots for the first endorsement -->
+          <div class="image-grid2" aria-hidden="true" style="margin:0.75rem 0;">
+            <img src="https://i.pinimg.com/1200x/24/34/fa/2434fa084b446601473be7f0567a674a.jpg"
+              alt="Snapshot: SafariLink collaboration event">
+            <img src="https://i.pinimg.com/1200x/39/ae/90/39ae90623a3c5d04a068d32c86491804.jpg"
+              alt="Snapshot: young travellers at Scholar's Nest">
+            <img src="https://picsum.photos/seed/sn3/800/600" alt="Snapshot: sustainable travel workshop">
+          </div>
+
+          <div class="testimonial">
+            “Nutriee Fish's natural fish snacks and spice powder were an instant hit with the residents — delicious,
+            nutritious and sustainably made. Feedback has been overwhelmingly positive, and both Scholar’s Nest and
+            Nutriee Fish have seen significant benefits:
+            residents enjoy healthier options while Nutriee Fish expanded its local reach and impact.”
+            <br><br>
+            <strong>— Karen Mwangi, COO, <span style="color: var(--secondary-color)">Nutriee Fish </span></strong>
+          </div>
+
+          <!-- Photo grid: snapshots for the Nutriee Fish endorsement -->
+          <div class="image-grid2" aria-hidden="true" style="margin:0.75rem 0;">
+            <img src="https://i.pinimg.com/1200x/dc/46/4c/dc464c52692dbd2b592b959280ddd5f6.jpg"
+              alt="Snapshot: Nutriee Fish tasting session">
+            <img src="https://i.pinimg.com/1200x/b1/8d/97/b18d97ee5549d84548a0620bda227af4.jpg"
+              alt="Snapshot: residents enjoying healthy snacks">
+            <img src="https://i.pinimg.com/1200x/d2/c5/ff/d2c5ffed4567aa5bba67d87b8549e20a.jpg"
+              alt="Snapshot: Nutriee Fish product display">
+          </div>
+
+          <div class="testimonial">
+            “Partnering with Scholar’s Nest has been a joy. At GreenHarvest Farms we grow organic, halal and non‑GMO
+            produce with care — and seeing our mushrooms,
+            fruits and other harvests become part of residents' meals fills me with pride. Scholar’s Nest treats food
+            with the same respect we do,
+            and this collaboration has helped us reach neighbours who value healthy, ethical food. Our open-farm days
+            are a community highlight: residents and
+            visitors come to pick mushrooms and seasonal fruit, learn about organic farming and halal practices, and
+            leave inspired.
+            I’m passionate about this work and grateful for a partner that shares our values — I can’t wait for more
+            shared events and visits.”
+            <br><br>
+            <strong>— Mr. Musa Otieno, Founder, <span style="color: var(--secondary-color)">GreenHarvest Farms
+              </span></strong>
+          </div>
+        </div>
+
+        <div style="margin-top:1rem;">
+          <button class="btn" onclick="window.location.href='contact-us.html#bg-photo-section'">
+            Be Our Commercial Partner
+          </button>
+      </section>
+
+      <!-- COMMUNITY & SUSTAINABILITY -->
+      <section class="section block-community reveal" aria-labelledby="community-heading">
+        <h2 id="community-heading">Community <br />& NPOs</h2>
+        <h3>Making local impact through shared action</h3>
+        <p>Scholar’s Nest invites community organisations and sustainability groups to design and lead projects with
+          residents. Our role is to provide venue, visibility and logistical support so projects can scale and sustain.
+        </p>
+        <div class="highlight-box">
+          We welcome groups to lead beach cleanups, guided park hikes, yoga and reflection sessions, and nature trails
+          that combine conservation with wellbeing.
+        </div>
+
+        <div class="content-columns reveal-stagger" style="margin-top:1rem;">
+          <div class="content-column">
+            <h3>Typical activities we host</h3>
+            <ul class="engagement-list">
+              <li>Beach cleanups and coastal restoration projects.</li>
+              <li>Park hikes and guided nature trails with local ecologists.</li>
+              <li>Yoga mornings, mindfulness sessions and reflection circles.</li>
+              <li>Community fairs, craft markets and sustainability workshops.</li>
+            </ul>
+
+            <div class="image-grid" aria-hidden="true" style="margin-top:1rem;">
+              <img src="https://i.pinimg.com/1200x/d9/ca/e0/d9cae0b1ddf2e4ec41febaaaca897db6.jpg"
+                alt="volunteers picking up litter at a beach">
+              <img src="https://i.pinimg.com/1200x/78/53/fd/7853fd56b4458943dff95b180d47e133.jpg"
+                alt="group hike and nature trail">
+              <img src="https://i.pinimg.com/1200x/ed/e3/e3/ede3e3ff8244bef97c6e4030a76394eb.jpg"
+                alt="yoga session on the lawn">
+              <img src="https://i.pinimg.com/1200x/95/40/c3/9540c37f87e018a7916d4d6b11d31b40.jpg"
+                alt="community craft fair">
+            </div>
+          </div>
+
+          <div class="content-column">
+            <h3>Partnership impact</h3>
+            <p>Projects run with us aim to create measurable outcomes, such as reduced single-use waste, increased
+              native tree cover, and greater public awareness of local biodiversity. We publish short reports after
+              major activities so partners and residents can see progress.</p>
+
+            <h3 style="margin-top:1rem;">Community voices</h3>
+            <div class="testimonials">
+              <div class="testimonial">
+                “We hosted a coastal restoration day and the energy was incredible. Guests, residents and locals worked
+                side by side.”<br><br>
+                <strong>— Umi Sora, Green Shores Initiative</strong>
+              </div>
+              <div class="testimonial">
+                “Joining a yoga and beach cleanup changed how I travel. I look forward to more. Bana
+                mshaniconvince”<br><br>
+                <strong>— Ahmed Noor, Resident and Volunteer</strong>
+              </div>
+            </div>
+
+            <div style="margin-top:1rem;">
+              <button class="btn" onclick="window.location.href='contact?type=community'">Propose a Community
+                Initiative</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHAT WE'RE LOOKING FOR -->
+      <section class="section block-involvement reveal" aria-labelledby="looking-heading">
+        <h2 id="looking-heading">What we are looking for</h2>
+        <h3>Partners who share values and practical impact</h3>
+        <p>Scholar’s Nest seeks collaborators who care about safe student experiences, ethical commerce and
+          environmental restoration. If your organisation prioritises learning, dignity and measurable outcomes, we want
+          to hear from you.</p>
+        <ul>
+          <li>Schools that prioritise student safety, experiential learning and inclusivity.</li>
+          <li>Commercial partners that practice ethical travel, fair pricing and cultural respect.</li>
+          <li>Community organisations focused on conservation, youth mentorship and local livelihoods.</li>
+        </ul>
+
+        <blockquote>“Every partnership grows into community. We look for organisations that bring skill, patience and a
+          long-term view.”</blockquote>
+        <p class="partner-endorsement"><strong>— Scholar’s Nest Community Board</strong></p>
+      </section>
+
+      <!-- RECOGNITION -->
+      <section class="section reveal" aria-labelledby="recognition-heading">
+        <h2 id="recognition-heading">Recognition and next steps</h2>
+        <p>Scholar’s Nest is recognised for combining hospitality with education and community impact. Our badges
+          reflect trusted partnerships and verified sustainability practices.</p>
+        <div style="margin-top:0.6rem;">
+          <span class="badge">Education-First Partnerships</span>
+          <span class="badge">Sustainability Verified</span>
+          <span class="badge">Community Builder 2025</span>
+        </div>
+
+        <div class="cta reveal" style="margin-top:1rem;">
+          <p style="margin-bottom:0.6rem;">Still have questions, or ready to partner with Scholar’s Nest?</p>
+          <button class="btn" onclick="window.location.href='contact-us.html'">Visit the contact page</button>
+        </div>
+      </section>
+
+    </main>
+
+    <script>
+      // Intersection Observer to reveal elements with .reveal and .reveal-stagger
+      (function () {
+        const observerOptions = { root: null, rootMargin: '0px 0px -80px 0px', threshold: 0.06 };
+        const revealObserver = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+              // if we want to keep it once visible, unobserve
+              obs.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+        document.querySelectorAll('.reveal-stagger').forEach(el => revealObserver.observe(el));
+      })();
+    </script>
+
+    <!--footer and shii-->
+    <footer class="new-footer">
+      <div class="section__container footer__content">
+        <div class="footer__left">
+          <ul class="big-nav-links">
+            <li><a href="index.html">Home <span class="arrow">&rarr;</span></a></li>
+            <li><a href="about-us.html">About Us <span class="arrow">&rarr;</span></a></li>
+            <li><a href="parents.html">Guardians & Residents <span class="arrow">&rarr;</span></a></li>
+            <li><a href="schools.html">Schools & Partners <span class="arrow">&rarr;</span></a></li>
+            <li><a href="room-details.html">Rooms & Spaces <span class="arrow">&rarr;</span></a></li>
+            <li><a href="contact-us.html">Contact Us <span class="arrow">&rarr;</span></a></li>
+          </ul>
+        </div>
+        <div class="footer__right">
+          <div class="newsletter-section">
+            <h3>Newsletter</h3>
+            <p>Sign up for our newsletter to stay up to date with the latest news.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Email" required>
+              <button type="submit">&rarr;</button>
+            </form>
+          </div>
+          <div class="contact-large">
+            <a href="mailto:scholarsnestke@gmail.com" class="email-link">scholarsnestke@gmail.com</a>
+            <p class="phone-number">+254 719837909</p>
           </div>
         </div>
       </div>
-      <div class="footer__bar">
-        Copyright © 2025 Scholar's Nest Kenya. All rights reserved.
+      <div class="footer__bottom">
+        <p class="copyright">&copy; 2025 Scholar's Nest Kenya. All rights reserved.</p>
+        <ul class="footer__socials">
+          <li><a href="#"><i class="ri-youtube-fill"></i></a></li>
+          <li><a href="#"><i class="ri-instagram-line"></i></a></li>
+          <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
+          <li><a href="#"><i class="ri-linkedin-fill"></i></a></li>
+        </ul>
       </div>
     </footer>
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
   </body>
+
 </html>

@@ -1,172 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css" />
-    <title>Contact Us - Nest</title>
-  </head>
 
-  <body>
-    <nav>
-      <div class="nav__bar">
-        <div class="nav__header">
-          <div class="logo nav__logo">
-             <div> <img src="assets/NEST GREY LOGO.png" alt="logo" style="width: 40px; height: 40px;"> 
-            </div>
-            <span>SCHOLAR'S <br /> NEST</span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <title>Contact Us - Nest</title>
+</head>
+
+<body>
+  <nav>
+    <div class="nav__bar">
+      <div class="nav__header">
+        <div class="logo nav__logo">
+          <div> <img src="assets/NEST GREY LOGO.png" alt="logo" style="width: 40px; height: 40px;">
           </div>
-          <div class="nav__menu__btn" id="menu-btn">
-            <i class="ri-menu-line"></i>
-          </div>
+          <span>SCHOLAR'S <br /> NEST</span>
         </div>
-        <ul class="nav__links" id="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about-us.html">About Us</a></li>
-          <li><a href="parents.html">Guardians & Residents</a></li>
-          <li><a href="schools.html">Schools & Partners</a></li>
-          <li><a href="room-details.html">Rooms & Spaces</a></li>
-          <li><a href="contact-us.html" class="active" aria-current="page">Contact Us</a></li>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="parents.html">Guardians & Residents</a></li>
+        <li><a href="schools.html">Schools & Partners</a></li>
+        <li><a href="room-details.html">Rooms & Spaces</a></li>
+        <li><a href="contact-us.html" class="active" aria-current="page">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+  <header class="header-contact-us" id="home">
+    <div class="section__container-lead header__container">
+      <p class="section__subheader">Ready to book your stay?</p>
+      <h1 id="highlightText">contact<br /> us <br /> today</h1>
+      <button class="btn"
+        onclick="document.querySelector('#bg-photo-section').scrollIntoView({behavior: 'smooth'})">Talk To Us</button>
+    </div>
+  </header>
+
+  <!-- about section -->
+
+  <section id="bg-photo-section" class="bg-photo-section">
+    <div class="contact-pair">
+      <h2>Ring Us On:</h2>
+      <p>+254 719837909</p>
+    </div>
+    <div class="contact-pair">
+      <h2>Email:</h2>
+      <p>
+        <a href="mailto:scholarsnestke@gmail.com"
+          style="color: var(--extra-light); text-decoration: underline; transition: color 0.3s ease;"
+          onmouseover="this.style.color='var(--secondary-color)'" onmouseout="this.style.color='var(--extra-light)'">
+          scholarsnestke@gmail.com
+        </a>
+      </p>
+    </div>
+    <div class="contact-pair">
+      <h2>Come See Us:</h2>
+      <p> Nyali Golf Drive, Nyali Estate.<br /> Mombasa, Kenya</p>
+    </div>
+
+    <div class="contact-pair">
+      <h2>Connect on Social Media:</h2>
+      <p>
+        <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener" aria-label="Instagram"
+          style="margin-right: 12px;">
+          <i class="ri-instagram-line" style="font-size: 50px; color: var(--extra-light);"></i>
+        </a>
+        <a href="https://facebook.com/yourpage" target="_blank" rel="noopener" aria-label="Facebook"
+          style="margin-right: 12px;">
+          <i class="ri-facebook-line" style="font-size: 50px; color: var(--extra-light);"></i>
+        </a>
+        <a href="https://tiktok.com/@yourprofile" target="_blank" rel="noopener" aria-label="TikTok">
+          <i class="ri-tiktok-line" style="font-size: 50px; color: var(--extra-light);"></i>
+        </a>
+      </p>
+    </div>
+
+
+    <button class="btn" onclick="document.querySelector('#map').scrollIntoView({behavior: 'smooth'})">Get
+      Directions</button>
+  </section>
+
+  <div id="map"
+    style="width: 100%; height: 50vw; margin-top: 2rem; border-radius: 1px; box-shadow: 0 0 10px rgba(36, 84, 1, 0.4);">
+  </div>
+
+
+  <!--footer and shii-->
+  <footer class="new-footer">
+    <div class="section__container footer__content">
+      <div class="footer__left">
+        <ul class="big-nav-links">
+          <li><a href="index.html">Home <span class="arrow">&rarr;</span></a></li>
+          <li><a href="about-us.html">About Us <span class="arrow">&rarr;</span></a></li>
+          <li><a href="parents.html">Guardians & Residents <span class="arrow">&rarr;</span></a></li>
+          <li><a href="schools.html">Schools & Partners <span class="arrow">&rarr;</span></a></li>
+          <li><a href="room-details.html">Rooms & Spaces <span class="arrow">&rarr;</span></a></li>
+          <li><a href="contact-us.html">Contact Us <span class="arrow">&rarr;</span></a></li>
         </ul>
       </div>
-    </nav>
-<header class="header-contact-us" id="home">
-  <div class="section__container-lead header__container">
-    <p class="section__subheader">Ready to book your stay?</p>
-    <h1 id="highlightText">contact<br /> us <br /> today</h1>
-    <button class="btn" onclick="document.querySelector('#bg-photo-section').scrollIntoView({behavior: 'smooth'})">Talk To Us</button>
-  </div>
-</header>
-
-<!-- about section -->
-
-<section id="bg-photo-section" class="bg-photo-section">
-  <div class="contact-pair">
-  <h2>Ring Us On:</h2>
-  <p>+254 719837909</p>
-</div>
-<div class="contact-pair">
-  <h2>Email:</h2>
-  <p>
-  <a href="mailto:scholarsnestke@gmail.com"
-     style="color: var(--extra-light); text-decoration: underline; transition: color 0.3s ease;"
-     onmouseover="this.style.color='var(--secondary-color)'"
-     onmouseout="this.style.color='var(--extra-light)'">
-    scholarsnestke@gmail.com
-  </a>
-</p>
-</div>
-<div class="contact-pair">
-  <h2>Come See Us:</h2>
-  <p> Nyali Golf Drive, Nyali Estate.<br /> Mombasa, Kenya</p>
-</div>
-
-<div class="contact-pair">
-  <h2>Connect on Social Media:</h2>
-  <p>
-    <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener" aria-label="Instagram" style="margin-right: 12px;">
-      <i class="ri-instagram-line" style="font-size: 50px; color: var(--extra-light);"></i>
-    </a>
-    <a href="https://facebook.com/yourpage" target="_blank" rel="noopener" aria-label="Facebook" style="margin-right: 12px;">
-      <i class="ri-facebook-line" style="font-size: 50px; color: var(--extra-light);"></i>
-    </a>
-    <a href="https://tiktok.com/@yourprofile" target="_blank" rel="noopener" aria-label="TikTok">
-      <i class="ri-tiktok-line" style="font-size: 50px; color: var(--extra-light);"></i>
-    </a>
-  </p>
-</div>
-
-
-  <button class="btn" onclick="document.querySelector('#map').scrollIntoView({behavior: 'smooth'})">Get Directions</button>
-</section>
-
-<div id="map" style="width: 100%; height: 50vw; margin-top: 2rem; border-radius: 1px; box-shadow: 0 0 10px rgba(36, 84, 1, 0.4);"></div>
-
-
-<!--footer and shii-->
-<footer class="footer">
-      <div class="section__container footer__container">
-        <div class="footer__col">
-          <div class="logo footer__logo">
-            <div>SN</div>
-            <span>SCHOLAR'S <br />NEST</span>
-          </div>
-            <p class="section__description">
-            Scholar's Nest provides safe, affordable, and comfortable student accommodations.<br />
-             Book your stay with us and join a vibrant community focused on learning, growth, and well-being.
-            </p>
-          <ul class="footer__socials">
-            <li>
-              <a href="#"><i class="ri-youtube-fill"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="ri-instagram-line"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="ri-facebook-fill"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="ri-linkedin-fill"></i></a>
-            </li>
-          </ul>
+      <div class="footer__right">
+        <div class="newsletter-section">
+          <h3>Newsletter</h3>
+          <p>Sign up for our newsletter to stay up to date with the latest news.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Email" required>
+            <button type="submit">&rarr;</button>
+          </form>
         </div>
-        <div class="footer__col">
-          <h4>Services</h4>
-          <div class="footer__links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about-us.html">About Us</a></li>
-            <li><a href="parents.html">Guardians & Residents</a></li>
-            <li><a href="schools.html">Schools & Partners</a></li>
-            <li><a href="room-details.html">Rooms & Spaces</a></li>
-            <li><a href="contact-us.html">Contact Us</a></li>
-          </div>
-        </div>
-        <div class="footer__col">
-          <h4>Contact Us</h4>
-          <div class="footer__links">
-            <li>
-              <span><i class="ri-phone-fill"></i></span>
-              <div>
-                <h5>Phone Number</h5>
-                <p>+254 719837909</p>
-              </div>
-            </li>
-            <li>
-              <span><i class="ri-record-mail-line"></i></span>
-              <div>
-                <h5>Email</h5>
-                <p><a href="mailto:scholarsnestke@gmail.com">scholarsnestke@gmail.com</a></p>
-              </div>
-            </li>
-            <li>
-              <span><i class="ri-map-pin-2-fill"></i></span>
-              <div>
-                <h5>Location</h5>
-                <p>Delta Towers, 4th Floor, <br /> Suite 3, Westlands Nairobi</p>
-              </div>
-            </li>
-          </div>
+        <div class="contact-large">
+          <a href="mailto:scholarsnestke@gmail.com" class="email-link">scholarsnestke@gmail.com</a>
+          <p class="phone-number">+254 719837909</p>
         </div>
       </div>
-      <div class="footer__bar">
-        Copyright © 2025 Scholar's Nest Kenya. All rights reserved.
-      </div>
-    </footer>
+    </div>
+    <div class="footer__bottom">
+      <p class="copyright">&copy; 2025 Scholar's Nest Kenya. All rights reserved.</p>
+      <ul class="footer__socials">
+        <li><a href="#"><i class="ri-youtube-fill"></i></a></li>
+        <li><a href="#"><i class="ri-instagram-line"></i></a></li>
+        <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
+        <li><a href="#"><i class="ri-linkedin-fill"></i></a></li>
+      </ul>
+    </div>
+  </footer>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="main.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="main.js"></script>
 
-    <!--REMEMBER TO ADD YOUR API KEY YA LOCATION MY FREN!!-->
-    <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
-</script>
+  <!--REMEMBER TO ADD YOUR API KEY YA LOCATION MY FREN!!-->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+  </script>
 
-  </body>
+</body>
+
 </html>

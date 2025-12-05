@@ -151,6 +151,38 @@ ScrollReveal().reveal(".news__card", {
   interval: 100,
 });
 
+// About Us Page: Mission & Vision
+ScrollReveal().reveal(".about-mv__left", {
+  ...scrollRevealOption,
+  origin: "left",
+  delay: 200,
+});
+ScrollReveal().reveal(".about-mv__right", {
+  ...scrollRevealOption,
+  origin: "right",
+  delay: 400,
+});
+ScrollReveal().reveal(".about-mv__left2", {
+  ...scrollRevealOption,
+  origin: "left",
+  delay: 200,
+});
+ScrollReveal().reveal(".about-mv__right2", {
+  ...scrollRevealOption,
+  origin: "right",
+  delay: 400,
+});
+
+// About Us Page: Our Values
+ScrollReveal().reveal(".values-info", {
+  ...scrollRevealOption,
+  origin: "left",
+});
+ScrollReveal().reveal(".value-card", {
+  ...scrollRevealOption,
+  interval: 200,
+});
+
 
 // Make room cards clickable and keyboard-accessible
 document.addEventListener('DOMContentLoaded', () => {
@@ -229,7 +261,7 @@ if (introSection && video && toggleBtn) {
         introSection.classList.add('show');
       } else {
         // If not intersecting and video isn't active, hide overlay
-        if(!introSection.classList.contains('video-active')) {
+        if (!introSection.classList.contains('video-active')) {
           introSection.classList.remove('show');
         }
       }
@@ -262,7 +294,7 @@ if (introSection && video && toggleBtn) {
 const currentPage = window.location.pathname.split('/').pop();
 
 document.querySelectorAll('.nav__links a').forEach(link => {
-  if(link.getAttribute('href') === currentPage) {
+  if (link.getAttribute('href') === currentPage) {
     link.classList.add('active');
   }
 });
@@ -305,87 +337,87 @@ window.initMap = function () {
 // --- END GOOGLE MAP INITIALIZATION ---
 
 
-  const section = document.getElementById('animatedSection');
-  const text1 = document.getElementById('text1');
-  const button = document.getElementById('seeStoreButton');
+const section = document.getElementById('animatedSection');
+const text1 = document.getElementById('text1');
+const button = document.getElementById('seeStoreButton');
 
-  if (section && text1 && button) {
-    // Ensure button hidden initially and positioned
-    button.style.opacity = '0.5';
+if (section && text1 && button) {
+  // Ensure button hidden initially and positioned
+  button.style.opacity = '0.5';
 
-    // Intersection observer to detect when section is at least 50% visible
-    const animatedSectionObserver = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting) {
-          // Trigger text1 animation sliding down
-          text1.classList.add('visible');
+  // Intersection observer to detect when section is at least 50% visible
+  const animatedSectionObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Trigger text1 animation sliding down
+        text1.classList.add('visible');
 
-          // After text1 finishes sliding down, trigger button
-          text1.addEventListener('transitionend', () => {
-            button.classList.add('visible');
-          }, {once: true});
+        // After text1 finishes sliding down, trigger button
+        text1.addEventListener('transitionend', () => {
+          button.classList.add('visible');
+        }, { once: true });
 
-          // Stop observing after first trigger
-          animatedSectionObserver.unobserve(section);
-        }
-      });
-    }, {threshold: 0.5});
-
-    animatedSectionObserver.observe(section);
-  }
-
-  const slider = document.querySelector('.carousel-wrapper');
-  
-  if (slider) {
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-    slider.addEventListener('mousedown', (e) => {
-      isDown = true; 
-      slider.classList.add('active');
-      startX = e.pageX - slider.offsetLeft;
-      scrollLeft = slider.scrollLeft;
-    });
-    slider.addEventListener('mouseleave', () => {
-      isDown = false;
-      slider.classList.remove('active');
-    });
-    slider.addEventListener('mouseup', () => {
-      isDown = false;
-      slider.classList.remove('active');
-    });
-    slider.addEventListener('mousemove', (e) => {
-      if(!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - slider.offsetLeft;
-      const walk = (x - startX) * 2; 
-      slider.scrollLeft = scrollLeft - walk;
-    });
-  }
-   // Count up animation
-  function countUp(element, target, duration = 2000) {
-    let start = 0;
-    const stepTime = Math.max(Math.floor(duration / target), 20);
-    function step() {
-      start++;
-      element.textContent = start + "+";
-      if (start < target) {
-        setTimeout(step, stepTime);
+        // Stop observing after first trigger
+        animatedSectionObserver.unobserve(section);
       }
-    }
-    step();
-  }
-
-  // Trigger when page loads
-  window.addEventListener('load', () => {
-    const numbers = document.querySelectorAll('.stat-number');
-    numbers.forEach((numEl) => {
-      const target = parseInt(numEl.getAttribute('data-target'), 10);
-      countUp(numEl, target, 1500);
     });
-  });
+  }, { threshold: 0.5 });
 
-  // Shader loading animation (vanilla JS version)
+  animatedSectionObserver.observe(section);
+}
+
+const slider = document.querySelector('.carousel-wrapper');
+
+if (slider) {
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+  slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    slider.classList.add('active');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+  slider.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider.classList.remove('active');
+  });
+  slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.classList.remove('active');
+  });
+  slider.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 2;
+    slider.scrollLeft = scrollLeft - walk;
+  });
+}
+// Count up animation
+function countUp(element, target, duration = 2000) {
+  let start = 0;
+  const stepTime = Math.max(Math.floor(duration / target), 20);
+  function step() {
+    start++;
+    element.textContent = start + "+";
+    if (start < target) {
+      setTimeout(step, stepTime);
+    }
+  }
+  step();
+}
+
+// Trigger when page loads
+window.addEventListener('load', () => {
+  const numbers = document.querySelectorAll('.stat-number');
+  numbers.forEach((numEl) => {
+    const target = parseInt(numEl.getAttribute('data-target'), 10);
+    countUp(numEl, target, 1500);
+  });
+});
+
+// Shader loading animation (vanilla JS version)
 
 let camera, scene, renderer, uniforms;
 let canvas = document.getElementById("shader-canvas");
@@ -472,7 +504,28 @@ initShader();
 // ▶ Hide loading screen when page fully loads
 window.addEventListener("load", () => {
   const loader = document.getElementById("shader-loader");
-  loader.classList.add("fade-out");
+  if (loader) {
+    loader.classList.add("fade-out");
+    setTimeout(() => loader.remove(), 1000);
+  }
+});
 
-  setTimeout(() => loader.remove(), 1000);
+
+
+// Reveal Team Section Header
+ScrollReveal().reveal(".section-grid .caption", {
+  ...scrollRevealOption,
+  delay: 200,
+});
+ScrollReveal().reveal(".section-grid .title", {
+  ...scrollRevealOption,
+  delay: 400,
+});
+ScrollReveal().reveal(".section-grid .subtitle", {
+  ...scrollRevealOption,
+  delay: 600,
+});
+ScrollReveal().reveal(".section-grid .description", {
+  ...scrollRevealOption,
+  delay: 800,
 });

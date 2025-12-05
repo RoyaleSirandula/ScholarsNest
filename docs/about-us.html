@@ -1,637 +1,659 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css" />
-    <title>About Us - Nest</title>
-  </head>
 
-  <body>
-    <nav>
-      <div class="nav__bar">
-        <div class="nav__header">
-          <div class="logo nav__logo">
-             <div> <img src="assets/NEST GREY LOGO.png" alt="logo" style="width: 40px; height: 40px;"> 
-            </div>
-            <span>SCHOLAR'S <br /> NEST</span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <title>About Us - Nest</title>
+</head>
+
+<body>
+  <nav>
+    <div class="nav__bar">
+      <div class="nav__header">
+        <div class="logo nav__logo">
+          <div> <img src="assets/NEST GREY LOGO.png" alt="logo" style="width: 40px; height: 40px;">
           </div>
-          <div class="nav__menu__btn" id="menu-btn">
-            <i class="ri-menu-line"></i>
+          <span>SCHOLAR'S <br /> NEST</span>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about-us.html" class="active" aria-current="page">About Us</a></li>
+        <li><a href="parents.html">Guardians & Residents</a></li>
+        <li><a href="schools.html">Schools & Partners</a></li>
+        <li><a href="room-details.html">Rooms & Spaces</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+  <header class="header-about" id="home">
+    <div class="section__container-lead header__container">
+      <p class="section__subheader">Get To Know More</p>
+      <h1 id="highlightText">about<br /> us,<br /> our values<br /><span
+          style="color: inherit; -webkit-text-fill-color: transparent; -webkit-text-stroke: 2px currentColor;">&amp;</span>
+        vision</h1>
+      <button class="btn" onclick="document.querySelector('#about-panel').scrollIntoView({behavior: 'smooth'})">What is
+        Scholar's Nest?</button>
+
+    </div>
+  </header>
+
+  <!-- About Us Panel -->
+  <section id="about-panel" class="about-panel">
+    <div id="about-label" class="about-label">WHAT EXACTLY IS SCHOLAR'S NEST?</div>
+    <div class="about-summary">
+      <span style="color:var(--secondary-color)">Scholar’s Nest™</span> is located on Nyali Golf Drive, Nyali Estate,
+      Mombasa, Kenya. It is a refreshing student living community by
+      <span style="color:var(--secondary-color);">Nest™</span>, a visionary real estate firm redefining modern
+      accommodation. Designed for comfort,
+      affordability, and focus, it blends fully serviced rooms with study-friendly space
+      and vibrant social zones that foster belonging. <br /> From study lounges, fast internet speeds, green spaces,
+      in-house chefs, and serene pools to 24/7 service,
+      top-tier security, and collaborations with leading schools, every detail supports academic excellence
+      and personal growth. More than housing, <span style="color:var(--secondary-color)">Scholar’s Nest™</span> is a
+      lifestyle hub where students thrive, connect,
+      and create their best stories.
+    </div>
+    <div class="about-stats">
+      <div class="stat-group">
+        <div class="about-num">150+</div>
+        <div class="about-labelstat" style="color:var(--secondary-color)">Units Managed</div>
+      </div>
+      <div class="stat-group">
+        <div class="about-num">10+</div>
+        <div class="about-labelstat" style="color:var(--secondary-color)">Partner Schools</div>
+      </div>
+      <div class="stat-group">
+        <div class="about-num">98%</div>
+        <div class="about-labelstat" style="color:var(--secondary-color)">Resident Satisfaction Rate</div>
+      </div>
+      <div class="stat-group">
+        <div class="about-num">24/7</div>
+        <div class="about-labelstat" style="color:var(--secondary-color)">Security & Facility Support</div>
+      </div>
+      <div class="stat-group">
+        <div class="about-num">15+</div>
+        <div class="about-labelstat" style="color:var(--secondary-color)">Community Events Hosted Annually</div>
+      </div>
+    </div>
+  </section>
+  <!--Info Sections-->
+  <section class="about-missionvision">
+    <div class="section__container about-mv__container">
+      <div class="about-mv__item about-mv__left">
+        <h2>mission</h2>
+      </div>
+      <div class="about-mv__item about-mv__right">
+        <p>
+          To provide safe, affordable, and comfortable student accommodations that foster academic excellence,
+          personal growth, and a vibrant community spirit.
+        </p>
+      </div>
+    </div>
+
+    <div class="section__container about-mv__container2">
+      <div class="about-mv__item about-mv__left2">
+        <p>
+          To be the leading student living community that empowers learners to achieve their full academic
+          and personal potential by providing safe, inspiring,
+          and sustainable environments.
+        </p>
+      </div>
+      <div class="about-mv__item about-mv__right2">
+        <h2>vision</h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="our-values-section">
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="icon">
+          <!-- Remix Icon for Global Community -->
+          <i class="ri-global-line" style="font-size: 34px;"></i>
+        </div>
+        <div class="value-description">
+          Creating a welcoming, home-away-from-home for students from every nation—where friendships cross borders and
+          cultures.
+        </div>
+        <div class="divider"></div>
+        <div class="value-title">Global Community</div>
+      </div>
+
+      <div class="value-card">
+        <div class="icon">
+          <!-- Remix Icon for Diversity & Respect -->
+          <i class="ri-honour-line" style="font-size: 34px;"></i>
+        </div>
+        <div class="value-description">
+          Respecting, celebrating, and learning from the diverse backgrounds and perspectives of our residents and
+          staff.
+        </div>
+        <div class="divider"></div>
+        <div class="value-title">Diversity & Respect</div>
+      </div>
+
+      <div class="value-card">
+        <div class="icon">
+          <!-- Remix Icon for peer support / helping hand -->
+          <i class="ri-hand-heart-line" style="font-size:34px;"></i>
+        </div>
+        <div class="value-description">
+          Supporting one another—students helping students, sharing knowledge, and building a supportive,
+          solution-driven community.
+        </div>
+        <div class="divider"></div>
+        <div class="value-title">Peer Support</div>
+      </div>
+
+
+      <div class="value-card">
+        <div class="icon">
+          <!-- Sustainability/Leaf SVG -->
+          <i class="ri-leaf-line" style="font-size: 34px;"></i>
+        </div>
+        <div class="value-description">
+          Living responsibly—championing sustainability in daily routines, conservation efforts, and eco-initiatives for
+          a greener planet.
+        </div>
+        <div class="divider"></div>
+        <div class="value-title">Sustainability</div>
+      </div>
+    </div>
+
+    <div class="values-info">
+      <h2><span style="color: inherit; -webkit-text-fill-color: transparent; -webkit-text-stroke: 2px currentColor;">our
+        </span> values</h2>
+      <p>At Scholar’s Nest™, our values guide everything we do. They shape our interactions, decisions, and the way we
+        build our platform.</p>
+    </div>
+  </section>
+
+  <style>
+    .our-values-section {
+      display: flex;
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 40px 0;
+      gap: 48px;
+      box-sizing: border-box;
+      background-color: #00000000;
+      border-bottom: var(--secondary-color) 2px solid;
+    }
+
+    .values-info {
+      flex: 1 1 340px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .values-info h2 {
+      color: var(--primary-color);
+      font-size: 7.7rem;
+      margin: 0 0 18px 0;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      border-bottom: var(--secondary-color) 2px solid;
+    }
+
+    .values-info p {
+      font-size: 1.10rem;
+      color: var(--text-light);
+      line-height: 1.45;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(2, 1fr);
+      gap: 5px;
+      flex: 1 1 500px;
+    }
+
+    .value-card {
+      background: #fff;
+      border-radius: 1px;
+      box-shadow: 0 1px 12px rgba(0, 0, 0, 0.05);
+      padding: 32px 26px 28px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition:
+        background 0.21s cubic-bezier(.4, 2, .6, 1),
+        transform 0.33s cubic-bezier(.34, 1.56, .64, 1),
+        box-shadow 0.16s cubic-bezier(.45, .25, .60, 1);
+      cursor: pointer;
+      will-change: transform, background;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .value-card:hover {
+      background: var(--primary-color);
+      color: #fff;
+
+      box-shadow: 0 6px 28px rgba(255, 75, 0, 0.14);
+    }
+
+    .value-card:hover .icon svg {
+      color: #fff;
+      /* changes stroke to white */
+    }
+
+    .value-card:hover .divider {
+      background: #fff;
+    }
+
+    .value-card .icon {
+      margin-bottom: 22px;
+      color: #181818;
+      transition: color 0.2s;
+      font-size: 2.2rem;
+    }
+
+    .value-card:hover .icon {
+      color: var(--secondary-color);
+    }
+
+    .value-description {
+      font-size: 1.01rem;
+      font-weight: 400;
+      color: var(--text-light);
+      margin-bottom: 18px;
+      transition: color 0.22s;
+    }
+
+    .value-card:hover .value-description,
+    .value-card:hover .value-title {
+      color: #fff;
+    }
+
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: var(--secondary-color);
+      margin: 0 0 14px 0;
+      border-radius: 2px;
+      transition: background 0.22s;
+    }
+
+    .value-title {
+      font-size: 1.06rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--primary-color);
+      transition: color 0.22s;
+    }
+
+    .value-card:hover .value-title {
+      color: var(--secondary-color);
+    }
+
+    @media (max-width: 950px) {
+      .our-values-section {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 32px;
+        padding: 32px 0;
+      }
+
+      .values-grid {
+        width: 100%;
+        max-width: 600px;
+      }
+
+      .value-card {
+        background: #fff;
+        border-radius: 1px;
+        box-shadow: 0 1px 12px rgba(0, 0, 0, 0.05);
+        padding: 32px 26px 28px 28px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        transition:
+          background 0.21s cubic-bezier(.4, 2, .6, 1),
+          transform 0.33s cubic-bezier(.34, 1.56, .64, 1),
+          box-shadow 0.16s cubic-bezier(.45, .25, .60, 1);
+        cursor: pointer;
+        will-change: transform, background;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .values-info h2 {
+        color: var(--primary-color);
+        font-size: 3.7rem;
+        margin: 0 0 18px 0;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        border-bottom: var(--secondary-color) 2px solid;
+      }
+
+      .values-info p {
+        font-size: 1rem;
+        color: var(--text-light);
+        line-height: 1;
+      }
+
+      .value-card .icon {
+        margin-bottom: 10px;
+        color: #181818;
+        transition: color 0.2s;
+        font-size: 1.2rem;
+      }
+
+      .value-description {
+        font-size: 1.01rem;
+        font-weight: 400;
+        color: var(--text-light);
+        margin-bottom: 18px;
+        transition: color 0.22s;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .values-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .value-card {
+        padding: 22px 18px 18px 18px;
+      }
+
+      .our-values-section {
+        padding: 16px 0;
+        margin: 0;
+      }
+
+      .values-info h2 {
+        color: var(--primary-color);
+        font-size: 2.7rem;
+        margin: 0 0 18px 0;
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        border-bottom: var(--secondary-color) 2px solid;
+      }
+
+      .values-info p {
+        font-size: 1rem;
+        color: var(--text-light);
+        line-height: 1.2;
+      }
+
+      .value-card {
+        background: #fff;
+        border-radius: 1px;
+        box-shadow: 0 1px 12px rgba(0, 0, 0, 0.05);
+        padding: 10px 12px 10px 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        transition:
+          background 0.21s cubic-bezier(.4, 2, .6, 1),
+          transform 0.33s cubic-bezier(.34, 1.56, .64, 1),
+          box-shadow 0.16s cubic-bezier(.45, .25, .60, 1);
+        cursor: pointer;
+        will-change: transform, background;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .value-card .icon {
+        margin-bottom: 5px;
+        color: #181818;
+        transition: color 0.2s;
+        font-size: 1.2rem;
+      }
+
+      .value-description {
+        font-size: 1.01rem;
+        font-weight: 400;
+        color: var(--text-light);
+        margin-bottom: 18px;
+        transition: color 0.22s;
+      }
+    }
+  </style>
+
+
+
+  <section class="section-grid">
+    <div class="section-header">
+      <div>
+        <div class="caption">Every Dream Needs A Team</div>
+        <h2 class="title">Meet Ours</h2>
+        <div class="subtitle">Adminstration</div>
+      </div>
+    </div>
+    <!--Card Section-->
+    <div class="card-container">
+      <div class="profile-card">
+        <img src="https://i.pinimg.com/736x/d9/7b/bb/d97bbb08017ac2309307f0822e63d082.jpg" alt="Profile" />
+        <div class="card-info">
+          <div class="card-name">Nashmi Abigail</div>
+          <div class="card-position"> Founder</div>
+        </div>
+        <div class="card-hover-details">
+          <div class="card-hover-name">Nashmi Abigail</div>
+          <div class="card-hover-position"> Founder</div>
+          <div class="card-hover-description">
+            Nashmi has over 15 years of experience in strategic leadership and business development.
           </div>
         </div>
-        <ul class="nav__links" id="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about-us.html" class="active" aria-current="page">About Us</a></li>
-          <li><a href="parents.html">Guardians & Residents</a></li>
-          <li><a href="schools.html">Schools & Partners</a></li>
-          <li><a href="room-details.html">Rooms & Spaces</a></li>
-          <li><a href="contact-us.html">Contact Us</a></li>
-        </ul>
       </div>
-    </nav>
-<header class="header-about" id="home">
-  <div class="section__container-lead header__container">
-    <p class="section__subheader">Get To Know More</p>
-    <h1 id="highlightText">about<br /> us,<br /> our values<br /><span style="color: inherit; -webkit-text-fill-color: transparent; -webkit-text-stroke: 2px currentColor; text-stroke: 2px currentColor;">&amp;</span> vision</h1>
-    <button class="btn" onclick="document.querySelector('#about-panel').scrollIntoView({behavior: 'smooth'})">What is Scholar's Nest?</button>
-
-  </div>
-</header>
-
-<!-- About Us Panel -->
-    <section id="about-panel" class="about-panel">
-      <div id="about-label" class="about-label">WHAT EXACTLY IS SCHOLAR'S NEST?</div>
-      <div class="about-summary">
-     <span style="color:var(--secondary-color)">Scholar’s Nest™</span> is located on Nyali Golf Drive, Nyali Estate, Mombasa, Kenya. It is a refreshing student living community by
-     <span style="color:var(--secondary-color);">Nest™</span>, a visionary real estate firm redefining modern accommodation. Designed for comfort,
-        affordability, and focus, it blends fully serviced rooms with study-friendly space 
-        and vibrant social zones that foster belonging. <br /> From study lounges, fast internet speeds, green spaces, in-house chefs, and serene pools to 24/7 service,
-        top-tier security, and collaborations with leading schools, every detail supports academic excellence
-        and personal growth. More than housing, <span style="color:var(--secondary-color)">Scholar’s Nest™</span> is a lifestyle hub where students thrive, connect,
-        and create their best stories.
-      </div>
-     <div class="about-stats">
-        <div class="stat-group">
-         <div class="about-num">150+</div>
-         <div class="about-labelstat" style="color:var(--secondary-color)">Units Managed</div>
-       </div>
-       <div class="stat-group">
-         <div class="about-num">10+</div>
-         <div class="about-labelstat" style="color:var(--secondary-color)">Partner Schools</div>
-       </div>
-       <div class="stat-group">
-          <div class="about-num">98%</div>
-          <div class="about-labelstat" style="color:var(--secondary-color)">Resident Satisfaction Rate</div>
+      <!-- Duplicate .profile-card for additional cards -->
+      <div class="profile-card">
+        <img src="https://i.pinimg.com/736x/d9/7b/bb/d97bbb08017ac2309307f0822e63d082.jpg" alt="Profile" />
+        <div class="card-info">
+          <div class="card-name">O'Neal Range</div>
+          <div class="card-position"> CEO</div>
         </div>
-       <div class="stat-group">
-          <div class="about-num">24/7</div>
-          <div class="about-labelstat" style="color:var(--secondary-color)">Security & Facility Support</div>
-       </div>
-       <div class="stat-group">
-         <div class="about-num">15+</div>
-         <div class="about-labelstat" style="color:var(--secondary-color)">Community Events Hosted Annually</div>
-       </div>
+        <div class="card-hover-details">
+          <div class="card-hover-name">O'Neal Range</div>
+          <div class="card-hover-position"> CEO</div>
+          <div class="card-hover-description">
+            O'Neal has over 15 years of experience in strategic leadership and business development.
+          </div>
+        </div>
       </div>
-   </section>
-   <!--Info Sections-->
-<section class="about-missionvision">
-  <div class="section__container about-mv__container">
-    <div class="about-mv__item about-mv__left">
-      <h2>mission</h2>
+      <div class="profile-card">
+        <img src="https://i.pinimg.com/736x/d9/7b/bb/d97bbb08017ac2309307f0822e63d082.jpg" alt="Profile" />
+        <div class="card-info">
+          <div class="card-name">Ciku Wainaina</div>
+          <div class="card-position"> Operations Lead</div>
+        </div>
+        <div class="card-hover-details">
+          <div class="card-hover-name">Ciku Wainaina</div>
+          <div class="card-hover-position"> Operations Lead</div>
+          <div class="card-hover-description">
+            Ciku has over 15 years of experience in strategic leadership and business development.
+          </div>
+        </div>
+      </div>
+      <div class="profile-card">
+        <img src="https://i.pinimg.com/736x/d9/7b/bb/d97bbb08017ac2309307f0822e63d082.jpg" alt="Profile" />
+        <div class="card-info">
+          <div class="card-name">Mr John Doe</div>
+          <div class="card-position"> Investments Lead</div>
+        </div>
+        <div class="card-hover-details">
+          <div class="card-hover-name">Mr John Doe</div>
+          <div class="card-hover-position"> Investments Lead</div>
+          <div class="card-hover-description">
+            John has over 15 years of experience in strategic leadership and business development.
+          </div>
+        </div>
+      </div>
+      <div class="profile-card">
+        <img src="https://i.pinimg.com/736x/d9/7b/bb/d97bbb08017ac2309307f0822e63d082.jpg" alt="Profile" />
+        <div class="card-info">
+          <div class="card-name">Mrs Jane Doe</div>
+          <div class="card-position"> Finance Lead</div>
+        </div>
+        <div class="card-hover-details">
+          <div class="card-hover-name">Mrs Jane Doe</div>
+          <div class="card-hover-position"> Finance Lead</div>
+          <div class="card-hover-description">
+            Jane has over 15 years of experience in strategic leadership and business development.
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="about-mv__item about-mv__right">
+    <div class="description">
       <p>
-        To provide safe, affordable, and comfortable student accommodations that foster academic excellence,
-        personal growth, and a vibrant community spirit.
-      </p>
-    </div>
-  </div>
-
-  <div class="section__container about-mv__container2">
-  <div class="about-mv__item about-mv__left2">
-    <p>
-      To be the leading student living community that empowers learners to achieve their full academic 
-        and personal potential by providing safe, inspiring,
-         and sustainable environments.
-    </p>
-  </div>
-  <div class="about-mv__item about-mv__right2">
-    <h2>vision</h2>
-  </div>
-</div>
-</section>
-
-<section class="our-values-section">
- <div class="values-grid">
-  <div class="value-card">
-  <div class="icon">
-    <!-- Remix Icon for Global Community -->
-    <i class="ri-global-line" style="font-size: 34px;"></i>
-  </div>
-  <div class="value-description">
-    Creating a welcoming, home-away-from-home for students from every nation—where friendships cross borders and cultures.
-  </div>
-  <div class="divider"></div>
-  <div class="value-title">Global Community</div>
-</div>
-
-<div class="value-card">
-  <div class="icon">
-    <!-- Remix Icon for Diversity & Respect -->
-    <i class="ri-honour-line" style="font-size: 34px;"></i>
-  </div>
-  <div class="value-description">
-    Respecting, celebrating, and learning from the diverse backgrounds and perspectives of our residents and staff.
-  </div>
-  <div class="divider"></div>
-  <div class="value-title">Diversity & Respect</div>
-</div>
-
- <div class="value-card">
-  <div class="icon">
-    <!-- Remix Icon for peer support / helping hand -->
-    <i class="ri-hand-heart-line" style="font-size:34px;"></i>
-  </div>
-  <div class="value-description">
-    Supporting one another—students helping students, sharing knowledge, and building a supportive, solution-driven community.
-  </div>
-  <div class="divider"></div>
-  <div class="value-title">Peer Support</div>
-</div>
-
-
-  <div class="value-card">
-    <div class="icon">
-      <!-- Sustainability/Leaf SVG -->
-     <i class="ri-leaf-line" style="font-size: 34px;"></i> 
-    </div>
-    <div class="value-description">
-      Living responsibly—championing sustainability in daily routines, conservation efforts, and eco-initiatives for a greener planet.
-    </div>
-    <div class="divider"></div>
-    <div class="value-title">Sustainability</div>
-  </div>
-</div>
-
-  <div class="values-info">
-    <h2><span style="color: inherit; -webkit-text-fill-color: transparent; -webkit-text-stroke: 2px currentColor; text-stroke: 2px currentColor;">our </span> values</h2>
-    <p>At Scholar’s Nest™, our values guide everything we do. They shape our interactions, decisions, and the way we build our platform.</p>
-  </div>
-</section>
-
-<style>
-.our-values-section {
-  display: flex;
-  max-width: 1100px;
-  margin: 50px auto;
-  padding: 40px 0;
-  gap: 48px;
-  box-sizing: border-box;
-  background-color: #00000000;
-  border-bottom: var(--secondary-color) 2px solid ;
-}
-.values-info {
-  flex: 1 1 340px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.values-info h2 {
-  color: var(--primary-color);
-  font-size: 7.7rem;
-  margin: 0 0 18px 0;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  border-bottom: var(--secondary-color) 2px solid;
-}
-.values-info p {
-  font-size: 1.10rem;
-  color: var(--text-light);
-  line-height: 1.45;
-}
-.values-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(2, 1fr);
-  gap: 5px;
-  flex: 1 1 500px;
-}
-.value-card {
-  background: #fff;
-  border-radius: 1px;
-  box-shadow: 0 1px 12px rgba(0,0,0,0.05);
-  padding: 32px 26px 28px 28px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  transition: 
-    background 0.21s cubic-bezier(.4,2,.6,1), 
-    transform 0.33s cubic-bezier(.34,1.56,.64,1), 
-    box-shadow 0.16s cubic-bezier(.45,.25,.60,1);
-  cursor: pointer;
-  will-change: transform, background;
-  position: relative;
-  overflow: hidden;
-}
-.value-card:hover {
-  background: var(--primary-color);
-  color: #fff;
-  
-  box-shadow: 0 6px 28px rgba(255,75,0,0.14);
-}
-.value-card:hover .icon svg {
-  color: #fff; /* changes stroke to white */
-}
-.value-card:hover .divider {
-  background: #fff;
-}
-.value-card .icon {
-  margin-bottom: 22px;
-  color: #181818;
-  transition: color 0.2s;
-  font-size: 2.2rem;
-}
-.value-card:hover .icon {
-  color: var(--secondary-color);
-}
-.value-description {
-  font-size: 1.01rem;
-  font-weight: 400;
-  color: var(--text-light);
-  margin-bottom: 18px;
-  transition: color 0.22s;
-}
-.value-card:hover .value-description,
-.value-card:hover .value-title {
-  color: #fff;
-}
-.divider {
-  width: 100%;
-  height: 1px;
-  background: var(--secondary-color);
-  margin: 0 0 14px 0;
-  border-radius: 2px;
-  transition: background 0.22s;
-}
-.value-title {
-  font-size: 1.06rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  color: var(--primary-color);
-  transition: color 0.22s;
-}
-.value-card:hover .value-title {
-  color: var(--secondary-color);
-}
-@media (max-width: 950px) {
-  .our-values-section {
-    flex-direction: column-reverse;
-    align-items: center;
-    gap: 32px;
-    padding: 32px 0;
-  }
-  .values-grid {
-    width: 100%;
-    max-width: 600px;
-  }
-  .value-card {
-  background: #fff;
-  border-radius: 1px;
-  box-shadow: 0 1px 12px rgba(0,0,0,0.05);
-  padding: 32px 26px 28px 28px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  transition: 
-    background 0.21s cubic-bezier(.4,2,.6,1), 
-    transform 0.33s cubic-bezier(.34,1.56,.64,1), 
-    box-shadow 0.16s cubic-bezier(.45,.25,.60,1);
-  cursor: pointer;
-  will-change: transform, background;
-  position: relative;
-  overflow: hidden;
-}
-  .values-info h2 {
-  color: var(--primary-color);
-  font-size: 3.7rem;
-  margin: 0 0 18px 0;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  border-bottom: var(--secondary-color) 2px solid;
-}
-.values-info p {
-  font-size: 1rem;
-  color: var(--text-light);
-  line-height: 1;
-}
-.value-card .icon {
-  margin-bottom: 10px;
-  color: #181818;
-  transition: color 0.2s;
-  font-size: 1.2rem;
-}
-
-.value-description {
-  font-size: 1.01rem;
-  font-weight: 400;
-  color: var(--text-light);
-  margin-bottom: 18px;
-  transition: color 0.22s;
-}
-}
-
-@media (max-width: 600px) {
-  .values-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  .value-card {
-    padding: 22px 18px 18px 18px;
-  }
-  .our-values-section {
-    padding: 16px 0;
-    margin: 0;
-  }
-  .values-info h2 {
-  color: var(--primary-color);
-  font-size: 2.7rem;
-  margin: 0 0 18px 0;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  border-bottom: var(--secondary-color) 2px solid;
-}
-.values-info p {
-  font-size: 1rem;
-  color: var(--text-light);
-  line-height: 1.2;
-}
-  .value-card {
-  background: #fff;
-  border-radius: 1px;
-  box-shadow: 0 1px 12px rgba(0,0,0,0.05);
-  padding: 10px 12px 10px 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  transition: 
-    background 0.21s cubic-bezier(.4,2,.6,1), 
-    transform 0.33s cubic-bezier(.34,1.56,.64,1), 
-    box-shadow 0.16s cubic-bezier(.45,.25,.60,1);
-  cursor: pointer;
-  will-change: transform, background;
-  position: relative;
-  overflow: hidden;
-}
-.value-card .icon {
-  margin-bottom: 5px;
-  color: #181818;
-  transition: color 0.2s;
-  font-size: 1.2rem;
-}
-
-.value-description {
-  font-size: 1.01rem;
-  font-weight: 400;
-  color: var(--text-light);
-  margin-bottom: 18px;
-  transition: color 0.22s;
-}
-}
-</style>
-
-
-
-<section class="section-grid">
-  <div class="section-header">
-    <div>
-      <div class="caption">Every Dream Needs A Team</div>
-      <h2 class="title">Meet Ours</h2>
-      <div class="subtitle">Adminstration</div>
-    </div>
-  </div>
-<!--Card Section-->
-  <div class="card-container">
-  <div class="profile-card">
-    <img src="https://i.pinimg.com/736x/d9/7b/bb/d97bbb08017ac2309307f0822e63d082.jpg" alt="Profile" />
-    <div class="card-info">
-      <div class="card-name">Nashmi Abigail</div> 
-      <div class="card-position"> Founder</div>
-    </div>
-    <div class="card-hover-details">
-      <div class="card-hover-name">Nashmi Abigail</div>
-      <div class="card-hover-position"> Founder</div>
-      <div class="card-hover-description">
-        Nashmi has over 15 years of experience in strategic leadership and business development.
-      </div>
-    </div>
-  </div>
-  <!-- Duplicate .profile-card for additional cards -->
-     <div class="profile-card">
-    <img src="https://i.pinimg.com/736x/d9/7b/bb/d97bbb08017ac2309307f0822e63d082.jpg" alt="Profile" />
-    <div class="card-info">
-      <div class="card-name">O'Neal Range</div>
-      <div class="card-position"> CEO</div>
-    </div>
-    <div class="card-hover-details">
-      <div class="card-hover-name">O'Neal Range</div>
-      <div class="card-hover-position"> CEO</div>
-      <div class="card-hover-description">
-        O'Neal has over 15 years of experience in strategic leadership and business development.
-      </div>
-    </div>
-  </div>
-    <div class="profile-card">
-    <img src="https://i.pinimg.com/736x/d9/7b/bb/d97bbb08017ac2309307f0822e63d082.jpg" alt="Profile" />
-    <div class="card-info">
-      <div class="card-name">Ciku Wainaina</div>
-      <div class="card-position"> Operations Lead</div>
-    </div>
-    <div class="card-hover-details">
-      <div class="card-hover-name">Ciku Wainaina</div>
-      <div class="card-hover-position"> Operations Lead</div>
-      <div class="card-hover-description">
-        Ciku has over 15 years of experience in strategic leadership and business development.
-      </div>
-    </div>
-  </div>
-    <div class="profile-card">
-    <img src="https://i.pinimg.com/736x/d9/7b/bb/d97bbb08017ac2309307f0822e63d082.jpg" alt="Profile" />
-    <div class="card-info">
-      <div class="card-name">Mr John Doe</div>
-      <div class="card-position"> Investments Lead</div>
-    </div>
-    <div class="card-hover-details">
-      <div class="card-hover-name">Mr John Doe</div>
-      <div class="card-hover-position"> Investments Lead</div>
-      <div class="card-hover-description">
-        John has over 15 years of experience in strategic leadership and business development.
-      </div>
-    </div>
-  </div>
-    <div class="profile-card">
-    <img src="https://i.pinimg.com/736x/d9/7b/bb/d97bbb08017ac2309307f0822e63d082.jpg" alt="Profile" />
-    <div class="card-info">
-      <div class="card-name">Mrs Jane Doe</div>
-      <div class="card-position"> Finance Lead</div>
-    </div>
-    <div class="card-hover-details">
-      <div class="card-hover-name">Mrs Jane Doe</div>
-      <div class="card-hover-position"> Finance Lead</div>
-      <div class="card-hover-description">
-        Jane has over 15 years of experience in strategic leadership and business development.
-      </div>
-    </div>
-  </div>
-</div>
-  <div class="description">
-      <p>
-        Our team combines years of international expertise across student accommodation, 
-        multicultural engagement, and residential operations. We champion safety, inclusivity, 
-        and personal growth—ensuring every student receives attentive service, open communication, and responsive support.
-         Working collaboratively, our staff delivers well-maintained spaces and enriching experiences, 
+        Our team combines years of international expertise across student accommodation,
+        multicultural engagement, and residential operations. We champion safety, inclusivity,
+        and personal growth—ensuring every student receives attentive service, open communication, and responsive
+        support.
+        Working collaboratively, our staff delivers well-maintained spaces and enriching experiences,
         always on time and aligned with the diverse needs of a global student community.
       </p>
     </div>
-</section>
+  </section>
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
-.section-grid {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 44px 20px;
-  font-family: 'Raleway', Arial, sans-serif;
-  background: #fff;
-}
-.section-header {
-  display: flex;
-  align-items: flex-start;
-  gap: 48px;
-  margin-bottom: 36px;
-}
-.section-header > div:first-child {
-  min-width: 230px;
-  max-width: 270px;
-}
-.caption {
-  color: var(--secondary-color);
-  font-size: 20px;
-  margin-bottom: 6px;
-  letter-spacing: 0.2px;
-}
-.title {
-  font-size: 2rem;
-  margin: 0 0 6px 0;
-  font-weight: 700;
-  color: var(--primary-color);
-  line-height: 1.1;
-}
-.subtitle {
-  font-size: 1.3rem;
-  font-weight: 500;
-  color: #bababa;
-  margin-bottom: 4px;
-}
-.description {
-  color: var(--text-light);
-  font-size: 1.06rem;
-  max-width: 800px;
-  line-height: 1.47;
-  margin-top: 0;
-}
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 160px);
-  gap: 4px;
-  margin-top: 6px;
-  justify-items: center; /* centers cards horizontally */
-  align-items: center;   /* centers cards vertically */
-}
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-.card {
-  background: linear-gradient(135deg, #d1d3d6 0%, #bcbec0 100%);
-  width: 200px;
-  height: 100px;
-  border-radius: 4px;
-  box-shadow: 0 2px 14px 0 #d6d7db63;
-}
+    .section-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 44px 20px;
+      font-family: 'Raleway', Arial, sans-serif;
+      background: #fff;
+    }
 
-@media (max-width: 900px) {
-  .section-header {
-    flex-direction: column;
-    gap: 18px;
-  }
-  .description{
-    max-width: 100%;
-  }
-  .card-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 120px);
-    gap: 4px;
-  }
-}
-</style>
+    .section-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 48px;
+      margin-bottom: 36px;
+    }
 
-<!--footer-->
-<footer class="footer">
-      <div class="section__container footer__container">
-        <div class="footer__col">
-          <div class="logo footer__logo">
-            <div>SN</div>
-            <span>SCHOLAR'S <br />NEST</span>
-          </div>
-            <p class="section__description">
-            Scholar's Nest provides safe, affordable, and comfortable student accommodations.<br />
-             Book your stay with us and join a vibrant community focused on learning, growth, and well-being.
-            </p>
-          <ul class="footer__socials">
-            <li>
-              <a href="#"><i class="ri-youtube-fill"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="ri-instagram-line"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="ri-facebook-fill"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="ri-linkedin-fill"></i></a>
-            </li>
-          </ul>
+    .section-header>div:first-child {
+      min-width: 230px;
+      max-width: 270px;
+    }
+
+    .caption {
+      color: var(--secondary-color);
+      font-size: 20px;
+      margin-bottom: 6px;
+      letter-spacing: 0.2px;
+    }
+
+    .title {
+      font-size: 2rem;
+      margin: 0 0 6px 0;
+      font-weight: 700;
+      color: var(--primary-color);
+      line-height: 1.1;
+    }
+
+    .subtitle {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #bababa;
+      margin-bottom: 4px;
+    }
+
+    .description {
+      color: var(--text-light);
+      font-size: 1.06rem;
+      max-width: 800px;
+      line-height: 1.47;
+      margin-top: 0;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 160px);
+      gap: 4px;
+      margin-top: 6px;
+      justify-items: center;
+      /* centers cards horizontally */
+      align-items: center;
+      /* centers cards vertically */
+    }
+
+    .card {
+      background: linear-gradient(135deg, #d1d3d6 0%, #bcbec0 100%);
+      width: 200px;
+      height: 100px;
+      border-radius: 4px;
+      box-shadow: 0 2px 14px 0 #d6d7db63;
+    }
+
+    @media (max-width: 900px) {
+      .section-header {
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      .description {
+        max-width: 100%;
+      }
+
+      .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 120px);
+        gap: 4px;
+      }
+    }
+  </style>
+
+  <!--footer-->
+  <footer class="new-footer">
+    <div class="section__container footer__content">
+      <div class="footer__left">
+        <ul class="big-nav-links">
+          <li><a href="index.html">Home <span class="arrow">&rarr;</span></a></li>
+          <li><a href="about-us.html">About Us <span class="arrow">&rarr;</span></a></li>
+          <li><a href="parents.html">Guardians & Residents <span class="arrow">&rarr;</span></a></li>
+          <li><a href="schools.html">Schools & Partners <span class="arrow">&rarr;</span></a></li>
+          <li><a href="room-details.html">Rooms & Spaces <span class="arrow">&rarr;</span></a></li>
+          <li><a href="contact-us.html">Contact Us <span class="arrow">&rarr;</span></a></li>
+        </ul>
+      </div>
+      <div class="footer__right">
+        <div class="newsletter-section">
+          <h3>Newsletter</h3>
+          <p>Sign up for our newsletter to stay up to date with the latest news.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Email" required>
+            <button type="submit">&rarr;</button>
+          </form>
         </div>
-      <div class="footer__col">
-          <h4>Services</h4>
-          <div class="footer__links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about-us.html">About Us</a></li>
-            <li><a href="parents.html">For Guardians & Residents</a></li>
-            <li><a href="schools.html">For Schools & Partners</a></li>
-            <li><a href="room-details.html">Rooms</a></li>
-            <li><a href="contact-us.html">Contact Us</a></li>
-          </div>
-        </div>
-        <div class="footer__col">
-          <h4>Contact Us</h4>
-          <div class="footer__links">
-            <li>
-              <span><i class="ri-phone-fill"></i></span>
-              <div>
-                <h5>Phone Number</h5>
-                <p>+254 719837909</p>
-              </div>
-            </li>
-            <li>
-              <span><i class="ri-record-mail-line"></i></span>
-              <div>
-                <h5>Email</h5>
-                <p><a href="mailto:scholarsnestke@gmail.com">scholarsnestke@gmail.com</a></p>
-              </div>
-            </li>
-            <li>
-              <span><i class="ri-map-pin-2-fill"></i></span>
-              <div>
-                <h5>Location</h5>
-                <p>Delta Towers, 4th Floor, <br /> Suite 3, Westlands Nairobi</p>
-              </div>
-            </li>
-          </div>
+        <div class="contact-large">
+          <a href="mailto:scholarsnestke@gmail.com" class="email-link">scholarsnestke@gmail.com</a>
+          <p class="phone-number">+254 719837909</p>
         </div>
       </div>
-      <div class="footer__bar">
-        Copyright © 2025 Scholar's Nest Kenya. All rights reserved.
-      </div>
-    </footer>
+    </div>
+    <div class="footer__bottom">
+      <p class="copyright">&copy; 2025 Scholar's Nest Kenya. All rights reserved.</p>
+      <ul class="footer__socials">
+        <li><a href="#"><i class="ri-youtube-fill"></i></a></li>
+        <li><a href="#"><i class="ri-instagram-line"></i></a></li>
+        <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
+        <li><a href="#"><i class="ri-linkedin-fill"></i></a></li>
+      </ul>
+    </div>
+  </footer>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="main.js"></script>
-  </body>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="main.js"></script>
+</body>
+
 </html>

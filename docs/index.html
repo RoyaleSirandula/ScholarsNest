@@ -1,758 +1,839 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css" />
-    <title>Home - Nest</title>
-  </head>
 
-  <body>
-    <nav>
-      <div class="nav__bar">
-        <div class="nav__header">
-          <div class="logo nav__logo">
-             <div> <img src="assets/NEST GREY LOGO.png" alt="logo" style="width: 40px; height: 40px;"> 
-            </div>
-            <span>SCHOLAR'S <br /> NEST</span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <title>Home - Nest</title>
+</head>
+
+<body>
+  <nav>
+    <div class="nav__bar">
+      <div class="nav__header">
+        <div class="logo nav__logo">
+          <div> <img src="assets/NEST GREY LOGO.png" alt="logo" style="width: 40px; height: 40px;">
           </div>
-          <div class="nav__menu__btn" id="menu-btn">
-            <i class="ri-menu-line"></i>
+          <span>SCHOLAR'S <br /> NEST</span>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="parents.html">Guardians & Residents</a></li>
+        <li><a href="schools.html">Schools & Partners</a></li>
+        <li><a href="room-details.html">Rooms & Spaces</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="header" id="home">
+    <div class="section__container-lead header__container">
+      <p class="section__subheader" data-split="sentences">Experience</p>
+      <h1 id="highlightText">
+        comfortable,<br />
+        exclusive stays <br />
+        <span style="color: inherit; -webkit-text-fill-color: transparent; -webkit-text-stroke: 2px currentColor;">with
+        </span>
+        <span class="color-cycle">Scholar's Nest™</span>.
+      </h1>
+      <button class="btn"
+        onclick="document.querySelector('#design-layout-section').scrollIntoView({behavior: 'smooth'})">Get
+        Started</button>
+    </div>
+  </header>
+  <section id="design-layout-section" class="design-layouts-section">
+    <div class="layout-header">
+      <div class="header-text">
+        <div class="caption">Life At Nest</div>
+        <h2 class="title">Gallery</h2>
+        <div class="subtitle">Sights & Sounds - <br /> Karibu Nyumbani</div>
+      </div>
+      <div class="description">
+        <span style="color: var(--secondary-color)">Scholar’s Nest™</span> by <span
+          style="color: var(--secondary-color)">Nest™ </span>provides an inspiring student housing experience that
+        combines modern comfort, safety, and community spirit.
+        Our thoughtfully designed spaces feature beautifully staged interiors, panoramic views, and carefully curated
+        amenities that make it easy for students to focus,
+        relax, and connect. We foster an environment where every detail—from natural light to acoustics—supports
+        well-being and academic success.
+        At Scholar’s Nest™, students find more than just accommodation: they find a vibrant community that supports
+        personal growth, lifelong friendships, and memorable experiences.
+        Life here is anything but ordinary. It’s a lifestyle crafted for the modern student — where elegance meets
+        purpose. Every room, hallway, and shared space is designed to inspire focus and connection,
+        helping you live and learn effortlessly in rhythm with success. <br /> <span
+          style="color: var(--secondary-color)">Scroll sideways to view the gallery. >></span>
+      </div>
+    </div>
+    <!-- Carousel Section -->
+    <div class="carousel-wrapper">
+      <div class="carousel">
+        <!--FIRST GRID-->
+        <div class="grid-slide">
+          <div class="layout-grid">
+            <div class="card box-4-5">
+              <img src="https://i.pinimg.com/736x/ad/17/6b/ad176b309792e0825685d71786c0298b.jpg"
+                alt="4:5 image description" />
+            </div>
+            <div class="card box-banner">
+              <img src="https://i.pinimg.com/736x/07/63/23/0763238ab54d7fb3f51e1fb346540fba.jpg"
+                alt="Banner image description" />
+            </div>
+            <div class="card box-9-18">
+              <img src="https://i.pinimg.com/736x/28/ba/69/28ba69503407e113fb922a417b17878a.jpg"
+                alt="9:18 image description" />
+            </div>
+            <div class="card box-3-4">
+              <img src="https://i.pinimg.com/736x/09/d3/c6/09d3c6f740f41baac67af48631c3cc80.jpg"
+                alt="3:4 image description" />
+            </div>
+            <div class="card box-1-1">
+              <img src="https://i.pinimg.com/736x/b8/1b/96/b81b96971350293fbe63e96f57087588.jpg"
+                alt="1:1 image description" />
+            </div>
+            <div class="card box-16-9">
+              <img src="https://i.pinimg.com/1200x/96/5e/77/965e77fec489590ea6b16103ea765bf1.jpg"
+                alt="16:9 image description" />
+            </div>
           </div>
         </div>
-         <ul class="nav__links" id="nav-links">
-    <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-    <li><a href="about-us.html">About Us</a></li>
-    <li><a href="parents.html">Guardians & Residents</a></li>
-    <li><a href="schools.html">Schools & Partners</a></li>
-    <li><a href="room-details.html">Rooms & Spaces</a></li>
-    <li><a href="contact-us.html">Contact Us</a></li>
-  </ul>
+
+        <!--SECOND GRID-->
+        <div class="grid-slide">
+          <div class="layout-grid">
+            <div class="card box-4-5">
+              <img src="https://i.pinimg.com/736x/ad/17/6b/ad176b309792e0825685d71786c0298b.jpg"
+                alt="4:5 image description" />
+            </div>
+            <div class="card box-banner">
+              <img src="https://i.pinimg.com/736x/07/63/23/0763238ab54d7fb3f51e1fb346540fba.jpg"
+                alt="Banner image description" />
+            </div>
+            <div class="card box-9-18">
+              <img src="https://i.pinimg.com/736x/28/ba/69/28ba69503407e113fb922a417b17878a.jpg"
+                alt="9:18 image description" />
+            </div>
+            <div class="card box-3-4">
+              <img src="https://i.pinimg.com/736x/09/d3/c6/09d3c6f740f41baac67af48631c3cc80.jpg"
+                alt="3:4 image description" />
+            </div>
+            <div class="card box-1-1">
+              <img src="https://i.pinimg.com/736x/b8/1b/96/b81b96971350293fbe63e96f57087588.jpg"
+                alt="1:1 image description" />
+            </div>
+            <div class="card box-16-9">
+              <img src="https://i.pinimg.com/1200x/96/5e/77/965e77fec489590ea6b16103ea765bf1.jpg"
+                alt="16:9 image description" />
+            </div>
+          </div>
+        </div>
+
+        <!--THIRD GRID-->
+        <div class="grid-slide">
+          <div class="layout-grid">
+            <div class="card box-4-5">
+              <img src="https://i.pinimg.com/736x/ad/17/6b/ad176b309792e0825685d71786c0298b.jpg"
+                alt="4:5 image description" />
+            </div>
+            <div class="card box-banner">
+              <img src="https://i.pinimg.com/736x/07/63/23/0763238ab54d7fb3f51e1fb346540fba.jpg"
+                alt="Banner image description" />
+            </div>
+            <div class="card box-9-18">
+              <img src="https://i.pinimg.com/736x/28/ba/69/28ba69503407e113fb922a417b17878a.jpg"
+                alt="9:18 image description" />
+            </div>
+            <div class="card box-3-4">
+              <img src="https://i.pinimg.com/736x/09/d3/c6/09d3c6f740f41baac67af48631c3cc80.jpg"
+                alt="3:4 image description" />
+            </div>
+            <div class="card box-1-1">
+              <img src="https://i.pinimg.com/736x/b8/1b/96/b81b96971350293fbe63e96f57087588.jpg"
+                alt="1:1 image description" />
+            </div>
+            <div class="card box-16-9">
+              <img src="https://i.pinimg.com/1200x/96/5e/77/965e77fec489590ea6b16103ea765bf1.jpg"
+                alt="16:9 image description" />
+            </div>
+          </div>
+        </div>
+
+        <!--FOURTH GRID-->
+        <div class="grid-slide">
+          <div class="layout-grid">
+            <div class="card box-4-5">
+              <img src="https://i.pinimg.com/736x/ad/17/6b/ad176b309792e0825685d71786c0298b.jpg"
+                alt="4:5 image description" />
+            </div>
+            <div class="card box-banner">
+              <img src="https://i.pinimg.com/736x/07/63/23/0763238ab54d7fb3f51e1fb346540fba.jpg"
+                alt="Banner image description" />
+            </div>
+            <div class="card box-9-18">
+              <img src="https://i.pinimg.com/736x/28/ba/69/28ba69503407e113fb922a417b17878a.jpg"
+                alt="9:18 image description" />
+            </div>
+            <div class="card box-3-4">
+              <img src="https://i.pinimg.com/736x/09/d3/c6/09d3c6f740f41baac67af48631c3cc80.jpg"
+                alt="3:4 image description" />
+            </div>
+            <div class="card box-1-1">
+              <img src="https://i.pinimg.com/736x/b8/1b/96/b81b96971350293fbe63e96f57087588.jpg"
+                alt="1:1 image description" />
+            </div>
+            <div class="card box-16-9">
+              <img src="https://i.pinimg.com/1200x/96/5e/77/965e77fec489590ea6b16103ea765bf1.jpg"
+                alt="16:9 image description" />
+            </div>
+          </div>
+        </div>
+
+        <!--END OF GRIDS-->
       </div>
-    </nav>
+    </div>
+  </section>
 
-<header class="header" id="home">
-  <div class="section__container-lead header__container">
-    <p class="section__subheader" data-split="sentences">Experience</p>
-   <h1 id="highlightText">
-     comfortable,<br />
-     exclusive stays <br />
-     <span style="color: inherit; -webkit-text-fill-color: transparent; -webkit-text-stroke: 2px currentColor; text-stroke: 2px currentColor;">with </span>
-     <span class="color-cycle">Scholar's Nest™</span>.
-</h1>
-    <button class="btn" onclick="document.querySelector('#design-layout-section').scrollIntoView({behavior: 'smooth'})">Get Started</button>
-  </div>
-</header>
-<section id="design-layout-section" class="design-layouts-section">
-  <div class="layout-header">
-    <div class="header-text">
-      <div class="caption">Life At Nest</div>
-      <h2 class="title">Gallery</h2>
-      <div class="subtitle">Sights & Sounds - <br /> Karibu Nyumbani</div>
-    </div>
-    <div class="description">
-      <span style="color: var(--secondary-color)">Scholar’s Nest™</span> by <span style="color: var(--secondary-color)">Nest™ </span>provides an inspiring student housing experience that combines modern comfort, safety, and community spirit. 
-      Our thoughtfully designed spaces feature beautifully staged interiors, panoramic views, and carefully curated amenities that make it easy for students to focus, 
-      relax, and connect. We foster an environment where every detail—from natural light to acoustics—supports well-being and academic success. 
-      At Scholar’s Nest™, students find more than just accommodation: they find a vibrant community that supports personal growth, lifelong friendships, and memorable experiences.
-      Life here is anything but ordinary. It’s a lifestyle crafted for the modern student — where elegance meets purpose. Every room, hallway, and shared space is designed to inspire focus and connection,
-      helping you live and learn effortlessly in rhythm with success. <br /> <span style="color: var(--secondary-color)">Scroll sideways to view the gallery. >></span>
-    </div>
-  </div>
-<!-- Carousel Section -->
-  <div class="carousel-wrapper">
-    <div class="carousel">
-<!--FIRST GRID-->
-      <div class="grid-slide">
-  <div class="layout-grid">
-    <div class="card box-4-5">
-      <img src="https://i.pinimg.com/736x/ad/17/6b/ad176b309792e0825685d71786c0298b.jpg" alt="4:5 image description" />
-    </div>
-    <div class="card box-banner">
-      <img src="https://i.pinimg.com/736x/07/63/23/0763238ab54d7fb3f51e1fb346540fba.jpg" alt="Banner image description" />
-    </div>
-    <div class="card box-9-18">
-      <img src="https://i.pinimg.com/736x/28/ba/69/28ba69503407e113fb922a417b17878a.jpg" alt="9:18 image description" />
-    </div>
-    <div class="card box-3-4">
-      <img src="https://i.pinimg.com/736x/09/d3/c6/09d3c6f740f41baac67af48631c3cc80.jpg" alt="3:4 image description" />
-    </div>
-    <div class="card box-1-1">
-      <img src="https://i.pinimg.com/736x/b8/1b/96/b81b96971350293fbe63e96f57087588.jpg" alt="1:1 image description" />
-    </div>
-    <div class="card box-16-9">
-      <img src="https://i.pinimg.com/1200x/96/5e/77/965e77fec489590ea6b16103ea765bf1.jpg" alt="16:9 image description" />
-    </div>
-  </div>
-</div>
-
-<!--SECOND GRID-->
-     <div class="grid-slide">
-  <div class="layout-grid">
-    <div class="card box-4-5">
-      <img src="https://i.pinimg.com/736x/ad/17/6b/ad176b309792e0825685d71786c0298b.jpg" alt="4:5 image description" />
-    </div>
-    <div class="card box-banner">
-      <img src="https://i.pinimg.com/736x/07/63/23/0763238ab54d7fb3f51e1fb346540fba.jpg" alt="Banner image description" />
-    </div>
-    <div class="card box-9-18">
-      <img src="https://i.pinimg.com/736x/28/ba/69/28ba69503407e113fb922a417b17878a.jpg" alt="9:18 image description" />
-    </div>
-    <div class="card box-3-4">
-      <img src="https://i.pinimg.com/736x/09/d3/c6/09d3c6f740f41baac67af48631c3cc80.jpg" alt="3:4 image description" />
-    </div>
-    <div class="card box-1-1">
-      <img src="https://i.pinimg.com/736x/b8/1b/96/b81b96971350293fbe63e96f57087588.jpg" alt="1:1 image description" />
-    </div>
-    <div class="card box-16-9">
-      <img src="https://i.pinimg.com/1200x/96/5e/77/965e77fec489590ea6b16103ea765bf1.jpg" alt="16:9 image description" />
-    </div>
-  </div>
-</div>
-
-<!--THIRD GRID-->
-  <div class="grid-slide">
-  <div class="layout-grid">
-    <div class="card box-4-5">
-      <img src="https://i.pinimg.com/736x/ad/17/6b/ad176b309792e0825685d71786c0298b.jpg" alt="4:5 image description" />
-    </div>
-    <div class="card box-banner">
-      <img src="https://i.pinimg.com/736x/07/63/23/0763238ab54d7fb3f51e1fb346540fba.jpg" alt="Banner image description" />
-    </div>
-    <div class="card box-9-18">
-      <img src="https://i.pinimg.com/736x/28/ba/69/28ba69503407e113fb922a417b17878a.jpg" alt="9:18 image description" />
-    </div>
-    <div class="card box-3-4">
-      <img src="https://i.pinimg.com/736x/09/d3/c6/09d3c6f740f41baac67af48631c3cc80.jpg" alt="3:4 image description" />
-    </div>
-    <div class="card box-1-1">
-      <img src="https://i.pinimg.com/736x/b8/1b/96/b81b96971350293fbe63e96f57087588.jpg" alt="1:1 image description" />
-    </div>
-    <div class="card box-16-9">
-      <img src="https://i.pinimg.com/1200x/96/5e/77/965e77fec489590ea6b16103ea765bf1.jpg" alt="16:9 image description" />
-    </div>
-  </div>
-</div>
-
-<!--FOURTH GRID-->
-  <div class="grid-slide">
-  <div class="layout-grid">
-    <div class="card box-4-5">
-      <img src="https://i.pinimg.com/736x/ad/17/6b/ad176b309792e0825685d71786c0298b.jpg" alt="4:5 image description" />
-    </div>
-    <div class="card box-banner">
-      <img src="https://i.pinimg.com/736x/07/63/23/0763238ab54d7fb3f51e1fb346540fba.jpg" alt="Banner image description" />
-    </div>
-    <div class="card box-9-18">
-      <img src="https://i.pinimg.com/736x/28/ba/69/28ba69503407e113fb922a417b17878a.jpg" alt="9:18 image description" />
-    </div>
-    <div class="card box-3-4">
-      <img src="https://i.pinimg.com/736x/09/d3/c6/09d3c6f740f41baac67af48631c3cc80.jpg" alt="3:4 image description" />
-    </div>
-    <div class="card box-1-1">
-      <img src="https://i.pinimg.com/736x/b8/1b/96/b81b96971350293fbe63e96f57087588.jpg" alt="1:1 image description" />
-    </div>
-    <div class="card box-16-9">
-      <img src="https://i.pinimg.com/1200x/96/5e/77/965e77fec489590ea6b16103ea765bf1.jpg" alt="16:9 image description" />
-    </div>
-  </div>
-</div>
-
-<!--END OF GRIDS-->
-    </div>
-  </div>
-</section>
-
-<style>
- @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
-  :root {
-    --base-font: 'Raleway', Arial, sans-serif;
-  }
+    :root {
+      --base-font: 'Raleway', Arial, sans-serif;
+    }
 
-  html, body {
-    
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
-  }
-  .design-layouts-section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0px;
-    font-family: 'Raleway', Arial, sans-serif;
-    background: #fff;
-    color: #222;
-  }
-   .layout-header {
-    position: relative;
-    background-color: #000000;
-  }
-  .layout-header::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: #000000;
-    z-index: -1;
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-  }
-  .layout-header {
-    display: flex;
-    gap: 48px;
-    align-items: flex-start;
-    padding: 24px; /* keep padding inside */
-    box-sizing: border-box;
-  }
-  .header-text {
-    min-width: 230px;
-    max-width: 280px;
-  }
-  .caption {
-    color: #eeeeee;
-    font-size: 14px;
-    margin-bottom: 6px;
-    letter-spacing: 0.2px;
-  }
-  .title {
-    font-size: 2.1rem;
-    color: #ffae00;
-    margin: 0 0 6px 0;
-    font-weight: 700;
-  }
-  .subtitle {
-    font-weight: 500;
-    color: var(--text-light);
-    font-size: 1.4rem;
-  }
-  .description {
-    max-width: 600px;
-    font-size: 1.03rem;
-    color: #eeeeee;
-    line-height: 1.4;
-  }
-  .carousel-wrapper {
-    background-color: #000000;
-    user-select: none;
-    border-radius: 1px;
-    margin-top: 0px;
-     /* Make full viewport width, breaking out of container */
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  }
+    html,
+    body {
 
-  .carousel-wrapper::before{
-    background-color: #000000;
-  }
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
 
-  .carousel {
-    display: flex;
-    gap: 2px;
-  }
-  
-  .grid-slide {
-    scroll-snap-align: start;
-    flex-shrink: 0;
-    height: 500px;
-    width: 700px; /* width for each grid slide */
-  }
-  
+    .design-layouts-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0px;
+      font-family: 'Raleway', Arial, sans-serif;
+      background: #fff;
+      color: #222;
+    }
 
-  .layout-grid {
-    display: grid;
-    grid-template-columns: 6fr 4fr 3fr;
-    grid-template-rows: repeat(3, 160px);
-    gap: 2px;
-    align-items: stretch;
-    width: 100%;
-  }
-  .card {
-    background: linear-gradient(135deg, #d1d3d6 0%, #bcbec0 100%);
-    border-radius: 2px;
-    box-shadow: 0 2px 14px 0 #d6d7db63;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 500;
-    font-size: 18px;
-    color: #999;
-  }
-    /* Styles for the images in cards */
-  .card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 2px;
-  display: block;
-}
-  .box-4-5 { grid-row: 1 / 3; grid-column: 1 / 2; }
-  .box-banner { grid-column: 2 / 3; grid-row: 1 / 2; }
-  .box-9-18 { grid-column: 3 / 4; grid-row: 1 / 3; }
-  .box-3-4 { grid-column: 1 / 2; grid-row: 3 / 4; }
-  .box-16-9 { grid-column: 3 / 4; grid-row: 3 / 4; }
-  .box-1-1 { grid-column: 2 / 3; grid-row: 2 / 4; }
-  
-
-  @keyframes scroll-carousel {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-700px - 48px)); }
-  }
-
-  @media (max-width: 900px) {
     .layout-header {
-      flex-direction: column;
-      gap: 18px;
-      padding: 24px 10px;
+      position: relative;
+      background-color: #000000;
     }
-    .description {
-      max-width: 100%;
-      font-size: 0.9rem;
-    }
-    .carousel-wrapper {
-      overflow-x: auto;
-    }
-    .carousel {
-      animation: none;
-    }
-    .grid-slide {
-      width: 100% !important;
-    }
-    .layout-grid {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(4, 140px);
-      gap: 10px;
-    }
-    .box-4-5, .box-banner, .box-9-18, .box-3-4, .box-1-1, .box-16-9 {
-      grid-column: auto !important;
-      grid-row: auto !important;
-    }
-  }
-</style>
 
-<!-- ================= Testimonials Section (inline) ================= -->
-<section id="intro" 
-  style="position: relative; background:linear-gradient(
+    .layout-header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #000000;
+      z-index: -1;
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+    }
+
+    .layout-header {
+      display: flex;
+      gap: 48px;
+      align-items: flex-start;
+      padding: 24px;
+      /* keep padding inside */
+      box-sizing: border-box;
+    }
+
+    .header-text {
+      min-width: 230px;
+      max-width: 280px;
+    }
+
+    .caption {
+      color: #eeeeee;
+      font-size: 14px;
+      margin-bottom: 6px;
+      letter-spacing: 0.2px;
+    }
+
+    .title {
+      font-size: 2.1rem;
+      color: #ffae00;
+      margin: 0 0 6px 0;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      font-weight: 500;
+      color: var(--text-light);
+      font-size: 1.4rem;
+    }
+
+    .description {
+      max-width: 600px;
+      font-size: 1.03rem;
+      color: #eeeeee;
+      line-height: 1.4;
+    }
+
+    .carousel-wrapper {
+      background-color: #000000;
+      user-select: none;
+      border-radius: 1px;
+      margin-top: 0px;
+      /* Make full viewport width, breaking out of container */
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+    }
+
+    .carousel-wrapper::before {
+      background-color: #000000;
+    }
+
+    .carousel {
+      display: flex;
+      gap: 2px;
+    }
+
+    .grid-slide {
+      scroll-snap-align: start;
+      flex-shrink: 0;
+      height: 500px;
+      width: 700px;
+      /* width for each grid slide */
+    }
+
+
+    .layout-grid {
+      display: grid;
+      grid-template-columns: 6fr 4fr 3fr;
+      grid-template-rows: repeat(3, 160px);
+      gap: 2px;
+      align-items: stretch;
+      width: 100%;
+    }
+
+    .card {
+      background: linear-gradient(135deg, #d1d3d6 0%, #bcbec0 100%);
+      border-radius: 2px;
+      box-shadow: 0 2px 14px 0 #d6d7db63;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 500;
+      font-size: 18px;
+      color: #999;
+    }
+
+    /* Styles for the images in cards */
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 2px;
+      display: block;
+    }
+
+    .box-4-5 {
+      grid-row: 1 / 3;
+      grid-column: 1 / 2;
+    }
+
+    .box-banner {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+
+    .box-9-18 {
+      grid-column: 3 / 4;
+      grid-row: 1 / 3;
+    }
+
+    .box-3-4 {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+    }
+
+    .box-16-9 {
+      grid-column: 3 / 4;
+      grid-row: 3 / 4;
+    }
+
+    .box-1-1 {
+      grid-column: 2 / 3;
+      grid-row: 2 / 4;
+    }
+
+
+    @keyframes scroll-carousel {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(calc(-700px - 48px));
+      }
+    }
+
+    @media (max-width: 900px) {
+      .layout-header {
+        flex-direction: column;
+        gap: 18px;
+        padding: 24px 10px;
+      }
+
+      .description {
+        max-width: 100%;
+        font-size: 0.9rem;
+      }
+
+      .carousel-wrapper {
+        overflow-x: auto;
+      }
+
+      .carousel {
+        animation: none;
+      }
+
+      .grid-slide {
+        width: 100% !important;
+      }
+
+      .layout-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 140px);
+        gap: 10px;
+      }
+
+      .box-4-5,
+      .box-banner,
+      .box-9-18,
+      .box-3-4,
+      .box-1-1,
+      .box-16-9 {
+        grid-column: auto !important;
+        grid-row: auto !important;
+      }
+    }
+  </style>
+
+  <!-- ================= Testimonials Section (inline) ================= -->
+  <section id="intro" style="position: relative; background:linear-gradient(
       rgba(0, 0, 0, 0.705),
       rgba(0, 0, 0, 0.622)
     ), url('https://i.pinimg.com/1200x/dc/49/c2/dc49c2561be8aeb1fd132bf9e463b3bf.jpg') no-repeat center center; 
     background-attachment: fixed; /* This keeps the background fixed */
    color:#fff; text-align:center; padding:4rem 2rem; overflow:hidden;">
 
- <h1 style="font-size:clamp(1.8rem, 4vw, 3rem); font-weight:700; line-height:1.2; margin-bottom:3rem;">
-  What others are<br />saying about Nest.
-</h1>
+    <h1 style="font-size:clamp(1.8rem, 4vw, 3rem); font-weight:700; line-height:1.2; margin-bottom:3rem;">
+      What others are<br />saying about Nest.
+    </h1>
 
-  <div style="display:flex; gap:3rem; justify-content:center; flex-wrap:wrap; max-width:900px; margin:0 auto;">
+    <div style="display:flex; gap:3rem; justify-content:center; flex-wrap:wrap; max-width:900px; margin:0 auto;">
 
-  <div style="flex:1 1 200px; text-align:center;">
-    <div class="stat-number" data-target="10" 
-      style="font-size:clamp(1.8rem, 4vw, 2.8rem); font-weight:400; color:#ffae00; margin-bottom:0.5rem;">
-      0+
-    </div>
-    <div style="font-size:clamp(1rem, 2.5vw, 1.2rem); font-weight:600; margin-bottom:0.2rem;">
-      Partner Schools & Institutions
-    </div>
-    <div style="font-size:clamp(0.9rem, 2vw, 1rem); font-weight:200; color:rgba(255,255,255,0.7);">
-      Trusted academic institutions
-    </div>
-  </div>
-
-  <div style="flex:1 1 200px; text-align:center;">
-    <div class="stat-number" data-target="100" 
-      style="font-size:clamp(1.8rem, 4vw, 2.8rem); font-weight:400; color:#ffae00; margin-bottom:0.5rem;">
-      0+
-    </div>
-    <div style="font-size:clamp(1rem, 2.5vw, 1.2rem); font-weight:600; margin-bottom:0.2rem;">
-      Happy Students
-    </div>
-    <div style="font-size:clamp(0.9rem, 2vw, 1rem); font-weight:200; color:rgba(255,255,255,0.7);">
-      Lives transformed through quality housing
-    </div>
-  </div>
-
-  <div style="flex:1 1 200px; text-align:center;">
-    <div class="stat-number" data-target="80" 
-      style="font-size:clamp(1.8rem, 4vw, 2.8rem); font-weight:400; color:#ffae00; margin-bottom:0.5rem;">
-      0+
-    </div>
-    <div style="font-size:clamp(1rem, 2.5vw, 1.2rem); font-weight:600; margin-bottom:0.2rem;">
-      Verified Reviews
-    </div>
-    <div style="font-size:clamp(0.9rem, 2vw, 1rem); font-weight:200; color:rgba(255,255,255,0.7);">
-      Real experiences from residents
-    </div>
-  </div>
-
-</div>
-
-</section>
-<style>
- .animated-section {
-  position: relative;
-  height: 50vh;
-  background: url('https://i.pinimg.com/1200x/70/48/cf/7048cf7da30a2ea730e38d92944a022b.jpg') center center/cover no-repeat;
-  overflow: hidden;
-  cursor: default;
-}
-
-.animated-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
-}
-
-.animated-section > * {
-  position: relative;
-  z-index: 2;
-}
-
-.text1,
-.see-store-button {
-  position: absolute;
-  opacity: 1;
-  transition: transform 1s ease, opacity 1s ease;
-}
-
-/* --- Main styles --- */
-.text1 {
-  top: 10%;
-  right: 10%;
-  transform: translateY(-100%);
-  font-size: clamp(2rem, 6vw, 6rem); /* responsive size */
-  color: var(--secondary-color);
-  font-weight: 700;
-  line-height: 1.1;
-  text-align: right;
-}
-
-.see-store-button {
-  bottom: 10%;
-  left: 10%;
-  transform: translateY(100%);
-  font-size: clamp(0.9rem, 2vw, 1.2rem); /* responsive size */
-  color: white;
-  background: var(--secondary-color);
-  padding: clamp(0.5em, 2vw, 0.8em) clamp(1em, 3vw, 1.5em);
-  border: none;
-  border-radius: 2px;
-  cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-.see-store-button:hover {
-  background: white;
-  color: var(--secondary-color);
-  border-radius: 4px;
-}
-
-/* --- Animation visibility --- */
-.text1.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-/* --- Animation visibility --- */
-.see-store-button.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* --- Tablet layout --- */
-@media (max-width: 1024px) {
-  .text1 {
-    top: 8%;
-    right: 8%;
-  }
-
-  .see-store-button {
-    bottom: 8%;
-    left: 8%;
-  }
-}
-
-/* --- Phone layout --- */
-@media (max-width: 600px) {
-  .animated-section {
-    height: 60vh; /* slightly taller for text */
-  }
-
-  .text1 {
-    font-size: clamp(1.0rem, 8vw, 3rem);
-    top: 12%;
-    right: 5%;
-    text-align: center;
-  }
-
-  .see-store-button {
-    font-size: clamp(0.8rem, 3vw, 1rem);
-    bottom: 12%;
-    left: 50%;
-    transform: translateX(-50%) translateY(100%);
-    padding: 0.6em 1.2em;
-  }
-}
-
-</style>
-
-<section class="animated-section" id="animatedSection">
-  <div class="text1" id="text1">  <span style="color: inherit; -webkit-text-fill-color: transparent; -webkit-text-stroke: 1.5px currentColor; text-stroke: 2px currentColor;"> What are you <br /> waiting for?</span></div>
- <a href="parents.html#assurance__header" class="see-store-button" id="seeStoreButton" role="button">See what's in store</a>
-
-</section>
-
-<!-- ================= Partners Section (inline) ================= -->
-<section class="partners" id="partners">
-  <div class="section__container partners__container">
-    <div class="partners__header">
-      <div>
-        <p class="section__subheader">OUR PARTNERS</p>
-        <h2 class="section__header">Organisations, Sustainability Partners & Institutions Supporting Nest</h2>
-        <p class="section__description">
-          Scholar's Nest collaborates with leading schools, universities, organisations, and sustainability partners to provide unrivalled service and support for our students.
-        </p>
-      </div>
-    </div>
-
-    <a href="schools.html#section block-hero reveal" class="partners__cta" style="display:inline-block;margin:16px 0;padding:10px 18px;background:#ffae00;color: white;border-radius:6px;text-decoration:none;font-weight:600;">
-      Be a Nest™ partner
-    </a>
-
-    <ul class="partners__list">
-      <li>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_0eabhaP1-2T8Wjvq6pZM4k_BGtgPFeL0pg&s" alt="Braeburn International School" />
-        <div class="partners__details">
-          <h4>Braeburn International School, Mombasa</h4>
-          <p>Leading international school with strong academic and holistic programmes.</p>
+      <div style="flex:1 1 200px; text-align:center;">
+        <div class="stat-number" data-target="10"
+          style="font-size:clamp(1.8rem, 4vw, 2.8rem); font-weight:400; color:#ffae00; margin-bottom:0.5rem;">
+          0+
         </div>
-      </li>
-      <li>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNpcr5H-jctwSCixNhVS2qo3WzMZ1OSSDXQA&s"  alt="Light International School Mombasa" />
-        <div class="partners__details">
-          <h4>Light International School, Mombasa</h4>
-          <p>Prestigious international school in Nyali supporting global student excellence.</p>
+        <div style="font-size:clamp(1rem, 2.5vw, 1.2rem); font-weight:600; margin-bottom:0.2rem;">
+          Partner Schools & Institutions
         </div>
-      </li>
-      <li>
-         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQmbLg7iWL2NreSrdsuWuNDxxbAdbaTrEm4Q&s"  alt="Aga Khan Academy Mombasa" />
-        <div class="partners__details">
-          <h4>Aga Khan Academy, Mombasa</h4>
-          <p>World-class institution emphasising ethical leadership and community service.</p>
+        <div style="font-size:clamp(0.9rem, 2vw, 1rem); font-weight:200; color:rgba(255,255,255,0.7);">
+          Trusted academic institutions
         </div>
-      </li>
-      <li>
-         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmxDqkZNPOl0RDn3TC2k0aTq33HhSB_HcVQ&s"  alt="Mombasa Academy" />
-        <div class="partners__details">
-          <h4>Mombasa Academy</h4>
-          <p>High-quality private school in Nyali, with British curriculum and holistic focus.</p>
-        </div>
-      </li>
-      <li>
-         <img src="https://jafferyacademy.org/wp-content/uploads/2021/08/cropped-New-Jaffery-Logo-2019-1024x727-1.png"  alt="Jaffery Academy Mombasa" />
-        <div class="partners__details">
-          <h4>Jaffery Academy, Mombasa</h4>
-          <p>International school providing well-rounded education and service programmes.</p>
-        </div>
-      </li>
-      <li>
-         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAlIxvwhN8sHZhZrV5i5OPGvJYTfOhPSDasg&s"  alt="Clean Up Kenya" />
-        <div class="partners__details">
-          <h4>Clean Up Kenya</h4>
-          <p>Empowering children through beach cleanups, environmental education and youth stewardship programmes.</p>
-        </div>
-      </li>
-      <li>
-         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR896NFe4S-e9RKiIQpKZU7rB8AA6qDxpQXFQ&s"  alt="Green Action Project" />
-        <div class="partners__details">
-          <h4>Green Action Project (Be The You Foundation)</h4>
-          <p>Planting fruit tree seedlings in schools and cleaning shores along the Indian Ocean.</p>
-        </div>
-      </li>
-      <li>
-         <img src="https://media.licdn.com/dms/image/v2/D4D0BAQFSBkNPJw2SWA/company-logo_200_200/company-logo_200_200/0/1683283555031?e=2147483647&v=beta&t=mGon8fN8V3XDVudksBOnG6UJqdWicfpJRUQ80pnpPGM"  alt="Omeriye Foundation" />
-        <div class="partners__details">
-          <h4>Omeriye Foundation</h4>
-          <p>Conducts Nyali beach cleanups and engages youth in environmental awareness acts.</p>
-        </div>
-      </li>
-    </ul>
-  </div>
-
-<!-- ================= Events Section (inline) ================= -->
-    <section class="section__container news__container" id="news">
-    <div class="news__header">
-      <div>
-        <p class="section__subheader">EVENTS</p>
-        <h2 class="section__header">Upcoming at Nest</h2>
-      </div>
-      <div class="section__nav">
-        <span><i class="ri-arrow-left-line"></i></span>
-        <span><i class="ri-arrow-right-line"></i></span>
-      </div>
-    </div>
-
-    <div class="news__grid">
-      <div class="news__card">
-        <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=600" alt="Open Day" />
-        <div class="news__card__title">
-          <p>20th November 2025</p>
-          <p>For Parents & Residents</p>
-        </div>
-        <h4>Open Day: Explore Scholar's Nest</h4>
-        <p>
-          Tour our hostels, meet staff, and discover the Nest experience. All parents and students welcome!
-        </p>
       </div>
 
-      <div class="news__card">
-        <img src="https://i.pinimg.com/1200x/88/d5/72/88d572136dbee46d55fe3f563cd938b0.jpg" alt="School Showcase" />
-        <div class="news__card__title">
-          <p>23rd November 2025</p>
-          <p>For Parents & Residents</p>
+      <div style="flex:1 1 200px; text-align:center;">
+        <div class="stat-number" data-target="100"
+          style="font-size:clamp(1.8rem, 4vw, 2.8rem); font-weight:400; color:#ffae00; margin-bottom:0.5rem;">
+          0+
         </div>
-        <h4>Nest Field Day @Vipingo Ridge Golf Club</h4>
-        <p>
-          Nest will have a stand at Vipingo Ridge Golf Club on Chairman's Cup Day. Parents are encouraged to attend, meet our team, interact, and ask any questions about our student housing and services. See you there!
-        </p>
+        <div style="font-size:clamp(1rem, 2.5vw, 1.2rem); font-weight:600; margin-bottom:0.2rem;">
+          Happy Students
+        </div>
+        <div style="font-size:clamp(0.9rem, 2vw, 1rem); font-weight:200; color:rgba(255,255,255,0.7);">
+          Lives transformed through quality housing
+        </div>
       </div>
 
-      <div class="news__card">
-        <img src="https://i.pinimg.com/1200x/b1/56/e8/b156e82871f62c287a83663af42319b2.jpg" alt="School Showcase" />
-        <div class="news__card__title">
-          <p>25-28th November 2025</p>
-          <p>For Schools</p>
+      <div style="flex:1 1 200px; text-align:center;">
+        <div class="stat-number" data-target="80"
+          style="font-size:clamp(1.8rem, 4vw, 2.8rem); font-weight:400; color:#ffae00; margin-bottom:0.5rem;">
+          0+
         </div>
-        <h4>School Partnership Showcase</h4>
-        <p>
-          A four day event where schools and parents are invited to see our facilities and learn about collaboration opportunities for student housing.
-        </p>
+        <div style="font-size:clamp(1rem, 2.5vw, 1.2rem); font-weight:600; margin-bottom:0.2rem;">
+          Verified Reviews
+        </div>
+        <div style="font-size:clamp(0.9rem, 2vw, 1rem); font-weight:200; color:rgba(255,255,255,0.7);">
+          Real experiences from residents
+        </div>
       </div>
 
-      <div class="news__card">
-        <img src="https://i.pinimg.com/1200x/9e/ea/1f/9eea1f7d5b63a3af8cb68f3b4bba11c6.jpg" alt="launch" />
-        <div class="news__card__title">
-          <p>10th January 2026</p>
-          <p>Community</p>
-        </div>
-        <h4>Grand Opening</h4>
-        <p>
-          Join us in celebrating the launch of our suites. Contact us to make a reservation; event details will be shared upon reservation and confirmation.
-        </p>
-      </div>
-
-      <div class="news__card">
-        <img src="https://i.pinimg.com/1200x/51/a9/13/51a91394e2466c7010e7ac5fa2d6f8c3.jpg" alt="Game Night" />
-        <div class="news__card__title">
-          <p>17th February 2026</p>
-          <p>Residents</p>
-        </div>
-        <h4>Student Game & Movie Night!</h4>
-        <p>
-          A fun evening for our residents to connect, relax, and enjoy games and movies in our common room.
-        </p>
-      </div>
-
-      <div class="news__card">
-        <img src="https://i.pinimg.com/1200x/39/e5/c7/39e5c75b5765cf79aeab8127acb25c31.jpg" alt="Parent Info" />
-        <div class="news__card__title">
-          <p>24th January 2025</p>
-          <p>For Parents</p>
-        </div>
-        <h4>Parent Information Session</h4>
-        <p>
-          Q&A with our team about safety, amenities, and support at Scholar's Nest. Network with our partners and various stakeholders as well.
-           All parents invited!
-        </p>
-      </div>
-
-       <a href="contact-us.html#bg-photo-section" class="partners__cta" style="display:inline-block;margin:16px 0;padding:10px 18px;background:#ffae00;color: white;border-radius:6px;text-decoration:none;font-weight:600;">
-      Make your reservation
-    </a>
     </div>
+
+  </section>
+  <style>
+    .animated-section {
+      position: relative;
+      height: 50vh;
+      background: url('https://i.pinimg.com/1200x/70/48/cf/7048cf7da30a2ea730e38d92944a022b.jpg') center center/cover no-repeat;
+      overflow: hidden;
+      cursor: default;
+    }
+
+    .animated-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .animated-section>* {
+      position: relative;
+      z-index: 2;
+    }
+
+    .text1,
+    .see-store-button {
+      position: absolute;
+      opacity: 1;
+      transition: transform 1s ease, opacity 1s ease;
+    }
+
+    /* --- Main styles --- */
+    .text1 {
+      top: 10%;
+      right: 10%;
+      transform: translateY(-100%);
+      font-size: clamp(2rem, 6vw, 6rem);
+      /* responsive size */
+      color: var(--secondary-color);
+      font-weight: 700;
+      line-height: 1.1;
+      text-align: right;
+    }
+
+    .see-store-button {
+      bottom: 10%;
+      left: 10%;
+      transform: translateY(100%);
+      font-size: clamp(0.9rem, 2vw, 1.2rem);
+      /* responsive size */
+      color: white;
+      background: var(--secondary-color);
+      padding: clamp(0.5em, 2vw, 0.8em) clamp(1em, 3vw, 1.5em);
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .see-store-button:hover {
+      background: white;
+      color: var(--secondary-color);
+      border-radius: 4px;
+    }
+
+    /* --- Animation visibility --- */
+    .text1.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* --- Animation visibility --- */
+    .see-store-button.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* --- Tablet layout --- */
+    @media (max-width: 1024px) {
+      .text1 {
+        top: 8%;
+        right: 8%;
+      }
+
+      .see-store-button {
+        bottom: 8%;
+        left: 8%;
+      }
+    }
+
+    /* --- Phone layout --- */
+    @media (max-width: 600px) {
+      .animated-section {
+        height: 60vh;
+        /* slightly taller for text */
+      }
+
+      .text1 {
+        font-size: clamp(1.0rem, 8vw, 3rem);
+        top: 12%;
+        right: 5%;
+        text-align: center;
+      }
+
+      .see-store-button {
+        font-size: clamp(0.8rem, 3vw, 1rem);
+        bottom: 12%;
+        left: 50%;
+        transform: translateX(-50%) translateY(100%);
+        padding: 0.6em 1.2em;
+      }
+    }
+  </style>
+
+  <section class="animated-section" id="animatedSection">
+    <div class="text1" id="text1"> <span
+        style="color: inherit; -webkit-text-fill-color: transparent; -webkit-text-stroke: 1.5px currentColor;">
+        What are you <br /> waiting for?</span></div>
+    <a href="parents.html#assurance__header" class="see-store-button" id="seeStoreButton" role="button">See what's in
+      store</a>
+
   </section>
 
-    <footer class="footer">
-      <div class="section__container footer__container">
-        <div class="footer__col">
-          <div class="logo footer__logo">
-            <div>SN</div>
-            <span>SCHOLAR'S <br />NEST</span>
+  <!-- ================= Partners Section (inline) ================= -->
+  <section class="partners" id="partners">
+    <div class="section__container partners__container">
+      <div class="partners__header">
+        <div>
+          <p class="section__subheader">OUR PARTNERS</p>
+          <h2 class="section__header">Organisations, Sustainability Partners & Institutions Supporting Nest</h2>
+          <p class="section__description">
+            Scholar's Nest collaborates with leading schools, universities, organisations, and sustainability partners
+            to provide unrivalled service and support for our students.
+          </p>
+        </div>
+      </div>
+
+      <a href="schools.html#section block-hero reveal" class="partners__cta"
+        style="display:inline-block;margin:16px 0;padding:10px 18px;background:#ffae00;color: white;border-radius:6px;text-decoration:none;font-weight:600;">
+        Be a Nest™ partner
+      </a>
+
+      <ul class="partners__list">
+        <li>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_0eabhaP1-2T8Wjvq6pZM4k_BGtgPFeL0pg&s"
+            alt="Braeburn International School" />
+          <div class="partners__details">
+            <h4>Braeburn International School, Mombasa</h4>
+            <p>Leading international school with strong academic and holistic programmes.</p>
           </div>
-            <p class="section__description">
-            Scholar's Nest provides safe, affordable, and comfortable student accommodations.<br />
-             Book your stay with us and join a vibrant community focused on learning, growth, and well-being.
-            </p>
-          <ul class="footer__socials">
-            <li>
-              <a href="#"><i class="ri-youtube-fill"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="ri-instagram-line"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="ri-facebook-fill"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="ri-linkedin-fill"></i></a>
-            </li>
+        </li>
+        <li>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNpcr5H-jctwSCixNhVS2qo3WzMZ1OSSDXQA&s"
+            alt="Light International School Mombasa" />
+          <div class="partners__details">
+            <h4>Light International School, Mombasa</h4>
+            <p>Prestigious international school in Nyali supporting global student excellence.</p>
+          </div>
+        </li>
+        <li>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQmbLg7iWL2NreSrdsuWuNDxxbAdbaTrEm4Q&s"
+            alt="Aga Khan Academy Mombasa" />
+          <div class="partners__details">
+            <h4>Aga Khan Academy, Mombasa</h4>
+            <p>World-class institution emphasising ethical leadership and community service.</p>
+          </div>
+        </li>
+        <li>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmxDqkZNPOl0RDn3TC2k0aTq33HhSB_HcVQ&s"
+            alt="Mombasa Academy" />
+          <div class="partners__details">
+            <h4>Mombasa Academy</h4>
+            <p>High-quality private school in Nyali, with British curriculum and holistic focus.</p>
+          </div>
+        </li>
+        <li>
+          <img src="https://jafferyacademy.org/wp-content/uploads/2021/08/cropped-New-Jaffery-Logo-2019-1024x727-1.png"
+            alt="Jaffery Academy Mombasa" />
+          <div class="partners__details">
+            <h4>Jaffery Academy, Mombasa</h4>
+            <p>International school providing well-rounded education and service programmes.</p>
+          </div>
+        </li>
+        <li>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAlIxvwhN8sHZhZrV5i5OPGvJYTfOhPSDasg&s"
+            alt="Clean Up Kenya" />
+          <div class="partners__details">
+            <h4>Clean Up Kenya</h4>
+            <p>Empowering children through beach cleanups, environmental education and youth stewardship programmes.</p>
+          </div>
+        </li>
+        <li>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR896NFe4S-e9RKiIQpKZU7rB8AA6qDxpQXFQ&s"
+            alt="Green Action Project" />
+          <div class="partners__details">
+            <h4>Green Action Project (Be The You Foundation)</h4>
+            <p>Planting fruit tree seedlings in schools and cleaning shores along the Indian Ocean.</p>
+          </div>
+        </li>
+        <li>
+          <img
+            src="https://media.licdn.com/dms/image/v2/D4D0BAQFSBkNPJw2SWA/company-logo_200_200/company-logo_200_200/0/1683283555031?e=2147483647&v=beta&t=mGon8fN8V3XDVudksBOnG6UJqdWicfpJRUQ80pnpPGM"
+            alt="Omeriye Foundation" />
+          <div class="partners__details">
+            <h4>Omeriye Foundation</h4>
+            <p>Conducts Nyali beach cleanups and engages youth in environmental awareness acts.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ================= Events Section (inline) ================= -->
+    <section class="section__container news__container" id="news">
+      <div class="news__header">
+        <div>
+          <p class="section__subheader">EVENTS</p>
+          <h2 class="section__header">Upcoming at Nest</h2>
+        </div>
+        <div class="section__nav">
+          <span><i class="ri-arrow-left-line"></i></span>
+          <span><i class="ri-arrow-right-line"></i></span>
+        </div>
+      </div>
+
+      <div class="news__grid">
+        <div class="news__card">
+          <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=600" alt="Open Day" />
+          <div class="news__card__title">
+            <p>20th November 2025</p>
+            <p>For Parents & Residents</p>
+          </div>
+          <h4>Open Day: Explore Scholar's Nest</h4>
+          <p>
+            Tour our hostels, meet staff, and discover the Nest experience. All parents and students welcome!
+          </p>
+        </div>
+
+        <div class="news__card">
+          <img src="https://i.pinimg.com/1200x/88/d5/72/88d572136dbee46d55fe3f563cd938b0.jpg" alt="School Showcase" />
+          <div class="news__card__title">
+            <p>23rd November 2025</p>
+            <p>For Parents & Residents</p>
+          </div>
+          <h4>Nest Field Day @Vipingo Ridge Golf Club</h4>
+          <p>
+            Nest will have a stand at Vipingo Ridge Golf Club on Chairman's Cup Day. Parents are encouraged to attend,
+            meet our team, interact, and ask any questions about our student housing and services. See you there!
+          </p>
+        </div>
+
+        <div class="news__card">
+          <img src="https://i.pinimg.com/1200x/b1/56/e8/b156e82871f62c287a83663af42319b2.jpg" alt="School Showcase" />
+          <div class="news__card__title">
+            <p>25-28th November 2025</p>
+            <p>For Schools</p>
+          </div>
+          <h4>School Partnership Showcase</h4>
+          <p>
+            A four day event where schools and parents are invited to see our facilities and learn about collaboration
+            opportunities for student housing.
+          </p>
+        </div>
+
+        <div class="news__card">
+          <img src="https://i.pinimg.com/1200x/9e/ea/1f/9eea1f7d5b63a3af8cb68f3b4bba11c6.jpg" alt="launch" />
+          <div class="news__card__title">
+            <p>10th January 2026</p>
+            <p>Community</p>
+          </div>
+          <h4>Grand Opening</h4>
+          <p>
+            Join us in celebrating the launch of our suites. Contact us to make a reservation; event details will be
+            shared upon reservation and confirmation.
+          </p>
+        </div>
+
+        <div class="news__card">
+          <img src="https://i.pinimg.com/1200x/51/a9/13/51a91394e2466c7010e7ac5fa2d6f8c3.jpg" alt="Game Night" />
+          <div class="news__card__title">
+            <p>17th February 2026</p>
+            <p>Residents</p>
+          </div>
+          <h4>Student Game & Movie Night!</h4>
+          <p>
+            A fun evening for our residents to connect, relax, and enjoy games and movies in our common room.
+          </p>
+        </div>
+
+        <div class="news__card">
+          <img src="https://i.pinimg.com/1200x/39/e5/c7/39e5c75b5765cf79aeab8127acb25c31.jpg" alt="Parent Info" />
+          <div class="news__card__title">
+            <p>24th January 2025</p>
+            <p>For Parents</p>
+          </div>
+          <h4>Parent Information Session</h4>
+          <p>
+            Q&A with our team about safety, amenities, and support at Scholar's Nest. Network with our partners and
+            various stakeholders as well.
+            All parents invited!
+          </p>
+        </div>
+
+        <a href="contact-us.html#bg-photo-section" class="partners__cta"
+          style="display:inline-block;margin:16px 0;padding:10px 18px;background:#ffae00;color: white;border-radius:6px;text-decoration:none;font-weight:600;">
+          Make your reservation
+        </a>
+      </div>
+    </section>
+
+    <footer class="new-footer">
+      <div class="section__container footer__content">
+        <div class="footer__left">
+          <ul class="big-nav-links">
+            <li><a href="index.html">Home <span class="arrow">&rarr;</span></a></li>
+            <li><a href="about-us.html">About Us <span class="arrow">&rarr;</span></a></li>
+            <li><a href="parents.html">Guardians & Residents <span class="arrow">&rarr;</span></a></li>
+            <li><a href="schools.html">Schools & Partners <span class="arrow">&rarr;</span></a></li>
+            <li><a href="room-details.html">Rooms & Spaces <span class="arrow">&rarr;</span></a></li>
+            <li><a href="contact-us.html">Contact Us <span class="arrow">&rarr;</span></a></li>
           </ul>
         </div>
-        <div class="footer__col">
-          <h4>Services</h4>
-          <div class="footer__links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about-us.html">About Us</a></li>
-            <li><a href="parents.html">For Guardians & Residents</a></li>
-            <li><a href="schools.html">For Schools & Partners</a></li>
-            <li><a href="room-details.html">Rooms</a></li>
-            <li><a href="contact-us.html">Contact Us</a></li>
+        <div class="footer__right">
+          <div class="newsletter-section">
+            <h3>Newsletter</h3>
+            <p>Sign up for our newsletter to stay up to date with the latest news.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Email" required>
+              <button type="submit">&rarr;</button>
+            </form>
           </div>
-        </div>
-        <div class="footer__col">
-          <h4>Contact Us</h4>
-          <div class="footer__links">
-            <li>
-              <span><i class="ri-phone-fill"></i></span>
-              <div>
-                <h5>Phone Number</h5>
-                <p>+254 719837909</p>
-              </div>
-            </li>
-            <li>
-              <span><i class="ri-record-mail-line"></i></span>
-              <div>
-                <h5>Email</h5>
-                <p><a href="mailto:scholarsnestke@gmail.com">scholarsnestke@gmail.com</a></p>
-              </div>
-            </li>
-            <li>
-              <span><i class="ri-map-pin-2-fill"></i></span>
-              <div>
-                <h5>Location</h5>
-                <p>Delta Towers, 4th Floor, <br /> Suite 3, Westlands Nairobi</p>
-              </div>
-            </li>
+          <div class="contact-large">
+            <a href="mailto:scholarsnestke@gmail.com" class="email-link">scholarsnestke@gmail.com</a>
+            <p class="phone-number">+254 719837909</p>
           </div>
         </div>
       </div>
-      <div class="footer__bar">
-        Copyright © 2025 Scholar's Nest Kenya. All rights reserved.
+      <div class="footer__bottom">
+        <p class="copyright">&copy; 2025 Scholar's Nest Kenya. All rights reserved.</p>
+        <ul class="footer__socials">
+          <li><a href="#"><i class="ri-youtube-fill"></i></a></li>
+          <li><a href="#"><i class="ri-instagram-line"></i></a></li>
+          <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
+          <li><a href="#"><i class="ri-linkedin-fill"></i></a></li>
+        </ul>
       </div>
     </footer>
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
-  </body>
+</body>
+
 </html>

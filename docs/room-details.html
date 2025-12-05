@@ -1,398 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css" />
-    <title>Rooms & Spaces - Nest</title>
-  </head>
 
-  <body>
-    <nav>
-      <div class="nav__bar">
-        <div class="nav__header">
-          <div class="logo nav__logo">
-             <div> <img src="assets/NEST GREY LOGO.png" alt="logo" style="width: 40px; height: 40px;"> 
-            </div>
-            <span>SCHOLAR'S <br /> NEST</span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <title>Rooms & Spaces - Nest</title>
+</head>
+
+<body>
+  <nav>
+    <div class="nav__bar">
+      <div class="nav__header">
+        <div class="logo nav__logo">
+          <div> <img src="assets/NEST GREY LOGO.png" alt="logo" style="width: 40px; height: 40px;">
           </div>
-          <div class="nav__menu__btn" id="menu-btn">
-            <i class="ri-menu-line"></i>
-          </div>
+          <span>SCHOLAR'S <br /> NEST</span>
         </div>
-        <ul class="nav__links" id="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about-us.html">About Us</a></li>
-          <li><a href="parents.html">Guardians & Residents</a></li>
-          <li><a href="schools.html">Schools & Partners</a></li>
-          <li><a href="room-details.html" class="active" aria-current="page">Rooms & Spaces</a></li>
-          <li><a href="contact-us.html">Contact Us</a></li>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="parents.html">Guardians & Residents</a></li>
+        <li><a href="schools.html">Schools & Partners</a></li>
+        <li><a href="room-details.html" class="active" aria-current="page">Rooms & Spaces</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+  <header class="header-room-details" id="home">
+    <div class="section__container-lead header__container">
+      <p class="section__subheader">A secure and supportive environment—empowering students to succeed and giving
+        parents peace of mind.</p>
+      <h1 id="highlightText">rooms <br /><span
+          style="color: inherit; -webkit-text-fill-color: transparent; -webkit-text-stroke: 2px currentColor;">&amp;</span>
+        spaces</h1>
+      <button class="btn" onclick="document.querySelector('#roomsSection').scrollIntoView({behavior: 'smooth'})">Look Up
+        Rooms</button>
+    </div>
+  </header>
+
+  <section class="carousel" id="roomsSection">
+    <div class="slide active">
+      <img src="https://i.pinimg.com/736x/0c/4f/60/0c4f60883756dcaf375fb5810b452af8.jpg" alt="Modern Ensuite">
+      <div class="slide__text">
+        <h2>Modern Ensuite Rooms</h2>
+        <p>Comfortable private spaces designed for focus and rest, ideal for senior residents balancing study and
+          self-care.</p>
+      </div>
+    </div>
+
+    <div class="slide">
+      <img src="https://i.pinimg.com/736x/c9/87/24/c98724004b1e1e106a6f29908204564d.jpg" alt="2-Person Rooms">
+      <div class="slide__text">
+        <h2>2-Person Sharing Rooms</h2>
+        <p>Modern, spacious rooms designed for comfort and productivity, featuring privacy partitions, ergonomic study
+          desks, premium bedding, and secure personal storage.</p>
+      </div>
+    </div>
+
+    <div class="slide">
+      <img src="https://i.pinimg.com/1200x/8e/19/61/8e19612d53e355f401ad62ea3ff30032.jpg" alt="Luxury Bathrooms">
+      <div class="slide__text">
+        <h2>Hotel-Style Bathrooms</h2>
+        <p>Large, beautifully designed bathrooms with rain showers, high-pressure systems, anti-fog mirrors, and modern
+          finishes that elevate everyday living.</p>
+      </div>
+    </div>
+
+    <div class="slide">
+      <img src="https://i.pinimg.com/1200x/38/62/6b/38626badbefb0d7ac35df277b82ae907.jpg" alt="Study Spaces">
+      <div class="slide__text">
+        <h2>24/7 Study & Academic Spaces</h2>
+        <p>Quiet study halls, group collaboration rooms, smart screens, and mini libraries that support late-night
+          revision and high-level academic performance.</p>
+      </div>
+    </div>
+
+    <div class="slide">
+      <img src="https://i.pinimg.com/736x/02/7f/de/027fdef6f02a6a4ef24bafe809b1a644.jpg" alt="Innovation Labs">
+      <div class="slide__text">
+        <h2>Innovation & STEM Labs</h2>
+        <p>Creative maker spaces equipped with 3D printers, robotics kits, and digital tools that inspire
+          problem-solving, curiosity, and hands-on innovation.</p>
+      </div>
+    </div>
+
+    <div class="slide">
+      <img src="https://i.pinimg.com/736x/46/c5/ac/46c5ac24a71e99ab889b46dae16c0b6e.jpg" alt="Swimming Pool">
+      <div class="slide__text">
+        <h2>Swimming Pool</h2>
+        <p>A clean, modern pool perfect for training, leisure swimming, or weekend relaxation—an ultimate lifestyle
+          upgrade for students.</p>
+      </div>
+    </div>
+
+    <div class="slide">
+      <img src="https://i.pinimg.com/736x/30/2d/5d/302d5dcffaa5f925227d1cce5326997d.jpg" alt="Turf Field">
+      <div class="slide__text">
+        <h2>Astro Turf Sports Field</h2>
+        <p>Well-maintained turf for football, rugby, and fitness activities, offering daily recreation and structured
+          sports experiences.</p>
+      </div>
+    </div>
+
+
+    <div class="slide">
+      <img src="https://i.pinimg.com/1200x/2e/45/46/2e45468160593356a8dca49d834bc011.jpg" alt="Yoga Studio">
+      <div class="slide__text">
+        <h2> Wellness Studio</h2>
+        <p>Peaceful, inspiring spaces for yoga, meditation, and mindfulness—supporting mental clarity and emotional
+          balance.</p>
+      </div>
+    </div>
+
+    <div class="slide">
+      <img src="https://i.pinimg.com/736x/5c/80/4a/5c804a4a101e3424ae413ae96184b610.jpg" alt="Cafeteria">
+      <div class="slide__text">
+        <h2>Cuisine Cafeteria</h2>
+        <p>A modern dining hall serving bespoke dishes, nutritionist-approved meal plans, and dietary-inclusive options
+          like vegan, halal, and allergy-friendly meals.</p>
+      </div>
+    </div>
+
+    <div class="slide">
+      <img src="https://i.pinimg.com/1200x/b5/dc/c4/b5dcc459a4fb8d6ff75878306dea1348.jpg" alt="Smoothie Bar">
+      <div class="slide__text">
+        <h2>Snacks & Smoothie Bar</h2>
+        <p>Fresh juices, smoothies, and healthy bites that keep students energized between classes, training, or late
+          study sessions.</p>
+      </div>
+    </div>
+
+    <div class="slide">
+      <img src="https://i.pinimg.com/736x/67/77/ec/6777ecaf42ed14e1366871de8b41d045.jpg" alt="Student Lounge">
+      <div class="slide__text">
+        <h2>Modern Student Lounge</h2>
+        <p>Comfortable, stylish hangout areas with sofas, gaming consoles, smart TVs, and study pods where friendships
+          naturally grow.</p>
+      </div>
+    </div>
+
+    <div class="slide">
+      <img src="https://i.pinimg.com/736x/32/b8/09/32b8096bd522b7fc153449a2a3bab48e.jpg" alt="Cinema Room">
+      <div class="slide__text">
+        <h2>Mini Cinema Room</h2>
+        <p>A cozy theatre setup for weekend movie nights, presentations, and club events—creating a fun, memorable
+          campus culture.</p>
+      </div>
+    </div>
+
+    <div class="slide">
+      <img src="https://i.pinimg.com/736x/27/37/66/2737664d58badfb1b6a9a65397612039.jpg" alt="Event Hall">
+      <div class="slide__text">
+        <h2>Event & Activity Hall</h2>
+        <p>A multipurpose venue for cultural nights, debates, workshops, celebrations, and leadership events that enrich
+          student life.</p>
+      </div>
+    </div>
+
+    <div class="slide">
+      <img src="https://i.pinimg.com/1200x/7a/4f/53/7a4f5380d20b63f0d9506ac26fd5b95b.jpg" alt="Rooftop Garden">
+      <div class="slide__text">
+        <h2>Rooftop Garden & Chill Spaces</h2>
+        <p>Scenic rooftop and outdoor lounges offering quiet study corners, evening relaxation, beautiful views, and
+          social hangouts. Lush outdoor spaces with benches, trees, and pathways that encourage reflection, reading, and
+          peaceful downtime.</p>
+      </div>
+    </div>
+
+    <div class="slide">
+      <img src="https://i.pinimg.com/736x/7c/25/60/7c2560a75b95ead9cf7fb42bead4c091.jpg" alt="Security Systems">
+      <div class="slide__text">
+        <h2>Smart Security Features</h2>
+        <p>RFID access, CCTV in shared areas, professional guards, and secure perimeters—providing parents with
+          confidence and students with safety.</p>
+      </div>
+    </div>
+
+
+    <div class="slide">
+      <img src="https://i.pinimg.com/1200x/b7/ed/ae/b7edae10bb36745b5c3ccb708d4f89d7.jpg" alt="Laundry Room">
+      <div class="slide__text">
+        <h2>Laundry & Housekeeping Services</h2>
+        <p>Self-service washing machines, dryers, ironing stations, and routine cleaning that keep daily life simple and
+          stress-free.</p>
+      </div>
+    </div>
+
+
+
+    <div class="slide">
+      <img src="https://i.pinimg.com/1200x/62/3f/0a/623f0a0821a8addbb0ed4e9ee58aa1bb.jpg" alt="Storage Room">
+      <div class="slide__text">
+        <h2>Secure Storage Facilities</h2>
+        <p>Safe, organized rooms where students can keep luggage, sports equipment, or long-term items without crowding
+          their living spaces.</p>
+      </div>
+    </div>
+
+
+    <button id="prev" class="carousel__btn"><i class="ri-arrow-left-s-line"></i></button>
+    <button id="next" class="carousel__btn"><i class="ri-arrow-right-s-line"></i></button>
+  </section>
+  <style>
+    :root {
+
+      --white: #fff;
+    }
+
+    .carousel {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .slide.active {
+      opacity: 1;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .slide__text {
+      position: absolute;
+      bottom: 4rem;
+      right: 3rem;
+      background: rgba(0, 0, 0, 0.3);
+      color: var(--white);
+      padding: 1.5rem;
+      border-radius: 6px;
+      max-width: 400px;
+      animation: fadeUp 1.2s ease forwards;
+      border-bottom: 2px solid var(--secondary-color);
+    }
+
+    .slide__text:hover {
+      position: absolute;
+      bottom: 4rem;
+      right: 3rem;
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0.6);
+      color: var(--white);
+      padding: 1.5rem;
+      border-radius: 3px;
+      max-width: 400px;
+      animation: fadeUp 1.2s ease forwards;
+      border-bottom: 2px solid var(--secondary-color);
+    }
+
+    .slide__text h2 {
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+    }
+
+    .slide__text p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .carousel__btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.3);
+      border: none;
+      color: var(--white);
+      font-size: 2rem;
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      border-radius: 1%;
+      transition: background 0.3s ease;
+    }
+
+    .carousel__btn:hover {
+      background: rgba(0, 0, 0, 0.6);
+      color: var(--secondary-color);
+    }
+
+    #prev {
+      left: 1rem;
+    }
+
+    #next {
+      right: 1rem;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const slides = document.querySelectorAll(".slide");
+      if (!slides.length) return; // guard
+
+      let index = 0;
+      const next = document.getElementById("next");
+      const prev = document.getElementById("prev");
+
+      function showSlide(i) {
+        slides.forEach(s => s.classList.remove("active"));
+        if (slides[i]) slides[i].classList.add("active");
+      }
+
+      next?.addEventListener('click', () => {
+        index = (index + 1) % slides.length;
+        showSlide(index);
+      });
+
+      prev?.addEventListener('click', () => {
+        index = (index - 1 + slides.length) % slides.length;
+        showSlide(index);
+      });
+
+      // start on the first slide
+      showSlide(index);
+
+      setInterval(() => {
+        index = (index + 1) % slides.length;
+        showSlide(index);
+      }, 15000);
+    });
+  </script>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="main.js"></script>
+
+  <footer class="new-footer">
+    <div class="section__container footer__content">
+      <div class="footer__left">
+        <ul class="big-nav-links">
+          <li><a href="index.html">Home <span class="arrow">&rarr;</span></a></li>
+          <li><a href="about-us.html">About Us <span class="arrow">&rarr;</span></a></li>
+          <li><a href="parents.html">Guardians & Residents <span class="arrow">&rarr;</span></a></li>
+          <li><a href="schools.html">Schools & Partners <span class="arrow">&rarr;</span></a></li>
+          <li><a href="room-details.html">Rooms & Spaces <span class="arrow">&rarr;</span></a></li>
+          <li><a href="contact-us.html">Contact Us <span class="arrow">&rarr;</span></a></li>
         </ul>
       </div>
-    </nav>
-<header class="header-room-details" id="home">
-  <div class="section__container-lead header__container">
-    <p class="section__subheader">A secure and supportive environment—empowering students to succeed and giving parents peace of mind.</p>
-    <h1 id="highlightText">rooms <br /><span style="color: inherit; -webkit-text-fill-color: transparent; -webkit-text-stroke: 2px currentColor; text-stroke: 2px currentColor;">&amp;</span> 
-      spaces</h1>
-    <button class="btn" onclick="document.querySelector('#roomsSection').scrollIntoView({behavior: 'smooth'})">Look Up Rooms</button>
-  </div>
-</header>
-
-<section class="carousel" id="roomsSection">
-  <div class="slide active">
-    <img src="https://i.pinimg.com/736x/0c/4f/60/0c4f60883756dcaf375fb5810b452af8.jpg" alt="Modern Ensuite">
-    <div class="slide__text">
-      <h2>Modern Ensuite Rooms</h2>
-      <p>Comfortable private spaces designed for focus and rest, ideal for senior residents balancing study and self-care.</p>
-    </div>
-  </div>
-
-  <div class="slide">
-    <img src="https://i.pinimg.com/736x/c9/87/24/c98724004b1e1e106a6f29908204564d.jpg" alt="2-Person Rooms">
-    <div class="slide__text">
-      <h2>2-Person Sharing Rooms</h2>
-      <p>Modern, spacious rooms designed for comfort and productivity, featuring privacy partitions, ergonomic study desks, premium bedding, and secure personal storage.</p>
-    </div>
-</div>
-
-<div class="slide">
-    <img src="https://i.pinimg.com/1200x/8e/19/61/8e19612d53e355f401ad62ea3ff30032.jpg" alt="Luxury Bathrooms">
-    <div class="slide__text">
-      <h2>Hotel-Style Bathrooms</h2>
-      <p>Large, beautifully designed bathrooms with rain showers, high-pressure systems, anti-fog mirrors, and modern finishes that elevate everyday living.</p>
-    </div>
-</div>
-
-<div class="slide">
-    <img src="https://i.pinimg.com/1200x/38/62/6b/38626badbefb0d7ac35df277b82ae907.jpg" alt="Study Spaces">
-    <div class="slide__text">
-      <h2>24/7 Study & Academic Spaces</h2>
-      <p>Quiet study halls, group collaboration rooms, smart screens, and mini libraries that support late-night revision and high-level academic performance.</p>
-    </div>
-</div>
-
-<div class="slide">
-    <img src="https://i.pinimg.com/736x/02/7f/de/027fdef6f02a6a4ef24bafe809b1a644.jpg" alt="Innovation Labs">
-    <div class="slide__text">
-      <h2>Innovation & STEM Labs</h2>
-      <p>Creative maker spaces equipped with 3D printers, robotics kits, and digital tools that inspire problem-solving, curiosity, and hands-on innovation.</p>
-    </div>
-</div>
-
-<div class="slide">
-    <img src="https://i.pinimg.com/736x/46/c5/ac/46c5ac24a71e99ab889b46dae16c0b6e.jpg" alt="Swimming Pool">
-    <div class="slide__text">
-      <h2>Swimming Pool</h2>
-      <p>A clean, modern pool perfect for training, leisure swimming, or weekend relaxation—an ultimate lifestyle upgrade for students.</p>
-    </div>
-</div>
-
-<div class="slide">
-    <img src="https://i.pinimg.com/736x/30/2d/5d/302d5dcffaa5f925227d1cce5326997d.jpg" alt="Turf Field">
-    <div class="slide__text">
-      <h2>Astro Turf Sports Field</h2>
-      <p>Well-maintained turf for football, rugby, and fitness activities, offering daily recreation and structured sports experiences.</p>
-    </div>
-</div>
-
-
-<div class="slide">
-    <img src="https://i.pinimg.com/1200x/2e/45/46/2e45468160593356a8dca49d834bc011.jpg" alt="Yoga Studio">
-    <div class="slide__text">
-      <h2> Wellness Studio</h2>
-      <p>Peaceful, inspiring spaces for yoga, meditation, and mindfulness—supporting mental clarity and emotional balance.</p>
-    </div>
-</div>
-
-<div class="slide">
-    <img src="https://i.pinimg.com/736x/5c/80/4a/5c804a4a101e3424ae413ae96184b610.jpg" alt="Cafeteria">
-    <div class="slide__text">
-      <h2>Cuisine Cafeteria</h2>
-      <p>A modern dining hall serving bespoke dishes, nutritionist-approved meal plans, and dietary-inclusive options like vegan, halal, and allergy-friendly meals.</p>
-    </div>
-</div>
-
-<div class="slide">
-    <img src="https://i.pinimg.com/1200x/b5/dc/c4/b5dcc459a4fb8d6ff75878306dea1348.jpg" alt="Smoothie Bar">
-    <div class="slide__text">
-      <h2>Snacks & Smoothie Bar</h2>
-      <p>Fresh juices, smoothies, and healthy bites that keep students energized between classes, training, or late study sessions.</p>
-    </div>
-</div>
-
-<div class="slide">
-    <img src="https://i.pinimg.com/736x/67/77/ec/6777ecaf42ed14e1366871de8b41d045.jpg" alt="Student Lounge">
-    <div class="slide__text">
-      <h2>Modern Student Lounge</h2>
-      <p>Comfortable, stylish hangout areas with sofas, gaming consoles, smart TVs, and study pods where friendships naturally grow.</p>
-    </div>
-</div>
-
-<div class="slide">
-    <img src="https://i.pinimg.com/736x/32/b8/09/32b8096bd522b7fc153449a2a3bab48e.jpg" alt="Cinema Room">
-    <div class="slide__text">
-      <h2>Mini Cinema Room</h2>
-      <p>A cozy theatre setup for weekend movie nights, presentations, and club events—creating a fun, memorable campus culture.</p>
-    </div>
-</div>
-
-<div class="slide">
-    <img src="https://i.pinimg.com/736x/27/37/66/2737664d58badfb1b6a9a65397612039.jpg" alt="Event Hall">
-    <div class="slide__text">
-      <h2>Event & Activity Hall</h2>
-      <p>A multipurpose venue for cultural nights, debates, workshops, celebrations, and leadership events that enrich student life.</p>
-    </div>
-</div>
-
-<div class="slide">
-    <img src="https://i.pinimg.com/1200x/7a/4f/53/7a4f5380d20b63f0d9506ac26fd5b95b.jpg" alt="Rooftop Garden">
-    <div class="slide__text">
-      <h2>Rooftop Garden & Chill Spaces</h2>
-      <p>Scenic rooftop and outdoor lounges offering quiet study corners, evening relaxation, beautiful views, and social hangouts. Lush outdoor spaces with benches, trees, and pathways that encourage reflection, reading, and peaceful downtime.</p>
-    </div>
-</div>
-
-<div class="slide">
-    <img src="https://i.pinimg.com/736x/7c/25/60/7c2560a75b95ead9cf7fb42bead4c091.jpg" alt="Security Systems">
-    <div class="slide__text">
-      <h2>Smart Security Features</h2>
-      <p>RFID access, CCTV in shared areas, professional guards, and secure perimeters—providing parents with confidence and students with safety.</p>
-    </div>
-</div>
-
-
-<div class="slide">
-    <img src="https://i.pinimg.com/1200x/b7/ed/ae/b7edae10bb36745b5c3ccb708d4f89d7.jpg" alt="Laundry Room">
-    <div class="slide__text">
-      <h2>Laundry & Housekeeping Services</h2>
-      <p>Self-service washing machines, dryers, ironing stations, and routine cleaning that keep daily life simple and stress-free.</p>
-    </div>
-</div>
-
-
-
-<div class="slide">
-    <img src="https://i.pinimg.com/1200x/62/3f/0a/623f0a0821a8addbb0ed4e9ee58aa1bb.jpg" alt="Storage Room">
-    <div class="slide__text">
-      <h2>Secure Storage Facilities</h2>
-      <p>Safe, organized rooms where students can keep luggage, sports equipment, or long-term items without crowding their living spaces.</p>
-    </div>
-</div>
-
-
-  <button id="prev" class="carousel__btn"><i class="ri-arrow-left-s-line"></i></button>
-  <button id="next" class="carousel__btn"><i class="ri-arrow-right-s-line"></i></button>
-</section>
-<style>
-  :root {
-  
-  --white: #fff;
-}
-
-.carousel {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.slide {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.slide.active {
-  opacity: 1;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.slide__text {
-  position: absolute;
-  bottom: 4rem;
-  right: 3rem;
-  background: rgba(0, 0, 0, 0.3);
-  color: var(--white);
-  padding: 1.5rem;
-  border-radius: 6px;
-  max-width: 400px;
-  animation: fadeUp 1.2s ease forwards;
-  border-bottom: 2px solid var(--secondary-color);
-}
-
-.slide__text:hover {
-  position: absolute;
-  bottom: 4rem;
-  right: 3rem;
-  cursor: pointer;
-  background: rgba(0, 0, 0, 0.6);
-  color: var(--white);
-  padding: 1.5rem;
-  border-radius: 3px;
-  max-width: 400px;
-  animation: fadeUp 1.2s ease forwards;
-  border-bottom: 2px solid var(--secondary-color);
-}
-
-.slide__text h2 {
-  margin-bottom: 0.5rem;
-  font-size: 1.5rem;
-}
-
-.slide__text p {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.carousel__btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.3);
-  border: none;
-  color: var(--white);
-  font-size: 2rem;
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-  border-radius: 1%;
-  transition: background 0.3s ease;
-}
-
-.carousel__btn:hover {
-  background: rgba(0, 0, 0, 0.6);
-  color: var(--secondary-color);
-}
-
-#prev { left: 1rem; }
-#next { right: 1rem; }
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-</style>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const slides = document.querySelectorAll(".slide");
-  if (!slides.length) return; // guard
-
-  let index = 0;
-  const next = document.getElementById("next");
-  const prev = document.getElementById("prev");
-
-  function showSlide(i) {
-    slides.forEach(s => s.classList.remove("active"));
-    if (slides[i]) slides[i].classList.add("active");
-  }
-
-  next?.addEventListener('click', () => {
-    index = (index + 1) % slides.length;
-    showSlide(index);
-  });
-
-  prev?.addEventListener('click', () => {
-    index = (index - 1 + slides.length) % slides.length;
-    showSlide(index);
-  });
-
-  // start on the first slide
-  showSlide(index);
-
-  setInterval(() => {
-    index = (index + 1) % slides.length;
-    showSlide(index);
-  }, 15000);
-});
-</script>
-
-<script src="https://unpkg.com/scrollreveal"></script>
-    <script src="main.js"></script>
-
-<footer class="footer">
-      <div class="section__container footer__container">
-        <div class="footer__col">
-          <div class="logo footer__logo">
-            <div>SN</div>
-            <span>SCHOLAR'S <br />NEST</span>
-          </div>
-            <p class="section__description">
-            Scholar's Nest provides safe, affordable, and comfortable student accommodations.<br />
-             Book your stay with us and join a vibrant community focused on learning, growth, and well-being.
-            </p>
-          <ul class="footer__socials">
-            <li>
-              <a href="#"><i class="ri-youtube-fill"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="ri-instagram-line"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="ri-facebook-fill"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="ri-linkedin-fill"></i></a>
-            </li>
-          </ul>
+      <div class="footer__right">
+        <div class="newsletter-section">
+          <h3>Newsletter</h3>
+          <p>Sign up for our newsletter to stay up to date with the latest news.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Email" required>
+            <button type="submit">&rarr;</button>
+          </form>
         </div>
-         <div class="footer__col">
-          <h4>Services</h4>
-          <div class="footer__links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about-us.html">About Us</a></li>
-            <li><a href="parents-students.html">For Guardians & Residents</a></li>
-            <li><a href="schools-partners.html">For Schools & Partners</a></li>
-            <li><a href="room-details.html">Rooms</a></li>
-            <li><a href="contact-us.html">Contact Us</a></li>
-          </div>
-        </div>
-        <div class="footer__col">
-          <h4>Contact Us</h4>
-          <div class="footer__links">
-            <li>
-              <span><i class="ri-phone-fill"></i></span>
-              <div>
-                <h5>Phone Number</h5>
-                <p>+254 719837909</p>
-              </div>
-            </li>
-            <li>
-              <span><i class="ri-record-mail-line"></i></span>
-              <div>
-                <h5>Email</h5>
-                <p><a href="mailto:scholarsnestke@gmail.com">scholarsnestke@gmail.com</a></p>
-              </div>
-            </li>
-            <li>
-              <span><i class="ri-map-pin-2-fill"></i></span>
-              <div>
-                <h5>Location</h5>
-                <p>Delta Towers, 4th Floor, <br /> Suite 3, Westlands Nairobi</p>
-              </div>
-            </li>
-          </div>
+        <div class="contact-large">
+          <a href="mailto:scholarsnestke@gmail.com" class="email-link">scholarsnestke@gmail.com</a>
+          <p class="phone-number">+254 719837909</p>
         </div>
       </div>
-      <div class="footer__bar">
-        Copyright © 2025 Scholar's Nest Kenya. All rights reserved.
-      </div>
-    </footer>
+    </div>
+    <div class="footer__bottom">
+      <p class="copyright">&copy; 2025 Scholar's Nest Kenya. All rights reserved.</p>
+      <ul class="footer__socials">
+        <li><a href="#"><i class="ri-youtube-fill"></i></a></li>
+        <li><a href="#"><i class="ri-instagram-line"></i></a></li>
+        <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
+        <li><a href="#"><i class="ri-linkedin-fill"></i></a></li>
+      </ul>
+    </div>
+  </footer>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="main.js"></script>
-  </body>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="main.js"></script>
+</body>
+
 </html>
