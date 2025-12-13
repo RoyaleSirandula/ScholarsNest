@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .faq-item {
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 15px 20px;
+            background: #f5f5f5;
+            border: none;
+            text-align: left;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background: #e8e8e8;
+        }
+
+        .faq-question.active {
+            background: #d4edda;
+        }
+
+        .faq-icon {
+            font-size: 24px;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        .faq-question.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: #fff;
+        }
+
+        .faq-answer.open {
+            max-height: 500px;
+        }
+
+        .faq-answer p {
+            padding: 15px 20px;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        #debug {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: #fff;
+            border: 2px solid #000;
+            padding: 10px;
+            font-family: monospace;
+            font-size: 12px;
+            max-width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="debug">
+        <strong>Debug Log:</strong><br>
+        <span id="log">Waiting for clicks...</span>
+    </div>
+
+    <h1>FAQ Accordion Test</h1>
+
+    <div class="faq-container">
+        <div class="faq-item">
+            <button class="faq-question">
+                How do I book a room?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Booking is simple! You can contact us directly via the 'Contact Us' page or click the "Get Started"
+                    button
+                    to initiate a reservation inquiry. Our team will guide you through the availability and finalizing
+                    your
+                    lease.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Is security provided 24/7?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Yes, safety is our top priority. We have 24/7 on-site security personnel, CCTV surveillance in
+                    common
+                    areas, and secure biometric access control for residents.
+                </p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                What amenities are included?
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>
+                    Residents enjoy high-speed Wi-Fi, fully furnished rooms, study lounges, a common recreation area,
+                    regular cleaning services, and access to laundry facilities.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const logEl = document.getElementById('log');
+
+        function log(message) {
+            const timestamp = new Date().toLocaleTimeString();
+            logEl.innerHTML = `${timestamp}: ${message}<br>` + logEl.innerHTML;
+            console.log(message);
+        }
+
+        log('Script loaded');
+
+        // FAQ Accordion Logic (Event Delegation)
+        document.addEventListener('click', function (e) {
+            log(`Click detected on: ${e.target.tagName}.${e.target.className}`);
+
+            // Check if the clicked element or one of its parents is a .faq-question
+            const faqQuestion = e.target.closest('.faq-question');
+
+            if (faqQuestion) {
+                log('FAQ question clicked!');
+
+                // Toggle active class on button
+                faqQuestion.classList.toggle("active");
+
+                // Toggle panel height
+                const faqAnswer = faqQuestion.nextElementSibling;
+
+                if (faqQuestion.classList.contains("active")) {
+                    log(`Opening answer, scrollHeight: ${faqAnswer.scrollHeight}px`);
+                    faqAnswer.style.maxHeight = faqAnswer.scrollHeight + "px";
+                    faqAnswer.classList.add("open");
+                } else {
+                    log('Closing answer');
+                    faqAnswer.style.maxHeight = '0';
+                    faqAnswer.classList.remove("open");
+                }
+            }
+        });
+
+        log('Event listener registered');
+    </script>
+</body>
+
+</html>

@@ -37,6 +37,32 @@
   pointer-events: none;
 }
 
+/* Scroll Animation Utilities */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: opacity, transform;
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional Stagger Delays */
+.delay-100 {
+  transition-delay: 100ms;
+}
+
+.delay-200 {
+  transition-delay: 200ms;
+}
+
+.delay-300 {
+  transition-delay: 300ms;
+}
+
 
 /* =========================
   2. GLOBAL RESETS & BASICS
@@ -197,7 +223,7 @@ nav {
   padding-block: 5rem;
   background-image: linear-gradient(rgba(15, 26, 44, 0.5),
       rgba(15, 26, 44, 0.5)),
-    url("https://i.pinimg.com/1200x/d0/da/0e/d0da0e7d3e55575f703ec560807b96e8.jpg");
+    url("https://i.pinimg.com/1200x/23/fe/33/23fe33e605997e380e3837c7bc93f761.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1205,6 +1231,10 @@ nav {
 
 .partners__list li:hover {
   border-bottom: var(--secondary-color) 2px solid;
+  border-left: var(--secondary-color) 2px solid;
+  transition: 0.3s;
+  padding-bottom: 0.25rem;
+  padding-left: 0.25rem;
 }
 
 .partners__list img {
@@ -2363,4 +2393,120 @@ blockquote {
 .contact-large {
   position: relative;
   z-index: 1;
+}
+
+/* =========================
+  9. FAQ SECTION
+  ========================= */
+.faq-section {
+  background-color: var(--primary-color);
+  /* Dark green matching reference */
+  color: #ffffff;
+  padding: 5rem 2rem;
+  font-family: var(--header-font);
+}
+
+.faq-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+@media (min-width: 900px) {
+  .faq-container {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 6rem;
+  }
+}
+
+/* Left Column */
+.faq-left {
+  flex: 1;
+  max-width: 400px;
+}
+
+.faq-header {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: white;
+  /* Ensure white text */
+}
+
+.faq-header span.italic-accent {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--secondary-color);
+  /* Light lime/yellow accent */
+}
+
+.faq-subtext {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+/* Right Column (Accordion) */
+.faq-right {
+  flex: 1.5;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 1.5rem 0;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+  color: var(--secondary-color);
+}
+
+.faq-icon {
+  font-size: 2rem;
+  font-weight: 300;
+  transition: transform 0.3s ease;
+}
+
+.faq-question.active .faq-icon {
+  transform: rotate(45deg);
+  /* Turn + to x */
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+
+.faq-answer p {
+  padding-bottom: 1.5rem;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+}
+
+.faq-answer.open {
+  opacity: 1;
+  /* Max-height will be set by JS */
 }

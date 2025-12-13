@@ -1,37 +1,40 @@
 // Toggle mobile menu button and icon
-const menuBtn = document.getElementById("menu-btn");
-const navLinks = document.getElementById("nav-links");
-const menuBtnIcon = menuBtn.querySelector("i");
+const mobileMenuBtn = document.getElementById("menu-btn");
+const mobileNavLinks = document.getElementById("nav-links");
 
-menuBtn.addEventListener("click", (e) => {
-  // open/close nav and swap the icon class
-  navLinks.classList.toggle("open");
+if (mobileMenuBtn && mobileNavLinks) {
+  const mobileMenuIcon = mobileMenuBtn.querySelector("i");
 
-  const isOpen = navLinks.classList.contains("open");
-  menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
-});
+  mobileMenuBtn.addEventListener("click", (e) => {
+    // open/close nav and swap the icon class
+    mobileNavLinks.classList.toggle("open");
 
-// Close nav when a link inside nav is clicked (mobile behavior)
-navLinks.addEventListener("click", (e) => {
-  navLinks.classList.remove("open");
-  menuBtnIcon.setAttribute("class", "ri-menu-line");
-});
+    const isOpen = mobileNavLinks.classList.contains("open");
+    mobileMenuIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
+  });
+
+  // Close nav when a link inside nav is clicked (mobile behavior)
+  mobileNavLinks.addEventListener("click", (e) => {
+    mobileNavLinks.classList.remove("open");
+    mobileMenuIcon.setAttribute("class", "ri-menu-line");
+  });
+}
 
 // Highlight effect on header H1 that follows the mouse via CSS variables
-const headerH1 = document.getElementById('highlightText');
+const heroHighlightText = document.getElementById('highlightText');
 
-if (headerH1) {
+if (heroHighlightText) {
   // Initialize CSS vars to a safe default
-  headerH1.style.setProperty('--mouse-x', '100%');
-  headerH1.style.setProperty('--mouse-y', '100%');
+  heroHighlightText.style.setProperty('--mouse-x', '100%');
+  heroHighlightText.style.setProperty('--mouse-y', '100%');
 
-  headerH1.addEventListener('mousemove', (e) => {
+  heroHighlightText.addEventListener('mousemove', (e) => {
     // Calculate mouse position relative to element and set CSS vars
-    const rect = headerH1.getBoundingClientRect();
+    const rect = heroHighlightText.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-    headerH1.style.setProperty('--mouse-x', `${x}px`);
-    headerH1.style.setProperty('--mouse-y', `${y}px`);
+    heroHighlightText.style.setProperty('--mouse-x', `${x}px`);
+    heroHighlightText.style.setProperty('--mouse-y', `${y}px`);
   });
 }
 
@@ -40,53 +43,57 @@ if (headerH1) {
 const slides = document.querySelectorAll('.feature__slide');
 const slidesContainer = document.querySelector('.feature__slides');
 const dotsContainer = document.querySelector('.feature__dots');
-let currentIndex = 0;
-const slideCount = slides.length;
-let autoplayInterval;
 
-// Create dot controls dynamically and wire click handlers
-slides.forEach((_, i) => {
-  const dot = document.createElement('div');
-  dot.classList.add('feature__dot');
-  if (i === 0) dot.classList.add('active');
-  dot.addEventListener('click', () => goToSlide(i));
-  dotsContainer.appendChild(dot);
-});
+// Only run carousel code if all required elements exist
+if (slidesContainer && dotsContainer && slides.length > 0) {
+  let currentIndex = 0;
+  const slideCount = slides.length;
+  let autoplayInterval;
 
-const dots = document.querySelectorAll('.feature__dot');
+  // Create dot controls dynamically and wire click handlers
+  slides.forEach((_, i) => {
+    const dot = document.createElement('div');
+    dot.classList.add('feature__dot');
+    if (i === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => goToSlide(i));
+    dotsContainer.appendChild(dot);
+  });
 
-function goToSlide(index) {
-  // Move slides container to show the requested slide
-  currentIndex = index;
-  slidesContainer.style.transform = `translateX(-${index * 100}%)`;
-  updateDots();
-  resetAutoplay();
-}
+  const dots = document.querySelectorAll('.feature__dot');
 
-function updateDots() {
-  // Update active state on dots
-  dots.forEach(dot => dot.classList.remove('active'));
-  dots[currentIndex].classList.add('active');
-}
+  function goToSlide(index) {
+    // Move slides container to show the requested slide
+    currentIndex = index;
+    slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+    updateDots();
+    resetAutoplay();
+  }
 
-function nextSlide() {
-  // Advance to next slide (wrap around)
-  currentIndex = (currentIndex + 1) % slideCount;
-  goToSlide(currentIndex);
-}
+  function updateDots() {
+    // Update active state on dots
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[currentIndex].classList.add('active');
+  }
 
-function startAutoplay() {
-  // Start automatic slide advance every 10s
-  autoplayInterval = setInterval(nextSlide, 10000);
-}
+  function nextSlide() {
+    // Advance to next slide (wrap around)
+    currentIndex = (currentIndex + 1) % slideCount;
+    goToSlide(currentIndex);
+  }
 
-function resetAutoplay() {
-  // Restart autoplay (useful after manual navigation)
-  clearInterval(autoplayInterval);
+  function startAutoplay() {
+    // Start automatic slide advance every 10s
+    autoplayInterval = setInterval(nextSlide, 10000);
+  }
+
+  function resetAutoplay() {
+    // Restart autoplay (useful after manual navigation)
+    clearInterval(autoplayInterval);
+    startAutoplay();
+  }
+
   startAutoplay();
 }
-
-startAutoplay();
 
 
 // ScrollReveal configuration and usage for entrance animations
@@ -304,15 +311,15 @@ window.initMap = function () {
   const mapElement = document.getElementById("map");
   if (!mapElement) return; // Stop if map div not found
 
-  const nyali = { lat: -4.0346, lng: 39.6995 }; // Nyali Estate, Mombasa
+  const nyali = { lat: -4.040949, lng: 39.706308 }; // Nyali Estate, Mombasa
 
   const map = new google.maps.Map(mapElement, {
     center: nyali,
     zoom: 15,
     styles: [
-      { featureType: "water", stylers: [{ color: "#245401" }] },
-      { featureType: "landscape", stylers: [{ color: "#f6ac0f" }] },
-      { featureType: "road", stylers: [{ color: "#357d01" }] },
+      { featureType: "water", stylers: [{ color: "#00bbffff" }] },
+      { featureType: "landscape", stylers: [{ color: "#ffffffff" }] },
+      { featureType: "road", stylers: [{ color: "#01a40cff" }] },
     ],
   });
 
@@ -529,3 +536,41 @@ ScrollReveal().reveal(".section-grid .description", {
   ...scrollRevealOption,
   delay: 800,
 });
+
+
+// FAQ Accordion Logic (Isolated Implementation)
+(function () {
+  'use strict';
+
+  // Use event delegation on document but with very specific targeting
+  document.addEventListener('click', function (evt) {
+    // Check if the clicked element or one of its parents is a .faq-question
+    const clickedFaqButton = evt.target.closest('.faq-question');
+
+    if (clickedFaqButton) {
+      // Prevent default button behavior
+      evt.preventDefault();
+
+      // Toggle active class on button
+      clickedFaqButton.classList.toggle("active");
+
+      // Get the answer panel (next sibling)
+      const answerPanel = clickedFaqButton.nextElementSibling;
+
+      if (!answerPanel || !answerPanel.classList.contains('faq-answer')) {
+        return; // Safety check: ensure we have a proper answer element
+      }
+
+      // Toggle panel visibility
+      if (clickedFaqButton.classList.contains("active")) {
+        // Opening
+        answerPanel.style.maxHeight = answerPanel.scrollHeight + "px";
+        answerPanel.classList.add("open");
+      } else {
+        // Closing
+        answerPanel.style.maxHeight = "0";
+        answerPanel.classList.remove("open");
+      }
+    }
+  });
+})();

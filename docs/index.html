@@ -3,13 +3,113 @@
 
 <head>
   <meta charset="UTF-8" />
+  <script>
+    // Intro Animation Check
+    // If not shown yet, redirect to pageload.html (the intro)
+    if (!sessionStorage.getItem('introShown')) {
+      // Both files are in docs/
+      window.location.href = "pageload.html";
+    }
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=1" />
   <title>Home - Nest</title>
+  <style>
+    /* Smooth Fade In for the main page */
+    body {
+      animation: fadeInPage 1.5s ease-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeInPage {
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Index FAQ Styles */
+    .index-faq-section {
+      padding: 4rem 2rem;
+      background: var(--primary-color);
+      font-family: 'Raleway', sans-serif;
+    }
+
+    .index-faq-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      .index-faq-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    .index-faq-item {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .index-faq-question {
+      width: 100%;
+      padding: 1.5rem 0;
+      background: transparent;
+      border: none;
+      text-align: left;
+      font-size: 1.1rem;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 500;
+      color: var(--extra-light);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: color 0.3s;
+    }
+
+    .index-faq-question:hover {
+      color: var(--secondary-color);
+    }
+
+    .index-faq-question.active {
+      color: var(--secondary-color);
+    }
+
+    .index-faq-icon {
+      font-size: 1.5rem;
+      font-weight: bold;
+      transition: transform 0.3s;
+    }
+
+    .index-faq-question.active .index-faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .index-faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .index-faq-answer.open {
+      max-height: 500px;
+    }
+
+    .index-faq-answer p {
+      padding: 0 0 1.5rem 0;
+      margin: 0;
+      color: var(--extra-light);
+      line-height: 1.6;
+    }
+  </style>
 </head>
 
 <body>
@@ -53,12 +153,12 @@
   </header>
   <section id="design-layout-section" class="design-layouts-section">
     <div class="layout-header">
-      <div class="header-text">
+      <div class="header-text animate-on-scroll">
         <div class="caption">Life At Nest</div>
         <h2 class="title">Gallery</h2>
         <div class="subtitle">Sights & Sounds - <br /> Karibu Nyumbani</div>
       </div>
-      <div class="description">
+      <div class="description animate-on-scroll delay-100">
         <span style="color: var(--secondary-color)">Scholar’s Nest™</span> by <span
           style="color: var(--secondary-color)">Nest™ </span>provides an inspiring student housing experience that
         combines modern comfort, safety, and community spirit.
@@ -433,19 +533,20 @@
 
   <!-- ================= Testimonials Section (inline) ================= -->
   <section id="intro" style="position: relative; background:linear-gradient(
-      rgba(0, 0, 0, 0.705),
-      rgba(0, 0, 0, 0.622)
-    ), url('https://i.pinimg.com/1200x/dc/49/c2/dc49c2561be8aeb1fd132bf9e463b3bf.jpg') no-repeat center center; 
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ), url('https://i.pinimg.com/1200x/2d/80/e8/2d80e8553782d031bb665ad76d7e4ff6.jpg') no-repeat center center; 
     background-attachment: fixed; /* This keeps the background fixed */
-   color:#fff; text-align:center; padding:4rem 2rem; overflow:hidden;">
+    color:#fff; text-align:center; padding:4rem 2rem; overflow:hidden;">
 
-    <h1 style="font-size:clamp(1.8rem, 4vw, 3rem); font-weight:700; line-height:1.2; margin-bottom:3rem;">
+    <h1 class="animate-on-scroll"
+      style="font-size:clamp(1.8rem, 4vw, 3rem); font-weight:700; line-height:1.2; margin-bottom:3rem;">
       What others are<br />saying about Nest.
     </h1>
 
     <div style="display:flex; gap:3rem; justify-content:center; flex-wrap:wrap; max-width:900px; margin:0 auto;">
 
-      <div style="flex:1 1 200px; text-align:center;">
+      <div class="animate-on-scroll delay-100" style="flex:1 1 200px; text-align:center;">
         <div class="stat-number" data-target="10"
           style="font-size:clamp(1.8rem, 4vw, 2.8rem); font-weight:400; color:#ffae00; margin-bottom:0.5rem;">
           0+
@@ -458,7 +559,7 @@
         </div>
       </div>
 
-      <div style="flex:1 1 200px; text-align:center;">
+      <div class="animate-on-scroll delay-200" style="flex:1 1 200px; text-align:center;">
         <div class="stat-number" data-target="100"
           style="font-size:clamp(1.8rem, 4vw, 2.8rem); font-weight:400; color:#ffae00; margin-bottom:0.5rem;">
           0+
@@ -471,7 +572,7 @@
         </div>
       </div>
 
-      <div style="flex:1 1 200px; text-align:center;">
+      <div class="animate-on-scroll delay-300" style="flex:1 1 200px; text-align:center;">
         <div class="stat-number" data-target="80"
           style="font-size:clamp(1.8rem, 4vw, 2.8rem); font-weight:400; color:#ffae00; margin-bottom:0.5rem;">
           0+
@@ -491,7 +592,8 @@
     .animated-section {
       position: relative;
       height: 50vh;
-      background: url('https://i.pinimg.com/1200x/70/48/cf/7048cf7da30a2ea730e38d92944a022b.jpg') center center/cover no-repeat;
+      background: url('https://i.pinimg.com/736x/c1/97/63/c19763d9eef3a0b4dda7f7a020a27da8.jpg') center center/cover no-repeat;
+      background-attachment: fixed;
       overflow: hidden;
       cursor: default;
     }
@@ -599,20 +701,102 @@
     }
   </style>
 
-  <section class="animated-section" id="animatedSection">
-    <div class="text1" id="text1"> <span
-        style="color: inherit; -webkit-text-fill-color: transparent; -webkit-text-stroke: 1.5px currentColor;">
-        What are you <br /> waiting for?</span></div>
-    <a href="parents.html#assurance__header" class="see-store-button" id="seeStoreButton" role="button">See what's in
-      store</a>
+  <!-- ================= FAQ Section ================= -->
+  <section id="faq" class="index-faq-section">
+    <div class="index-faq-container">
+      <div class="faq-left animate-on-scroll">
+        <h2 class="faq-header">
+          Frequently <br />
+          <span class="italic-accent">asked</span> <br />
+          questions
+        </h2>
+        <p class="faq-subtext">
+          Everything you need to know about booking, staying, and living at Scholar's Nest.
+        </p>
+        <a href="parents.html" class="partners__cta"
+          style="display:inline-block;margin:16px 0;padding:10px 18px;background:#ffae00;color: white;border-radius:6px;text-decoration:none;font-weight:600;">
+          Find out more here.
+        </a>
+      </div>
 
+      <div class="faq-right animate-on-scroll delay-100">
+        <div class="index-faq-item">
+          <button class="index-faq-question">
+            How do I book a room?
+            <span class="index-faq-icon">+</span>
+          </button>
+          <div class="index-faq-answer">
+            <p>
+              Booking is simple! You can contact us directly via the 'Contact Us' page or click the "Get Started" button
+              to initiate a reservation inquiry. Our team will guide you through the availability and finalizing your
+              lease.
+            </p>
+          </div>
+        </div>
+
+        <div class="index-faq-item">
+          <button class="index-faq-question">
+            Is security provided 24/7?
+            <span class="index-faq-icon">+</span>
+          </button>
+          <div class="index-faq-answer">
+            <p>
+              Yes, safety is our top priority. We have 24/7 on-site security personnel, CCTV surveillance in common
+              areas, and secure biometric access control for residents.
+            </p>
+          </div>
+        </div>
+
+        <div class="index-faq-item">
+          <button class="index-faq-question">
+            What amenities are included?
+            <span class="index-faq-icon">+</span>
+          </button>
+          <div class="index-faq-answer">
+            <p>
+              Residents enjoy high-speed Wi-Fi, fully furnished rooms, study lounges, a common recreation area,
+              regular cleaning services, and access to laundry facilities.
+            </p>
+          </div>
+        </div>
+
+        <div class="index-faq-item">
+          <button class="index-faq-question">
+            Can I choose my roommate?
+            <span class="index-faq-icon">+</span>
+          </button>
+          <div class="index-faq-answer">
+            <p>
+              Absolutely! If you and a friend both book with us, you can request to share a room. We also offer a
+              matching
+              service based on preferences for study habits and lifestyle.
+            </p>
+          </div>
+        </div>
+
+        <div class="index-faq-item">
+          <button class="index-faq-question">
+            Are different meal plans available?
+            <span class="index-faq-icon">+</span>
+          </button>
+          <div class="index-faq-answer">
+            <p>
+              Yes, we offer flexible meal plan options. You can choose from full-board, half-board, or self-catering
+              arrangements depending on your needs. Our kitchens are halal, and we also offer a range of dietary options
+              to suit your needs.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </section>
 
   <!-- ================= Partners Section (inline) ================= -->
   <section class="partners" id="partners">
     <div class="section__container partners__container">
       <div class="partners__header">
-        <div>
+        <div class="animate-on-scroll">
           <p class="section__subheader">OUR PARTNERS</p>
           <h2 class="section__header">Organisations, Sustainability Partners & Institutions Supporting Nest</h2>
           <p class="section__description">
@@ -622,12 +806,12 @@
         </div>
       </div>
 
-      <a href="schools.html#section block-hero reveal" class="partners__cta"
+      <a href="schools.html#section block-hero reveal" class="partners__cta animate-on-scroll delay-100"
         style="display:inline-block;margin:16px 0;padding:10px 18px;background:#ffae00;color: white;border-radius:6px;text-decoration:none;font-weight:600;">
         Be a Nest™ partner
       </a>
 
-      <ul class="partners__list">
+      <ul class="partners__list animate-on-scroll delay-200">
         <li>
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_0eabhaP1-2T8Wjvq6pZM4k_BGtgPFeL0pg&s"
             alt="Braeburn International School" />
@@ -653,10 +837,10 @@
           </div>
         </li>
         <li>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCmxDqkZNPOl0RDn3TC2k0aTq33HhSB_HcVQ&s"
-            alt="Mombasa Academy" />
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwOO2TBjKzapiwlFOgQY45CiPgvA4BkfhlVw&s"
+            alt=" Nyali Golf Club" />
           <div class="partners__details">
-            <h4>Mombasa Academy</h4>
+            <h4>Nyali Golf Club</h4>
             <p>High-quality private school in Nyali, with British curriculum and holistic focus.</p>
           </div>
         </li>
@@ -696,9 +880,18 @@
       </ul>
     </div>
 
+    <section class="animated-section" id="animatedSection">
+      <div class="text1" id="text1"> <span
+          style="color: inherit; -webkit-text-fill-color: transparent; -webkit-text-stroke: 1.5px currentColor;">
+          What are you <br /> waiting for?</span></div>
+      <a href="parents.html#assurance__header" class="see-store-button" id="seeStoreButton" role="button">See what's in
+        store</a>
+
+    </section>
+
     <!-- ================= Events Section (inline) ================= -->
     <section class="section__container news__container" id="news">
-      <div class="news__header">
+      <div class="news__header animate-on-scroll">
         <div>
           <p class="section__subheader">EVENTS</p>
           <h2 class="section__header">Upcoming at Nest</h2>
@@ -710,7 +903,7 @@
       </div>
 
       <div class="news__grid">
-        <div class="news__card">
+        <div class="news__card animate-on-scroll delay-100">
           <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=600" alt="Open Day" />
           <div class="news__card__title">
             <p>20th November 2025</p>
@@ -722,20 +915,20 @@
           </p>
         </div>
 
-        <div class="news__card">
+        <div class="news__card animate-on-scroll delay-200">
           <img src="https://i.pinimg.com/1200x/88/d5/72/88d572136dbee46d55fe3f563cd938b0.jpg" alt="School Showcase" />
           <div class="news__card__title">
             <p>23rd November 2025</p>
             <p>For Parents & Residents</p>
           </div>
-          <h4>Nest Field Day @Vipingo Ridge Golf Club</h4>
+          <h4>Nest Field Day @Nyali Golf Club</h4>
           <p>
-            Nest will have a stand at Vipingo Ridge Golf Club on Chairman's Cup Day. Parents are encouraged to attend,
+            Nest will have a stand at Nyali Golf Club on Chairman's Cup Day. Parents are encouraged to attend,
             meet our team, interact, and ask any questions about our student housing and services. See you there!
           </p>
         </div>
 
-        <div class="news__card">
+        <div class="news__card animate-on-scroll delay-300">
           <img src="https://i.pinimg.com/1200x/b1/56/e8/b156e82871f62c287a83663af42319b2.jpg" alt="School Showcase" />
           <div class="news__card__title">
             <p>25-28th November 2025</p>
@@ -748,7 +941,7 @@
           </p>
         </div>
 
-        <div class="news__card">
+        <div class="news__card animate-on-scroll delay-100">
           <img src="https://i.pinimg.com/1200x/9e/ea/1f/9eea1f7d5b63a3af8cb68f3b4bba11c6.jpg" alt="launch" />
           <div class="news__card__title">
             <p>10th January 2026</p>
@@ -761,7 +954,7 @@
           </p>
         </div>
 
-        <div class="news__card">
+        <div class="news__card animate-on-scroll delay-200">
           <img src="https://i.pinimg.com/1200x/51/a9/13/51a91394e2466c7010e7ac5fa2d6f8c3.jpg" alt="Game Night" />
           <div class="news__card__title">
             <p>17th February 2026</p>
@@ -773,7 +966,7 @@
           </p>
         </div>
 
-        <div class="news__card">
+        <div class="news__card animate-on-scroll delay-300">
           <img src="https://i.pinimg.com/1200x/39/e5/c7/39e5c75b5765cf79aeab8127acb25c31.jpg" alt="Parent Info" />
           <div class="news__card__title">
             <p>24th January 2025</p>
@@ -834,6 +1027,87 @@
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
+
+    <!-- Standalone FAQ Accordion Script for Index Page -->
+    <script>
+      (function () {
+        'use strict';
+
+        console.log('[Index FAQ] Script loaded');
+
+        // Wait for DOM to be ready
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initIndexFaq);
+        } else {
+          initIndexFaq();
+        }
+
+        function initIndexFaq() {
+          console.log('[Index FAQ] Initializing...');
+
+          // Find all FAQ questions on this page
+          const faqQuestions = document.querySelectorAll('.index-faq-question');
+          console.log('[Index FAQ] Found', faqQuestions.length, 'questions');
+
+          // Add click listener to each question button
+          faqQuestions.forEach(function (questionBtn, index) {
+            questionBtn.addEventListener('click', function (e) {
+              e.preventDefault();
+              console.log('[Index FAQ] Question', index + 1, 'clicked');
+
+              // Toggle active class
+              questionBtn.classList.toggle('active');
+
+              // Get the answer panel
+              const answerPanel = questionBtn.nextElementSibling;
+
+              if (!answerPanel || !answerPanel.classList.contains('index-faq-answer')) {
+                console.error('[Index FAQ] Answer panel not found for question', index + 1);
+                return;
+              }
+
+              // Toggle visibility
+              if (questionBtn.classList.contains('active')) {
+                console.log('[Index FAQ] Opening answer', index + 1);
+                answerPanel.style.maxHeight = answerPanel.scrollHeight + 'px';
+                answerPanel.classList.add('open');
+              } else {
+                console.log('[Index FAQ] Closing answer', index + 1);
+                answerPanel.style.maxHeight = '0';
+                answerPanel.classList.remove('open');
+              }
+            });
+          });
+
+          console.log('[Index FAQ] Initialization complete');
+        }
+      })();
+    </script>
+
+    <script>
+      // Intersection Observer for scroll animations
+      document.addEventListener("DOMContentLoaded", () => {
+
+
+        const observerOptions = {
+          root: null, // viewport
+          threshold: 0.1, // trigger when 10% visible
+          rootMargin: "0px 0px -50px 0px" // offset to trigger slightly before bottom
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target); // only animate once
+            }
+          });
+        }, observerOptions);
+
+        const elements = document.querySelectorAll('.animate-on-scroll');
+        elements.forEach(el => observer.observe(el));
+      });
+    </script>
 </body>
 
 </html>

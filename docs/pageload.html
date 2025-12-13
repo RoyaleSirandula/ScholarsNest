@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Scholar's Nest™</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background: #245401;
+            font-family: "Raleway", sans-serif;
+            color: #327304;
+        }
+
+        .word-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0;
+            z-index: 10;
+        }
+
+        .word {
+            font-size: clamp(4rem, 15vw, 12rem);
+            font-weight: 800;
+            line-height: 0.8;
+            white-space: nowrap;
+            position: relative;
+            will-change: transform, opacity;
+            padding: 0;
+            margin: 0;
+        }
+
+        #nest-word {
+            margin-top: -1rem;
+        }
+
+        .outline-text {
+            color: inherit;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke: 3px currentColor;
+        }
+
+        /* Final Logo Display */
+        #final-display {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* gap is handled by the wrapper padding now to allow smooth width anim */
+            gap: 0;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: max-content;
+            z-index: 20;
+        }
+
+        #logo {
+            width: clamp(100px, 15vw, 180px);
+            /* 180px max */
+            height: auto;
+            will-change: transform;
+            flex-shrink: 0;
+            /* Don't squash logo */
+        }
+
+        /* Wrapper for Line + Text to animate their width together */
+        #text-content-wrapper {
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            /* Crucial for width animation */
+            width: 0;
+            /* Start hidden */
+            /* gap inside wrapper */
+            gap: 1.5rem;
+        }
+
+        #vertical-line {
+            width: 2px;
+            height: 120px;
+            background: #a1a1a1;
+            transform: scaleY(0);
+            flex-shrink: 0;
+            margin-left: 1.5rem;
+            /* Gap between logo and line */
+        }
+
+        #final-text {
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            color: #888;
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            white-space: nowrap;
+            /* Prevent wrapping during expansion */
+        }
+
+        /* Controls */
+        #controls {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            display: flex;
+            gap: 1rem;
+            z-index: 100;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: inherit;
+            padding: 0.5rem 1.2rem;
+            border-radius: 2rem;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+
+        /* Flash overlay */
+        #flash-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 50;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="word-container">
+        <div id="scholars-word" class="word">Scholar’s</div>
+        <div id="nest-word" class="word outline-text">Nest™</div>
+    </div>
+
+    <!-- End State -->
+    <div id="final-display">
+        <img id="logo" src="assets/NEST LOGO 1.png" alt="Logo">
+        <!-- Wrapper for slide animation -->
+        <div id="text-content-wrapper">
+            <div id="vertical-line"></div>
+            <div id="final-text">
+                <div>Scholar's</div>
+                <div>Nest™</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FX Layer -->
+    <div id="flash-overlay"></div>
+
+    <!-- UI Controls -->
+    <div id="controls">
+        <button id="replay-btn" class="btn">Replay</button>
+        <button id="skip-btn" class="btn">Skip Intro</button>
+    </div>
+
+    <script>
+        gsap.registerPlugin();
+
+        const scholars = document.getElementById("scholars-word");
+        const nest = document.getElementById("nest-word");
+        const wordContainer = document.querySelector(".word-container");
+        const finalDisplay = document.getElementById("final-display");
+        const logo = document.getElementById("logo");
+        const textWrapper = document.getElementById("text-content-wrapper");
+        const line = document.getElementById("vertical-line");
+        const finalText = document.getElementById("final-text");
+        const flash = document.getElementById("flash-overlay");
+        const controls = document.getElementById("controls");
+
+        let tl;
+
+        function initAnimation() {
+            // Reset state
+            gsap.set("body", { backgroundColor: "#245401", color: "#2b6502", opacity: 1 });
+            gsap.set(wordContainer, { opacity: 1, scale: 1, display: "flex" });
+            gsap.set([scholars, nest], { opacity: 1, x: 0, scale: 1 });
+            gsap.set(finalDisplay, { opacity: 0 }); // Hide container
+            gsap.set(logo, { scale: 1, x: 0 });
+            // Reset text wrapper: Width 0 to hide it
+            gsap.set(textWrapper, { width: 0 });
+            gsap.set(line, { scaleY: 0, opacity: 0 }); // ensure clean start
+            gsap.set(finalText, { opacity: 0, x: -20 });
+            gsap.set(flash, { opacity: 0 });
+            gsap.set(controls, { opacity: 0, pointerEvents: "none" });
+
+            // Calculate start positions
+            const dist = window.innerWidth * 0.8;
+
+            tl = gsap.timeline({
+                defaults: { ease: "power2.inOut" }
+            });
+
+            // 1. SETUP
+            tl.set(scholars, { x: -dist });
+            tl.set(nest, { x: dist });
+
+            // 2. FLY IN
+            tl.to([scholars, nest], {
+                x: (i) => i === 0 ? -100 : 100,
+                duration: 1.2,
+                ease: "power4.in"
+            });
+
+            // 3. SPEED RAMP
+            tl.to([scholars, nest], {
+                x: 0,
+                duration: 2.5,
+                ease: "linear",
+            });
+
+            // 4. IMPACT
+            const impactLabel = "impact";
+            tl.addLabel(impactLabel);
+
+            tl.to(flash, { opacity: 1, duration: 0.05, ease: "none" }, impactLabel);
+            tl.to(flash, { opacity: 0, duration: 0.8 }, "+=0.05");
+
+            // Softer Background Switch
+            tl.to("body", {
+                backgroundColor: "#ffffff",
+                color: "#a1a1a1",
+                duration: 0.8, // Increased duration for softer feel
+                ease: "power2.inOut"
+            }, impactLabel);
+
+            tl.to([scholars, nest], {
+                x: "+=10",
+                yoyo: true,
+                repeat: 7,
+                duration: 0.04
+            }, impactLabel);
+
+            // Explosion
+            tl.to(wordContainer, {
+                scale: 2.5,
+                opacity: 0,
+                duration: 0.5,
+                ease: "power2.out",
+                onComplete: () => {
+                    gsap.set(wordContainer, { display: "none" });
+                }
+            }, impactLabel);
+
+            // 5. FINAL REVEAL (LOGO CENTER -> LEFT)
+
+            // A. Reveal Logo at CENTER
+            tl.set(finalDisplay, { opacity: 1 }, impactLabel); // Make container visible
+            tl.fromTo(logo,
+                { scale: 0.5, opacity: 0 },
+                { scale: 1, opacity: 1, duration: 0.8, ease: "back.out(1.7)" },
+                impactLabel + "+=0.2"
+            );
+
+            // B. Wait 2 seconds
+            // We just simply start the next tween 2 seconds later
+            const slideStart = "+=2.0";
+
+            // C. Move to Left (Slide)
+            tl.to(textWrapper, {
+                width: "auto",
+                duration: 1.2,
+                ease: "power3.inOut"
+            }, slideStart);
+
+            // D. Reveal Text Elements
+            tl.to(line, {
+                scaleY: 1,
+                opacity: 1,
+                duration: 0.5,
+                ease: "power2.out"
+            }, "-=0.4");
+
+            tl.to(finalText, {
+                opacity: 1,
+                x: 0,
+                duration: 0.8,
+                ease: "power2.out",
+                stagger: 0.1
+            }, "<+=0.1");
+
+            // 6. FADE OUT PAGE & REDIRECT
+            // Wait a bit after text reveal
+            const exitTime = "+=2.0";
+
+            tl.to("body", {
+                opacity: 0,
+                duration: 1.5,
+                ease: "power2.inOut",
+                onComplete: () => {
+                    // Set flag so we don't loop forever
+                    sessionStorage.setItem('introShown', 'true');
+                    // Redirect to index
+                    window.location.href = "index.html";
+                }
+            }, exitTime);
+        }
+
+        // --- Interaction ---
+
+        document.getElementById("replay-btn").addEventListener("click", () => {
+            tl.restart();
+        });
+
+        const skipBtn = document.getElementById("skip-btn");
+
+        gsap.to(controls, { opacity: 1, pointerEvents: "all", delay: 3, duration: 1 });
+
+        skipBtn.addEventListener("click", () => {
+            // Jump to just before the fade out
+            tl.progress(0.9);
+        });
+
+        initAnimation();
+
+    </script>
+</body>
+
+</html>

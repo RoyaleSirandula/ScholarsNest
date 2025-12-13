@@ -512,6 +512,83 @@
         height: 180px;
       }
     }
+
+    /* FAQ Pale Green Theme Override */
+    .schools-faq-section.pale {
+      background-color: #ffffff30 !important;
+      /* Pale green */
+      color: var(--text) !important;
+      border-bottom: 1px solid var(--accent);
+      /* visual separator */
+    }
+
+    .schools-faq-section.pale .section__header,
+    .schools-faq-section.pale .faq-header {
+      font-weight: 400;
+      color: var(--text);
+    }
+
+    .schools-faq-section.pale .faq-subtext,
+    .schools-faq-section.pale .section__description {
+      color: var(--muted);
+    }
+
+    .schools-faq-item {
+      margin-bottom: 1rem;
+      border-bottom: 0.5px solid var(--secondary-color);
+    }
+
+    .schools-faq-question {
+      width: 100%;
+      padding: 1rem 0;
+      background: transparent;
+      border: none;
+      text-align: left;
+      font-size: 1.1rem;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 500;
+      color: var(--text-dark);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: color 0.3s;
+    }
+
+    .schools-faq-question:hover {
+      color: var(--accent);
+    }
+
+    .schools-faq-question.active {
+      color: var(--accent);
+    }
+
+    .schools-faq-icon {
+      font-size: 1.5rem;
+      font-weight: 400;
+      transition: transform 0.3s;
+    }
+
+    .schools-faq-question.active .schools-faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .schools-faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .schools-faq-answer.open {
+      max-height: 500px;
+    }
+
+    .schools-faq-answer p {
+      padding: 0 0 1.5rem 0;
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
   </style>
   </head>
 
@@ -554,7 +631,7 @@
       <section class="section block-gallery reveal" aria-label="campus gallery">
         <div class="gallery-strip">
           <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=800&auto=format&fit=crop"
+            <img src="https://i.pinimg.com/736x/c0/cb/4c/c0cb4c3549144fe24c69b8e5a1c3bcb3.jpg"
               alt="Modern campus facade">
           </div>
           <div class="gallery-item">
@@ -740,7 +817,8 @@
             “Hosting Scholar’s Nest residents at our amusement park and cinema in Mombasa has been a pleasure — they
             arrive curious, respectful and eager to engage.
             Our joint events create fun, safe outings that benefit both the community and local businesses.”<br><br>
-            <strong>— Aisha Hassan, Guest Relations Manager, Wild Waters Amusement Park & Cineplex</strong>
+            <strong>— Aisha Hassan, Guest Relations Manager, <span style="color: var(--secondary-color)">Wild Waters
+                Amusement Park & Cineplex</span></strong>
           </div>
 
           <!-- Photo grid: snapshots for the first endorsement -->
@@ -849,8 +927,81 @@
             </div>
 
             <div style="margin-top:1rem;">
-              <button class="btn" onclick="window.location.href='contact?type=community'">Propose a Community
+              <button class="btn" onclick="window.location.href='contact-us.html#bg-photo-section'">Propose a Community
                 Initiative</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ SECTION -->
+      <section class="section schools-faq-section pale reveal" aria-labelledby="faq-heading">
+        <div class="schools-faq-container">
+          <div class="faq-left">
+            <h2 id="faq-heading" class="section__header" style="font-size: 3rem; line-height: 1.2;">
+              Common <br />
+              <span
+                style="font-family: 'Playfair Display', serif; font-style: italic; color: var(--accent);">Questions</span>
+              <br />
+              for Partners
+            </h2>
+            <p class="section__description" style="margin-top: 1rem;">
+              Key information for schools, educators, and commercial partners planning a collaboration.
+            </p>
+          </div>
+
+          <div class="faq-right">
+            <div class="schools-faq-item">
+              <button class="schools-faq-question">
+                How can a school partner with Scholar's Nest?
+                <span class="schools-faq-icon">+</span>
+              </button>
+              <div class="schools-faq-answer">
+                <p>
+                  We collaborate directly with school leadership to design custom itineraries. Contact us to schedule a
+                  consultation and site visit to discuss your specific learning objectives.
+                </p>
+              </div>
+            </div>
+
+            <div class="schools-faq-item">
+              <button class="schools-faq-question">
+                Are risk assessments provided for student trips?
+                <span class="schools-faq-icon">+</span>
+              </button>
+              <div class="schools-faq-answer">
+                <p>
+                  Yes, comprehensive risk assessments are provided for all activities and facilities. We adhere to
+                  strict
+                  safety protocols including 24/7 security, background-checked staff, and emergency response plans.
+                </p>
+              </div>
+            </div>
+
+            <div class="schools-faq-item">
+              <button class="schools-faq-question">
+                Can we book exclusive floors for our students?
+                <span class="schools-faq-icon">+</span>
+              </button>
+              <div class="schools-faq-answer">
+                <p>
+                  Absolutely. Subject to availability, schools can reserve dedicated floors or wings to ensure privacy
+                  and ease of supervision for their student groups.
+                </p>
+              </div>
+            </div>
+
+            <div class="schools-faq-item">
+              <button class="schools-faq-question">
+                What support is available for University Pathway students?
+                <span class="schools-faq-icon">+</span>
+              </button>
+              <div class="schools-faq-answer">
+                <p>
+                  Our Global Pathways Program offers exam prep (SAT/IELTS), personal statement coaching, and mentorship
+                  from alumni studying abroad. We also host annual fairs with university representatives.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -953,6 +1104,62 @@
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
+
+    <!-- Standalone FAQ Accordion Script for Schools Page -->
+    <script>
+      (function () {
+        'use strict';
+
+        console.log('[Schools FAQ] Script loaded');
+
+        // Wait for DOM to be ready
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initSchoolsFaq);
+        } else {
+          initSchoolsFaq();
+        }
+
+        function initSchoolsFaq() {
+          console.log('[Schools FAQ] Initializing...');
+
+          // Find all FAQ questions on this page
+          const faqQuestions = document.querySelectorAll('.schools-faq-question');
+          console.log('[Schools FAQ] Found', faqQuestions.length, 'questions');
+
+          // Add click listener to each question button
+          faqQuestions.forEach(function (questionBtn, index) {
+            questionBtn.addEventListener('click', function (e) {
+              e.preventDefault();
+              console.log('[Schools FAQ] Question', index + 1, 'clicked');
+
+              // Toggle active class
+              questionBtn.classList.toggle('active');
+
+              // Get the answer panel
+              const answerPanel = questionBtn.nextElementSibling;
+
+              if (!answerPanel || !answerPanel.classList.contains('schools-faq-answer')) {
+                console.error('[Schools FAQ] Answer panel not found for question', index + 1);
+                return;
+              }
+
+              // Toggle visibility
+              if (questionBtn.classList.contains('active')) {
+                console.log('[Schools FAQ] Opening answer', index + 1);
+                answerPanel.style.maxHeight = answerPanel.scrollHeight + 'px';
+                answerPanel.classList.add('open');
+              } else {
+                console.log('[Schools FAQ] Closing answer', index + 1);
+                answerPanel.style.maxHeight = '0';
+                answerPanel.classList.remove('open');
+              }
+            });
+          });
+
+          console.log('[Schools FAQ] Initialization complete');
+        }
+      })();
+    </script>
   </body>
 
 </html>
