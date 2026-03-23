@@ -223,7 +223,7 @@ nav {
   padding-block: 5rem;
   background-image: linear-gradient(rgba(15, 26, 44, 0.5),
       rgba(15, 26, 44, 0.5)),
-    url("https://i.pinimg.com/1200x/23/fe/33/23fe33e605997e380e3837c7bc93f761.jpg");
+    url("assets/SNFOLDER1/snest-4.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -235,7 +235,7 @@ nav {
   padding-block: 5rem;
   background-image: linear-gradient(rgba(15, 26, 44, 0.5),
       rgba(15, 26, 44, 0.5)),
-    url("https://i.pinimg.com/1200x/36/36/a2/3636a221f2b4f6bb5bdf7f9a5d163e08.jpg");
+    url("assets/SNFOLDER3/exp-6.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -247,7 +247,7 @@ nav {
   padding-block: 5rem;
   background-image: linear-gradient(rgba(15, 26, 44, 0.5),
       rgba(15, 26, 44, 0.5)),
-    url("https://i.pinimg.com/1200x/42/d4/79/42d479504d05ea599b2df5a271b88887.jpg");
+    url("assets/SNFOLDER1/snest-84.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -259,7 +259,7 @@ nav {
   padding-block: 5rem;
   background-image: linear-gradient(rgba(15, 26, 44, 0.5),
       rgba(15, 26, 44, 0.5)),
-    url("https://i.pinimg.com/1200x/fc/88/34/fc8834bd1fed4b2cd9da46a5245b9ecf.jpg");
+    url("assets/SNFOLDER3/wall-13.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -272,7 +272,7 @@ nav {
   padding-block: 5rem;
   background-image: linear-gradient(rgba(15, 26, 44, 0.5),
       rgba(15, 26, 44, 0.5)),
-    url("https://i.pinimg.com/1200x/4f/61/ef/4f61ef555705a7cb683252e723c9c4e4.jpg");
+    url("assets/SNFOLDER1/snest-113.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -403,8 +403,8 @@ nav {
 
 .about-summary {
   font-size: 1rem;
-  text-align: justify;
-  max-width: 600px;
+  text-align: center;
+  max-width: 800px;
   margin: 0 auto;
   font-weight: 400;
 }
